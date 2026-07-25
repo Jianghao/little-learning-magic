@@ -72,15 +72,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
 .cat-card .cc-desc{font-size:.82em;color:var(--text-light);margin-top:6px;line-height:1.5}
 
 /* Category Header */
-.cat-header-slide{flex-direction:column;text-align:center}
-.cat-header-slide .ch-icon{font-size:4em;margin-bottom:16px}
-.cat-header-slide h2{font-family:var(--font-display);font-size:clamp(2.4em,5vw,3.5em);font-weight:400;margin-bottom:10px}
-.cat-header-slide .ch-sub{font-size:1.2em;color:var(--text-light);margin-bottom:30px;max-width:550px}
-.cat-header-slide .ch-methods{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:950px}
-.cat-header-slide .ch-method-link{text-decoration:none;padding:10px 20px;border-radius:24px;font-size:.95em;font-weight:600;color:#fff;transition:var(--transition)}
-.cat-header-slide .ch-method-link:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
-.cat-header-slide .ch-scroll{color:var(--text-light);font-size:.9em;margin-top:24px;animation:bounce 2s ease-in-out infinite;display:flex;flex-direction:column;align-items:center;gap:4px}
-.cat-header-slide .ch-arrow{width:24px;height:24px;border-right:3px solid var(--coral);border-bottom:3px solid var(--coral);transform:rotate(45deg)}
+
 @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
 
 /* Method Slide */
@@ -185,52 +177,12 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <h2>📂 五大学习方法分类</h2>
   <p class="co-sub">40种方法分成5大类，点击进入你想了解的类别。每个方法点击图片可以看 Rainbow 的故事！</p>
   <div class="cat-cards">
-    <a href="#s2" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务</span><span class="cc-count">7种</span></a>
-    <a href="#s10" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化</span><span class="cc-count">8种</span></a>
-    <a href="#s19" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解</span><span class="cc-count">9种</span></a>
-    <a href="#s29" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动激励</span><span class="cc-count">6种</span></a>
-    <a href="#s36" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪习惯</span><span class="cc-count">10种</span></a>
+    <a href="#s3" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务</span><span class="cc-count">7种</span></a>
+    <a href="#s11" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化</span><span class="cc-count">8种</span></a>
+    <a href="#s20" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解</span><span class="cc-count">9种</span></a>
+    <a href="#s30" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动激励</span><span class="cc-count">6种</span></a>
+    <a href="#s37" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪习惯</span><span class="cc-count">10种</span></a>
   </div>
-</section>
-<!-- s2: 时间与任务管理 Header -->
-<section class="slide cat-header-slide" id="s2">
-  <div class="ch-icon">⏰</div>
-  <h2>时间与任务管理</h2>
-  <p class="ch-sub">学会管理时间、安排任务，是高效学习的第一步。这7种方法帮你从小养成好习惯。</p>
-  <div class="ch-methods"><a href="#s3" class="ch-method-link" style="background:⏰ 时间管理">🍅 番茄专注法</a> <a href="#s4" class="ch-method-link" style="background:⏰ 时间管理">📅 间隔记忆法</a> <a href="#s5" class="ch-method-link" style="background:⏰ 时间管理">🪜 目标分解法</a> <a href="#s6" class="ch-method-link" style="background:⏰ 时间管理">🟩 四象限法</a> <a href="#s7" class="ch-method-link" style="background:⏰ 时间管理">🌅 晨间规划法</a> <a href="#s8" class="ch-method-link" style="background:⏰ 时间管理">🔄 交叉学习法</a> <a href="#s9" class="ch-method-link" style="background:⏰ 时间管理">🧠 大脑休息法</a></div>
-  <div class="ch-scroll"><span>向下滚动查看详情 · 点击图片看 Rainbow 的故事</span><div class="ch-arrow"></div></div>
-</section>
-<!-- s10: 记忆强化技巧 Header -->
-<section class="slide cat-header-slide" id="s10">
-  <div class="ch-icon">🧠</div>
-  <h2>记忆强化技巧</h2>
-  <p class="ch-sub">记东西不需要死记硬背！这8种方法让你的记忆力像超级英雄一样强大。</p>
-  <div class="ch-methods"><a href="#s11" class="ch-method-link" style="background:🧠 记忆强化">🔍 预习与复习法</a> <a href="#s12" class="ch-method-link" style="background:🧠 记忆强化">🧩 联想记忆法</a> <a href="#s13" class="ch-method-link" style="background:🧠 记忆强化">🗺️ 思维导图法</a> <a href="#s14" class="ch-method-link" style="background:🧠 记忆强化">🧱 组块记忆法</a> <a href="#s15" class="ch-method-link" style="background:🧠 记忆强化">🌙 睡前复习法</a> <a href="#s16" class="ch-method-link" style="background:🧠 记忆强化">🎨 双编码法</a> <a href="#s17" class="ch-method-link" style="background:🧠 记忆强化">🌉 类比桥梁法</a> <a href="#s18" class="ch-method-link" style="background:🧠 记忆强化">👀 多感官学习法</a></div>
-  <div class="ch-scroll"><span>向下滚动查看详情 · 点击图片看 Rainbow 的故事</span><div class="ch-arrow"></div></div>
-</section>
-<!-- s19: 深度理解方法 Header -->
-<section class="slide cat-header-slide" id="s19">
-  <div class="ch-icon">💡</div>
-  <h2>深度理解方法</h2>
-  <p class="ch-sub">真正的学习不是死记硬背，而是深入理解。这9种方法帮你把知识真正吃透。</p>
-  <div class="ch-methods"><a href="#s20" class="ch-method-link" style="background:💡 深度理解">👨‍🏫 费曼小老师法</a> <a href="#s21" class="ch-method-link" style="background:💡 深度理解">❓ 提问学习法</a> <a href="#s22" class="ch-method-link" style="background:💡 深度理解">✅ 自我检测法</a> <a href="#s23" class="ch-method-link" style="background:💡 深度理解">📝 康奈尔笔记法</a> <a href="#s24" class="ch-method-link" style="background:💡 深度理解">🔄 SQ3R阅读法</a> <a href="#s25" class="ch-method-link" style="background:💡 深度理解">🔗 精细加工法</a> <a href="#s26" class="ch-method-link" style="background:💡 深度理解">🪜 具体例子法</a> <a href="#s27" class="ch-method-link" style="background:💡 深度理解">👂 主动倾听法</a> <a href="#s28" class="ch-method-link" style="background:💡 深度理解">🧵 知识串珠法</a></div>
-  <div class="ch-scroll"><span>向下滚动查看详情 · 点击图片看 Rainbow 的故事</span><div class="ch-arrow"></div></div>
-</section>
-<!-- s29: 互动与激励 Header -->
-<section class="slide cat-header-slide" id="s29">
-  <div class="ch-icon">🤝</div>
-  <h2>互动与激励</h2>
-  <p class="ch-sub">学习不一定是孤独的！这6种方法让学习变得更有趣、更有动力。</p>
-  <div class="ch-methods"><a href="#s30" class="ch-method-link" style="background:🤝 互动激励">💎 错题宝藏法</a> <a href="#s31" class="ch-method-link" style="background:🤝 互动激励">🤝 合作学习法</a> <a href="#s32" class="ch-method-link" style="background:🤝 互动激励">🏆 游戏化学习法</a> <a href="#s33" class="ch-method-link" style="background:🤝 互动激励">🎯 刻意练习法</a> <a href="#s34" class="ch-method-link" style="background:🤝 互动激励">🎭 角色扮演法</a> <a href="#s35" class="ch-method-link" style="background:🤝 互动激励">📋 考试策略法</a></div>
-  <div class="ch-scroll"><span>向下滚动查看详情 · 点击图片看 Rainbow 的故事</span><div class="ch-arrow"></div></div>
-</section>
-<!-- s36: 情绪与习惯 Header -->
-<section class="slide cat-header-slide" id="s36">
-  <div class="ch-icon">🌈</div>
-  <h2>情绪与习惯</h2>
-  <p class="ch-sub">好的学习状态来自好的情绪和习惯。这10种方法帮你建立最佳学习状态。</p>
-  <div class="ch-methods"><a href="#s37" class="ch-method-link" style="background:🌈 情绪习惯">🧘 正念学习法</a> <a href="#s38" class="ch-method-link" style="background:🌈 情绪习惯">🪞 自我对话法</a> <a href="#s39" class="ch-method-link" style="background:🌈 情绪习惯">📍 固定学习角法</a> <a href="#s40" class="ch-method-link" style="background:🌈 情绪习惯">⏳ 碎片时间利用法</a> <a href="#s41" class="ch-method-link" style="background:🌈 情绪习惯">📓 反思日记法</a> <a href="#s42" class="ch-method-link" style="background:🌈 情绪习惯">🌱 成长心态法</a> <a href="#s43" class="ch-method-link" style="background:🌈 情绪习惯">🏃 运动促学法</a> <a href="#s44" class="ch-method-link" style="background:🌈 情绪习惯">🔗 习惯叠加法</a> <a href="#s45" class="ch-method-link" style="background:🌈 情绪习惯">🌊 心流学习法</a> <a href="#s46" class="ch-method-link" style="background:🌈 情绪习惯">✍️ 手写优势法</a></div>
-  <div class="ch-scroll"><span>向下滚动查看详情 · 点击图片看 Rainbow 的故事</span><div class="ch-arrow"></div></div>
 </section>
 <!-- s3: 番茄专注法 -->
 <section class="slide method-slide" id="s3">
@@ -1277,11 +1229,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <h2>🌟 选择你的第一个魔法吧！</h2>
   <p class="co-sub">40种方法分成5大类，先选一个最喜欢的开始。每天进步一点点！</p>
   <div class="cat-cards">
-    <a href="#s2" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务</span><span class="cc-count">7种</span></a>
-    <a href="#s10" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化</span><span class="cc-count">8种</span></a>
-    <a href="#s19" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解</span><span class="cc-count">9种</span></a>
-    <a href="#s29" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动激励</span><span class="cc-count">6种</span></a>
-    <a href="#s36" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪习惯</span><span class="cc-count">10种</span></a>
+    <a href="#s3" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务</span><span class="cc-count">7种</span></a>
+    <a href="#s11" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化</span><span class="cc-count">8种</span></a>
+    <a href="#s20" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解</span><span class="cc-count">9种</span></a>
+    <a href="#s30" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动激励</span><span class="cc-count">6种</span></a>
+    <a href="#s37" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪习惯</span><span class="cc-count">10种</span></a>
   </div>
 </section>
 <!-- s48: FOOTER -->
@@ -1323,7 +1275,7 @@ for(let i=0;i<totalSlides;i++){
   const d=document.createElement('span');
   d.className='dot'+(i===0?' hero-dot active':'');
   d.dataset.index=i;
-  if([2,10,19,29,36].includes(i))d.classList.add('cat-dot');
+  if([2,10,19,29,36].includes(i)){};
   d.title=slides[i].id;
   d.addEventListener('click',()=>goToSlide(i));
   navDots.appendChild(d);
