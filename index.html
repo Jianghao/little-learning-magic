@@ -3,933 +3,913 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>学习的魔法之旅 — 小学生十大学习方法</title>
+<title>学习的魔法之旅 — 小学生24种学习方法大全</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-/* ============ CSS Variables ============ */
 :root {
-  --bg: #FFF8F0;
-  --card: #FFFDF7;
-  --coral: #E8725A;
-  --teal: #2D8B8B;
-  --gold: #F4C542;
-  --text: #3D2C2C;
-  --text-light: #7A6A6A;
-  --sage: #7BAE7F;
-  --lavender: #C4B5E0;
-  --blush: #F0D5D0;
-  --cream: #FEF9F0;
-  --shadow: 0 4px 24px rgba(61, 44, 44, 0.08);
-  --radius: 24px;
-  --radius-sm: 16px;
-  --font-display: 'ZCOOL KuaiLe', 'PingFang SC', 'Microsoft YaHei', cursive;
-  --font-body: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --c1: #E8725A; --c2: #F08A5D; --c3: #3DA5A5; --c4: #E8919E; --c5: #F4C542;
-  --c6: #7BAE7F; --c7: #9B7EC4; --c8: #5B9EED; --c9: #F0926B; --c10: #4ECB71;
+  --bg:#FFF8F0; --card:#FFFDF7; --coral:#E8725A; --teal:#2D8B8B; --gold:#F4C542;
+  --text:#3D2C2C; --text-light:#7A6A6A; --sage:#7BAE7F; --lavender:#C4B5E0;
+  --blush:#F0D5D0; --cream:#FEF9F0; --shadow:0 4px 24px rgba(61,44,44,0.08);
+  --radius:24px; --radius-sm:16px;
+  --font-display:'ZCOOL KuaiLe','PingFang SC','Microsoft YaHei',cursive;
+  --font-body:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+  --transition:0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+  --c1:#E8725A;--c2:#F08A5D;--c3:#3DA5A5;--c4:#E8919E;--c5:#F4C542;
+  --c6:#7BAE7F;--c7:#9B7EC4;--c8:#5B9EED;--c9:#F0926B;--c10:#4ECB71;
+  --cat1:#E8725A;--cat2:#7BAE7F;--cat3:#5B9EED;--cat4:#F4C542;--cat5:#9B7EC4;
 }
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  font-size: 18px;
-}
-body {
-  font-family: var(--font-body);
-  background: var(--bg);
-  color: var(--text);
-  overflow-x: hidden;
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth;font-size:18px}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.7;-webkit-font-smoothing:antialiased}
 
-/* ============ Background ============ */
-.bg-layer { position:fixed; inset:0; pointer-events:none; z-index:0; }
-.bg-orb {
-  position:absolute; border-radius:50%; opacity:0.10;
-  animation: orbFloat 20s ease-in-out infinite;
-}
-.bg-orb.o1 { width:500px; height:500px; background:radial-gradient(circle, var(--coral), transparent); top:-15%; left:-10%; }
-.bg-orb.o2 { width:400px; height:400px; background:radial-gradient(circle, var(--teal), transparent); bottom:-10%; right:-8%; animation-delay:-7s; }
-.bg-orb.o3 { width:300px; height:300px; background:radial-gradient(circle, var(--lavender), transparent); top:50%; left:55%; animation-delay:-14s; }
-.bg-orb.o4 { width:250px; height:250px; background:radial-gradient(circle, var(--gold), transparent); top:25%; left:5%; animation-delay:-3s; }
-@keyframes orbFloat {
-  0%,100% { transform: translate(0,0) scale(1); }
-  25% { transform: translate(30px,-40px) scale(1.08); }
-  50% { transform: translate(-20px,20px) scale(0.94); }
-  75% { transform: translate(-35px,-15px) scale(1.05); }
-}
+.bg-layer{position:fixed;inset:0;pointer-events:none;z-index:0}
+.bg-orb{position:absolute;border-radius:50%;opacity:.10;animation:orbFloat 20s ease-in-out infinite}
+.bg-orb.o1{width:500px;height:500px;background:radial-gradient(circle,var(--coral),transparent);top:-15%;left:-10%}
+.bg-orb.o2{width:400px;height:400px;background:radial-gradient(circle,var(--teal),transparent);bottom:-10%;right:-8%;animation-delay:-7s}
+.bg-orb.o3{width:300px;height:300px;background:radial-gradient(circle,var(--lavender),transparent);top:50%;left:55%;animation-delay:-14s}
+.bg-orb.o4{width:250px;height:250px;background:radial-gradient(circle,var(--gold),transparent);top:25%;left:5%;animation-delay:-3s}
+@keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(30px,-40px) scale(1.08)}50%{transform:translate(-20px,20px) scale(.94)}75%{transform:translate(-35px,-15px) scale(1.05)}}
 
-/* ============ Slide Navigation Dots ============ */
-.slide-nav {
-  position: fixed; right: 20px; top: 50%; transform: translateY(-50%);
-  z-index: 200; display: flex; flex-direction: column; gap: 10px;
-}
-.slide-nav .dot {
-  width: 14px; height: 14px; border-radius: 50%;
-  background: rgba(61,44,44,0.2); cursor: pointer;
-  transition: var(--transition); border: 2px solid transparent;
-}
-.slide-nav .dot:hover { background: var(--coral); transform: scale(1.3); }
-.slide-nav .dot.active { background: var(--coral); border-color: var(--coral); box-shadow: 0 0 12px rgba(232,114,90,0.5); }
-.slide-nav .dot.hero-dot { width: 18px; height: 18px; background: var(--gold); }
-.slide-nav .dot.catalog-dot { background: var(--lavender); }
+/* Nav dots */
+.slide-nav{position:fixed;right:16px;top:50%;transform:translateY(-50%);z-index:200;display:flex;flex-direction:column;gap:5px}
+.slide-nav .dot{width:8px;height:8px;border-radius:50%;background:rgba(61,44,44,.18);cursor:pointer;transition:var(--transition);border:1px solid transparent}
+.slide-nav .dot:hover{background:var(--coral);transform:scale(1.5)}
+.slide-nav .dot.active{background:var(--coral);border-color:var(--coral);box-shadow:0 0 8px rgba(232,114,90,.4);width:10px;height:10px}
+.slide-nav .dot.cat-dot{width:10px;height:10px;border:1px dashed rgba(61,44,44,.3)}
+.slide-nav .dot.hero-dot{width:12px;height:12px;background:var(--gold)}
 
-/* Keyboard hint */
-.kb-hint {
-  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
-  z-index: 200; font-size: 0.8em; color: var(--text-light);
-  background: rgba(255,255,255,0.8); backdrop-filter: blur(10px);
-  padding: 8px 20px; border-radius: 50px; pointer-events: none;
-  transition: opacity 0.5s;
-}
-.kb-hint kbd {
-  display: inline-block; padding: 2px 8px; border-radius: 4px;
-  background: #fff; border: 1px solid #ddd; font-family: monospace;
-  margin: 0 3px; font-size: 0.9em;
-}
+.kb-hint{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:200;font-size:.8em;color:var(--text-light);background:rgba(255,255,255,.8);backdrop-filter:blur(10px);padding:8px 20px;border-radius:50px;pointer-events:none;transition:opacity .5s}
+.kb-hint kbd{display:inline-block;padding:2px 8px;border-radius:4px;background:#fff;border:1px solid #ddd;font-family:monospace;margin:0 3px;font-size:.9em}
 
-/* ============ Slides ============ */
-.slide {
-  scroll-snap-align: start;
-  min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
-  position: relative; z-index: 1;
-  padding: 60px 40px;
-}
+/* Top nav */
+.top-method-nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--blush);padding:0 24px;height:52px;display:flex;align-items:center;gap:0;opacity:0;transform:translateY(-100%);transition:opacity .35s,transform .35s cubic-bezier(.25,.46,.45,.94);pointer-events:none;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.top-method-nav::-webkit-scrollbar{display:none}
+.top-method-nav.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+.top-method-nav a{flex-shrink:0;text-decoration:none;padding:6px 14px;border-radius:20px;font-size:.85em;font-weight:600;color:var(--text-light);transition:var(--transition);white-space:nowrap}
+.top-method-nav a:hover{color:var(--coral);background:rgba(232,114,90,.08)}
+.top-method-nav a.active{color:#fff}
 
-/* ============ Hero Slide ============ */
-.hero-slide {
-  flex-direction: column; text-align: center;
-}
-.hero-badge {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: rgba(255,255,255,0.7); backdrop-filter: blur(10px);
-  border: 2px solid var(--blush); border-radius: 50px;
-  padding: 12px 28px; font-size: 1.1em; font-weight: 500;
-  color: var(--coral); margin-bottom: 32px;
-  animation: fadeInUp 0.8s ease both;
-}
-.hero-badge .dot {
-  width: 10px; height: 10px; border-radius: 50%;
-  background: var(--coral); animation: pulse 2s ease-in-out infinite;
-}
-@keyframes pulse { 0%,100% { transform:scale(1); opacity:1; } 50% { transform:scale(1.8); opacity:0.5; } }
+.slide{scroll-snap-align:start;min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;z-index:1;padding:60px 40px}
 
-.hero-slide h1 {
-  font-family: var(--font-display);
-  font-size: clamp(3em, 7vw, 5.5em);
-  font-weight: 400; line-height: 1.2; margin-bottom: 20px;
-  animation: fadeInUp 0.8s ease 0.1s both;
-}
-.hero-slide h1 .hl {
-  background: linear-gradient(135deg, var(--coral), #F0A060, var(--gold));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.hero-slide .subtitle {
-  font-size: clamp(1.2em, 2.5vw, 1.5em);
-  color: var(--text-light); max-width: 650px; margin-bottom: 40px;
-  animation: fadeInUp 0.8s ease 0.2s both;
-}
-.hero-scroll {
-  margin-top: 14px; color: var(--text-light); font-size: 0.95em;
-  animation: fadeInUp 0.8s ease 0.45s both, bounce 2s ease-in-out 1.2s infinite;
-  display: flex; flex-direction: column; align-items: center; gap: 6px;
-}
-.hero-scroll .arrow {
-  width: 28px; height: 28px; border-right: 3px solid var(--coral);
-  border-bottom: 3px solid var(--coral); transform: rotate(45deg);
-}
-@keyframes fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
-@keyframes bounce { 0%,100% { transform:translateY(0); } 50% { transform:translateY(10px); } }
+/* Hero */
+.hero-slide{flex-direction:column;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.7);backdrop-filter:blur(10px);border:2px solid var(--blush);border-radius:50px;padding:12px 28px;font-size:1.1em;font-weight:500;color:var(--coral);margin-bottom:32px;animation:fadeInUp .8s ease both}
+.hero-badge .dot{width:10px;height:10px;border-radius:50%;background:var(--coral);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.8);opacity:.5}}
+.hero-slide h1{font-family:var(--font-display);font-size:clamp(2.8em,6vw,5em);font-weight:400;line-height:1.2;margin-bottom:20px;animation:fadeInUp .8s ease .1s both}
+.hero-slide h1 .hl{background:linear-gradient(135deg,var(--coral),#F0A060,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-slide .subtitle{font-size:clamp(1.1em,2.5vw,1.4em);color:var(--text-light);max-width:650px;margin-bottom:36px;animation:fadeInUp .8s ease .2s both}
+.hero-scroll{margin-top:14px;color:var(--text-light);font-size:.95em;animation:fadeInUp .8s ease .45s both,bounce 2s ease-in-out 1.2s infinite;display:flex;flex-direction:column;align-items:center;gap:6px}
+.hero-scroll .arrow{width:28px;height:28px;border-right:3px solid var(--coral);border-bottom:3px solid var(--coral);transform:rotate(45deg)}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
 
-/* ============ Method Slide ============ */
-.method-slide {
-  gap: 0;
-  padding: 0;
-}
-.method-slide .slide-inner {
-  display: flex; align-items: stretch;
-  width: 100%; min-height: 100vh;
-}
-.method-slide .slide-img {
-  flex: 0 0 60%;
-  display: flex; align-items: center; justify-content: center;
-  padding: 40px;
-  position: relative;
-}
-.method-slide .slide-img img {
-  width: 100%; max-height: 85vh;
-  object-fit: contain;
-  border-radius: var(--radius-sm);
-  box-shadow: 0 12px 48px rgba(0,0,0,0.12);
-}
-.method-slide .slide-text {
-  flex: 1;
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 68px 56px 48px 24px;
-  position: relative; overflow-y: auto;
-}
-.method-slide .slide-number {
-  position: absolute; top: 30px; right: 40px;
-  font-family: var(--font-display); font-size: 8em;
-  color: rgba(61,44,44,0.04); line-height: 1;
-  pointer-events: none; user-select: none;
-}
-.method-slide .card-badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 7px 18px; border-radius: 24px; font-size: 0.95em;
-  font-weight: 700; color: #fff; margin-bottom: 18px;
-  width: fit-content;
-}
-.method-slide h2 {
-  font-family: var(--font-display); font-size: clamp(2.4em, 4vw, 3.2em);
-  font-weight: 400; line-height: 1.2; margin-bottom: 10px;
-}
-.method-slide .method-subtitle {
-  font-size: 1.2em; color: var(--text-light);
-  margin-bottom: 20px; padding-bottom: 18px;
-  border-bottom: 2px dashed var(--blush);
-}
-.method-slide .info-blocks {
-  display: flex; flex-direction: column; gap: 18px; margin-bottom: 22px;
-}
-.method-slide .info-block {
-  padding: 18px 22px; border-radius: var(--radius-sm);
-  background: var(--cream); border-left: 5px solid;
-}
-.method-slide .info-block h4 {
-  font-size: 1.1em; margin-bottom: 6px; font-weight: 700;
-}
-.method-slide .info-block p {
-  font-size: 1.08em; color: var(--text-light); line-height: 1.7;
-}
-.method-slide .magic-spell {
-  display: flex; align-items: flex-start; gap: 12px;
-  padding: 20px 24px; border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, #FFF9E6, #FFF3D6);
-  border: 2px dashed var(--gold);
-}
-.method-slide .magic-spell .spell-icon { font-size: 1.6em; flex-shrink: 0; }
-.method-slide .magic-spell .spell-label { font-size: 0.9em; font-weight: 700; color: var(--gold); margin-bottom: 4px; }
-.method-slide .magic-spell .spell-text { font-size: 1.12em; font-weight: 500; color: var(--text); line-height: 1.6; }
+/* Category Overview */
+.cat-overview-slide{flex-direction:column;text-align:center}
+.cat-overview-slide h2{font-family:var(--font-display);font-size:clamp(2.2em,4vw,3em);font-weight:400;margin-bottom:10px;background:linear-gradient(135deg,var(--coral),var(--lavender),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cat-overview-slide .co-sub{color:var(--text-light);font-size:1.15em;margin-bottom:40px}
+.cat-cards{display:flex;gap:20px;max-width:1150px;flex-wrap:wrap;justify-content:center}
+.cat-card{flex:0 1 200px;background:var(--card);border-radius:var(--radius);padding:28px 20px;text-align:center;text-decoration:none;color:var(--text);box-shadow:var(--shadow);transition:var(--transition);position:relative;overflow:hidden}
+.cat-card:hover{transform:translateY(-8px);box-shadow:0 16px 48px rgba(0,0,0,.15)}
+.cat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:6px}
+.cat-card:nth-child(1)::before{background:var(--cat1)}
+.cat-card:nth-child(2)::before{background:var(--cat2)}
+.cat-card:nth-child(3)::before{background:var(--cat3)}
+.cat-card:nth-child(4)::before{background:var(--cat4)}
+.cat-card:nth-child(5)::before{background:var(--cat5)}
+.cat-card .cc-icon{font-size:3em;display:block;margin-bottom:12px}
+.cat-card .cc-name{font-family:var(--font-display);font-size:1.3em;font-weight:400;margin-bottom:4px}
+.cat-card .cc-count{font-size:.85em;color:var(--text-light)}
+.cat-card .cc-desc{font-size:.82em;color:var(--text-light);margin-top:6px;line-height:1.5}
 
-/* Color accent bars — first method-slide is the 3rd section child (after hero=1st, catalog=2nd) */
-.method-slide:nth-of-type(3)::before { background: var(--c1); }
-.method-slide:nth-of-type(4)::before { background: var(--c2); }
-.method-slide:nth-of-type(5)::before { background: var(--c3); }
-.method-slide:nth-of-type(6)::before { background: var(--c4); }
-.method-slide:nth-of-type(7)::before { background: var(--c5); }
-.method-slide:nth-of-type(8)::before { background: var(--c6); }
-.method-slide:nth-of-type(9)::before { background: var(--c7); }
-.method-slide:nth-of-type(10)::before { background: var(--c8); }
-.method-slide:nth-of-type(11)::before { background: var(--c9); }
-.method-slide:nth-of-type(12)::before { background: var(--c10); }
-.method-slide::before {
-  content: ''; position: absolute; top: 0; left: 0;
-  width: 8px; height: 100%; z-index: 2;
-}
+/* Category Section Header */
+.cat-header-slide{flex-direction:column;text-align:center}
+.cat-header-slide .ch-icon{font-size:4em;margin-bottom:16px}
+.cat-header-slide h2{font-family:var(--font-display);font-size:clamp(2.4em,5vw,3.5em);font-weight:400;margin-bottom:10px}
+.cat-header-slide .ch-sub{font-size:1.2em;color:var(--text-light);margin-bottom:30px;max-width:550px}
+.cat-header-slide .ch-methods{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:900px}
+.cat-header-slide .ch-method-link{text-decoration:none;padding:10px 20px;border-radius:24px;font-size:.95em;font-weight:600;color:#fff;transition:var(--transition)}
+.cat-header-slide .ch-method-link:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.cat-header-slide .ch-scroll{color:var(--text-light);font-size:.9em;margin-top:24px;animation:bounce 2s ease-in-out infinite;display:flex;flex-direction:column;align-items:center;gap:4px}
+.cat-header-slide .ch-arrow{width:24px;height:24px;border-right:3px solid;border-bottom:3px solid;transform:rotate(45deg)}
 
-/* ============ Catalog / Summary Slide ============ */
-.catalog-slide {
-  flex-direction: column; text-align: center;
-}
-.catalog-slide h2 {
-  font-family: var(--font-display); font-size: clamp(2.4em, 5vw, 3.4em);
-  font-weight: 400; margin-bottom: 14px;
-  background: linear-gradient(135deg, var(--coral), var(--lavender), var(--teal));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.catalog-slide .catalog-sub {
-  color: var(--text-light); font-size: 1.2em; margin-bottom: 40px;
-}
-.catalog-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px; max-width: 1050px; margin: 0 auto;
-}
-.catalog-item {
-  background: var(--card); border-radius: var(--radius-sm);
-  padding: 24px 16px; text-align: center; cursor: pointer;
-  box-shadow: var(--shadow); transition: var(--transition);
-  text-decoration: none; color: var(--text); display: block;
-  position: relative; overflow: hidden;
-}
-.catalog-item::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
-}
-.catalog-item:hover { transform: translateY(-8px); box-shadow: 0 16px 48px rgba(0,0,0,0.15); }
-.catalog-item .s-emoji { font-size: 2.6em; display: block; margin-bottom: 10px; }
-.catalog-item .s-num {
-  display: inline-block; width: 36px; height: 36px; line-height: 36px;
-  border-radius: 50%; color: #fff; font-weight: 700; font-size: 0.95em; margin-bottom: 8px;
-}
-.catalog-item .s-name { font-weight: 700; font-size: 1em; }
-.catalog-item .s-hint { font-size: 0.78em; color: var(--text-light); margin-top: 4px; }
+/* Method slide */
+.method-slide{gap:0;padding:0}
+.method-slide .slide-inner{display:flex;align-items:stretch;width:100%;min-height:100vh}
+.method-slide .slide-img{flex:0 0 60%;display:flex;align-items:center;justify-content:center;padding:40px;position:relative}
+.method-slide .slide-img img{width:100%;max-height:85vh;object-fit:contain;border-radius:var(--radius-sm);box-shadow:0 12px 48px rgba(0,0,0,.12)}
+.method-slide .slide-text{flex:1;display:flex;flex-direction:column;justify-content:center;padding:68px 56px 48px 24px;position:relative;overflow-y:auto}
+.method-slide .slide-number{position:absolute;top:30px;right:40px;font-family:var(--font-display);font-size:8em;color:rgba(61,44,44,.04);line-height:1;pointer-events:none;user-select:none}
+.method-slide .card-badge{display:inline-flex;align-items:center;gap:6px;padding:7px 18px;border-radius:24px;font-size:.95em;font-weight:700;color:#fff;margin-bottom:18px;width:fit-content}
+.method-slide h2{font-family:var(--font-display);font-size:clamp(2.2em,4vw,3em);font-weight:400;line-height:1.2;margin-bottom:10px}
+.method-slide .method-subtitle{font-size:1.15em;color:var(--text-light);margin-bottom:20px;padding-bottom:18px;border-bottom:2px dashed var(--blush)}
+.method-slide .info-blocks{display:flex;flex-direction:column;gap:16px;margin-bottom:20px}
+.method-slide .info-block{padding:16px 20px;border-radius:var(--radius-sm);background:var(--cream);border-left:5px solid}
+.method-slide .info-block h4{font-size:1.05em;margin-bottom:4px;font-weight:700}
+.method-slide .info-block p{font-size:1.05em;color:var(--text-light);line-height:1.65}
+.method-slide .magic-spell{display:flex;align-items:flex-start;gap:12px;padding:18px 22px;border-radius:var(--radius-sm);background:linear-gradient(135deg,#FFF9E6,#FFF3D6);border:2px dashed var(--gold)}
+.method-slide .magic-spell .spell-icon{font-size:1.5em;flex-shrink:0}
+.method-slide .magic-spell .spell-label{font-size:.85em;font-weight:700;color:var(--gold);margin-bottom:2px}
+.method-slide .magic-spell .spell-text{font-size:1.08em;font-weight:500;color:var(--text);line-height:1.6}
+.method-slide .accent-bar{position:absolute;top:0;left:0;width:8px;height:100%;z-index:2}
 
-.catalog-item:nth-child(1)::before { background: var(--c1); }
-.catalog-item:nth-child(2)::before { background: var(--c2); }
-.catalog-item:nth-child(3)::before { background: var(--c3); }
-.catalog-item:nth-child(4)::before { background: var(--c4); }
-.catalog-item:nth-child(5)::before { background: var(--c5); }
-.catalog-item:nth-child(6)::before { background: var(--c6); }
-.catalog-item:nth-child(7)::before { background: var(--c7); }
-.catalog-item:nth-child(8)::before { background: var(--c8); }
-.catalog-item:nth-child(9)::before { background: var(--c9); }
-.catalog-item:nth-child(10)::before { background: var(--c10); }
+/* Footer */
+.footer-slide{flex-direction:column;text-align:center;gap:20px;border-top:3px solid var(--blush)}
+.footer-slide .footer-title{font-family:var(--font-display);font-size:clamp(1.8em,4vw,2.6em);font-weight:400;background:linear-gradient(135deg,var(--coral),var(--gold),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.footer-slide .footer-sub{font-size:1.1em;color:var(--text-light);max-width:550px}
+.footer-mini-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:850px}
+.footer-mini-grid a{padding:7px 14px;border-radius:18px;font-size:.82em;font-weight:600;color:#fff;text-decoration:none;transition:var(--transition)}
+.footer-mini-grid a:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.15)}
+.footer-quote{font-size:1.15em;font-weight:500;color:var(--text);font-style:italic;padding:14px 28px;background:var(--cream);border-radius:var(--radius-sm);border:2px dashed var(--blush);max-width:600px}
+.footer-heart{font-size:1.05em;color:var(--text-light)}
+.footer-slide .heart{color:var(--coral);animation:pulse 1.5s ease-in-out infinite;display:inline-block}
 
-/* ============ Footer Slide ============ */
-.footer-slide {
-  flex-direction: column; text-align: center; gap: 24px;
-  border-top: 3px solid var(--blush);
+/* Responsive */
+@media(max-width:1024px){
+  .method-slide .slide-inner{flex-direction:column}
+  .top-method-nav{padding:0 12px;height:44px}
+  .top-method-nav a{padding:5px 10px;font-size:.76em}
+  .method-slide .slide-img{flex:0 0 auto;padding:60px 24px 8px}
+  .method-slide .slide-img img{max-height:35vh;width:auto;max-width:90%}
+  .method-slide .slide-text{padding:20px 28px 40px;overflow-y:visible}
+  .method-slide .slide-number{font-size:5em;top:10px;right:20px}
+  .method-slide h2{font-size:1.8em}
+  .cat-cards{gap:12px}
+  .cat-card{flex:0 1 150px;padding:20px 14px}
+  .slide-nav{right:8px}
+  .slide-nav .dot{width:6px;height:6px;gap:3px}
+  .slide-nav .dot.active{width:8px;height:8px}
 }
-.footer-slide .footer-title {
-  font-family: var(--font-display); font-size: clamp(2em, 4vw, 2.8em);
-  font-weight: 400; margin-bottom: 8px;
-  background: linear-gradient(135deg, var(--coral), var(--gold), var(--teal));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.footer-slide .footer-sub {
-  font-size: 1.2em; color: var(--text-light); max-width: 550px;
-}
-.footer-mini-grid {
-  display: flex; flex-wrap: wrap; justify-content: center;
-  gap: 10px; max-width: 850px;
-}
-.footer-mini-grid .fm-item {
-  padding: 8px 16px; border-radius: 20px;
-  font-size: 0.9em; font-weight: 600; color: #fff;
-  text-decoration: none; transition: var(--transition);
-}
-.footer-mini-grid .fm-item:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); }
-.footer-mini-grid .fm-item:nth-child(1){background:var(--c1);} .footer-mini-grid .fm-item:nth-child(2){background:var(--c2);}
-.footer-mini-grid .fm-item:nth-child(3){background:var(--c3);} .footer-mini-grid .fm-item:nth-child(4){background:var(--c4);}
-.footer-mini-grid .fm-item:nth-child(5){background:var(--c5);} .footer-mini-grid .fm-item:nth-child(6){background:var(--c6);}
-.footer-mini-grid .fm-item:nth-child(7){background:var(--c7);} .footer-mini-grid .fm-item:nth-child(8){background:var(--c8);}
-.footer-mini-grid .fm-item:nth-child(9){background:var(--c9);} .footer-mini-grid .fm-item:nth-child(10){background:var(--c10);}
-
-.footer-slide .footer-quote {
-  font-size: 1.25em; font-weight: 500; color: var(--text);
-  font-style: italic; padding: 16px 32px;
-  background: var(--cream); border-radius: var(--radius-sm);
-  border: 2px dashed var(--blush); max-width: 600px;
-}
-.footer-slide .footer-heart {
-  font-size: 1.1em; color: var(--text-light);
-}
-.footer-slide .heart { color: var(--coral); animation: pulse 1.5s ease-in-out infinite; display: inline-block; }
-
-/* ============ Top Method Navigation Bar ============ */
-.top-method-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 300;
-  background: rgba(255,255,255,0.88); backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--blush);
-  padding: 0 24px; height: 52px;
-  display: flex; align-items: center; gap: 0;
-  opacity: 0; transform: translateY(-100%);
-  transition: opacity 0.35s, transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  pointer-events: none;
-  overflow-x: auto; overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-}
-.top-method-nav::-webkit-scrollbar { display: none; }
-.top-method-nav.visible {
-  opacity: 1; transform: translateY(0); pointer-events: auto;
-}
-.top-method-nav a {
-  flex-shrink: 0; text-decoration: none;
-  padding: 6px 14px; border-radius: 20px;
-  font-size: 0.88em; font-weight: 600; color: var(--text-light);
-  transition: var(--transition); white-space: nowrap;
-  position: relative;
-}
-.top-method-nav a:hover { color: var(--coral); background: rgba(232,114,90,0.08); }
-.top-method-nav a.active { color: #fff; }
-.top-method-nav a .nav-num { font-size: 0.75em; margin-right: 2px; opacity: 0.7; }
-
-/* Per-method active colors */
-.top-method-nav a:nth-child(1).active { background: var(--c1); }
-.top-method-nav a:nth-child(2).active { background: var(--c2); }
-.top-method-nav a:nth-child(3).active { background: var(--c3); }
-.top-method-nav a:nth-child(4).active { background: var(--c4); }
-.top-method-nav a:nth-child(5).active { background: var(--c5); }
-.top-method-nav a:nth-child(6).active { background: var(--c6); }
-.top-method-nav a:nth-child(7).active { background: var(--c7); }
-.top-method-nav a:nth-child(8).active { background: var(--c8); }
-.top-method-nav a:nth-child(9).active { background: var(--c9); }
-.top-method-nav a:nth-child(10).active { background: var(--c10); }
-
-/* ============ Responsive ============ */
-@media (max-width: 1024px) {
-  .top-method-nav { padding: 0 12px; height: 44px; }
-  .top-method-nav a { padding: 5px 10px; font-size: 0.78em; }
-  .method-slide .slide-inner { flex-direction: column; }
-  .method-slide .slide-img {
-    flex: 0 0 auto; padding: 60px 24px 8px;
-  }
-  .method-slide .slide-img img {
-    max-height: 35vh; width: auto; max-width: 90%;
-  }
-  .method-slide .slide-text {
-    padding: 20px 28px 40px;
-    overflow-y: visible;
-  }
-  .method-slide .slide-number { font-size: 5em; top: 10px; right: 20px; }
-  .method-slide h2 { font-size: 2em; }
-  .catalog-grid { grid-template-columns: repeat(3, 1fr); }
-  .slide-nav { right: 10px; }
-  .slide-nav .dot { width: 10px; height: 10px; }
-}
-
-@media (max-width: 640px) {
-  html { font-size: 16px; }
-  .slide { padding: 40px 16px; }
-  .method-slide { padding: 0; }
-  .method-slide .slide-img { padding: 52px 16px 4px; }
-  .method-slide .slide-img img { max-height: 28vh; }
-  .method-slide .slide-text { padding: 14px 18px 32px; }
-  .method-slide .slide-number { font-size: 3.5em; top: 5px; right: 12px; }
-  .method-slide h2 { font-size: 1.7em; }
-  .method-slide .info-block p { font-size: 1em; }
-  .method-slide .magic-spell .spell-text { font-size: 1em; }
-  .method-slide::before { width: 5px; }
-  .catalog-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .catalog-item { padding: 16px 10px; }
-  .catalog-item .s-emoji { font-size: 1.8em; }
-  .slide-nav { display: none; }
-  .kb-hint { display: none; }
-  .footer-mini-grid .fm-item { font-size: 0.78em; padding: 6px 12px; }
-  .footer-quote { font-size: 1em; padding: 12px 18px; }
+@media(max-width:640px){
+  html{font-size:16px}
+  .slide{padding:40px 16px}
+  .method-slide{padding:0}
+  .method-slide .slide-img{padding:52px 16px 4px}
+  .method-slide .slide-img img{max-height:28vh}
+  .method-slide .slide-text{padding:14px 18px 32px}
+  .method-slide .slide-number{font-size:3.5em;top:5px;right:12px}
+  .method-slide h2{font-size:1.6em}
+  .method-slide .info-block p{font-size:.95em}
+  .method-slide .magic-spell .spell-text{font-size:.95em}
+  .method-slide .accent-bar{width:5px}
+  .cat-card{flex:0 1 130px;padding:16px 10px}
+  .cat-card .cc-icon{font-size:2em}
+  .cat-card .cc-name{font-size:1em}
+  .cat-header-slide h2{font-size:1.8em}
+  .slide-nav{display:none}
+  .kb-hint{display:none}
+  .footer-mini-grid a{font-size:.72em;padding:5px 10px}
+  .footer-quote{font-size:.95em;padding:10px 16px}
 }
 </style>
 </head>
 <body>
 
-<!-- Background -->
 <div class="bg-layer">
   <div class="bg-orb o1"></div><div class="bg-orb o2"></div>
   <div class="bg-orb o3"></div><div class="bg-orb o4"></div>
 </div>
 
-<!-- Slide Navigation Dots -->
-<nav class="slide-nav" id="slideNav">
-  <span class="dot hero-dot active" data-index="0" title="首页"></span>
-  <span class="dot catalog-dot" data-index="1" title="方法目录"></span>
-  <span class="dot" data-index="2" title="预习与复习法"></span>
-  <span class="dot" data-index="3" title="番茄专注法"></span>
-  <span class="dot" data-index="4" title="费曼小老师法"></span>
-  <span class="dot" data-index="5" title="思维导图法"></span>
-  <span class="dot" data-index="6" title="错题宝藏法"></span>
-  <span class="dot" data-index="7" title="间隔记忆法"></span>
-  <span class="dot" data-index="8" title="提问学习法"></span>
-  <span class="dot" data-index="9" title="目标分解法"></span>
-  <span class="dot" data-index="10" title="联想记忆法"></span>
-  <span class="dot" data-index="11" title="自我检测法"></span>
-  <span class="dot" data-index="12" title="结束"></span>
-</nav>
+<nav class="top-method-nav" id="topMethodNav"></nav>
 
-<!-- Top method navigation bar -->
-<nav class="top-method-nav" id="topMethodNav">
-  <a href="#s2" data-method="2"><span class="nav-num">01</span> 预习与复习</a>
-  <a href="#s3" data-method="3"><span class="nav-num">02</span> 番茄专注</a>
-  <a href="#s4" data-method="4"><span class="nav-num">03</span> 费曼小老师</a>
-  <a href="#s5" data-method="5"><span class="nav-num">04</span> 思维导图</a>
-  <a href="#s6" data-method="6"><span class="nav-num">05</span> 错题宝藏</a>
-  <a href="#s7" data-method="7"><span class="nav-num">06</span> 间隔记忆</a>
-  <a href="#s8" data-method="8"><span class="nav-num">07</span> 提问学习</a>
-  <a href="#s9" data-method="9"><span class="nav-num">08</span> 目标分解</a>
-  <a href="#s10" data-method="10"><span class="nav-num">09</span> 联想记忆</a>
-  <a href="#s11" data-method="11"><span class="nav-num">10</span> 自我检测</a>
-</nav>
+<nav class="slide-nav" id="slideNav"></nav>
 
-<!-- Keyboard hint -->
-<div class="kb-hint" id="kbHint">
-  按 <kbd>←</kbd> <kbd>→</kbd> 或 <kbd>↑</kbd> <kbd>↓</kbd> 翻页 · 点击右侧圆点跳转
-</div>
+<div class="kb-hint" id="kbHint">按 <kbd>←</kbd> <kbd>→</kbd> 翻页 · 右侧圆点跳转 · 顶部导航切分类</div>
 
-<!-- ==================== SLIDE 0: HERO ==================== -->
+<!-- ===== s0: HERO ===== -->
 <section class="slide hero-slide" id="s0">
-  <div class="hero-badge">
-    <span class="dot"></span> 小学生必备学习指南
-  </div>
+  <div class="hero-badge"><span class="dot"></span> 小学生必备学习指南</div>
   <h1>学习的<span class="hl">魔法之旅</span></h1>
-  <p class="subtitle">
-    掌握这10个神奇的学习方法，让每一天的学习都变成一场有趣的探险！
-  </p>
-  <div class="hero-scroll">
-    <span>向下滚动或按 ⬇ 键，先看看有哪些方法吧！</span>
-    <div class="arrow"></div>
+  <p class="subtitle">掌握这24个神奇的学习方法，按5大分类系统学习。让每一天都变成有趣的探险！</p>
+  <div class="hero-scroll"><span>向下滚动，先看看五大分类吧！</span><div class="arrow"></div></div>
+</section>
+
+<!-- ===== s1: CATEGORY OVERVIEW ===== -->
+<section class="slide cat-overview-slide" id="s1">
+  <h2>📂 五大学习方法分类</h2>
+  <p class="co-sub">24种方法分成5大类，点击进入你想了解的类别</p>
+  <div class="cat-cards">
+    <a href="#s2" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务</span><span class="cc-count">5种方法</span><span class="cc-desc">学会管理时间，做事不拖拉</span></a>
+    <a href="#s8" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化</span><span class="cc-count">6种方法</span><span class="cc-desc">记得快又牢，考试不慌张</span></a>
+    <a href="#s15" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解</span><span class="cc-count">5种方法</span><span class="cc-desc">不只是记住，还要真懂</span></a>
+    <a href="#s21" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动与激励</span><span class="cc-count">4种方法</span><span class="cc-desc">一起学更有动力</span></a>
+    <a href="#s26" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪与习惯</span><span class="cc-count">4种方法</span><span class="cc-desc">好状态才有好学习</span></a>
   </div>
 </section>
 
-<!-- ==================== SLIDE 1: 方法目录 ==================== -->
-<section class="slide catalog-slide" id="s1">
-  <h2>🌟 选择你的第一个魔法吧！</h2>
-  <p class="catalog-sub">点击任意方法直接跳转，也可以向下滚动逐个浏览</p>
-  <div class="catalog-grid">
-    <a href="#s2" class="catalog-item"><span class="s-emoji">🔍</span><span class="s-num" style="background:var(--c1)">01</span><span class="s-name">预习与复习法</span><span class="s-hint">学习闭环</span></a>
-    <a href="#s3" class="catalog-item"><span class="s-emoji">🍅</span><span class="s-num" style="background:var(--c2)">02</span><span class="s-name">番茄专注法</span><span class="s-hint">25+5分钟</span></a>
-    <a href="#s4" class="catalog-item"><span class="s-emoji">👨‍🏫</span><span class="s-num" style="background:var(--c3)">03</span><span class="s-name">费曼小老师法</span><span class="s-hint">讲给别人听</span></a>
-    <a href="#s5" class="catalog-item"><span class="s-emoji">🗺️</span><span class="s-num" style="background:var(--c4)">04</span><span class="s-name">思维导图法</span><span class="s-hint">画出知识树</span></a>
-    <a href="#s6" class="catalog-item"><span class="s-emoji">💎</span><span class="s-num" style="background:var(--c5)">05</span><span class="s-name">错题宝藏法</span><span class="s-hint">错题变宝石</span></a>
-    <a href="#s7" class="catalog-item"><span class="s-emoji">📅</span><span class="s-num" style="background:var(--c6)">06</span><span class="s-name">间隔记忆法</span><span class="s-hint">定时浇水</span></a>
-    <a href="#s8" class="catalog-item"><span class="s-emoji">❓</span><span class="s-num" style="background:var(--c7)">07</span><span class="s-name">提问学习法</span><span class="s-hint">带着问题学</span></a>
-    <a href="#s9" class="catalog-item"><span class="s-emoji">🪜</span><span class="s-num" style="background:var(--c8)">08</span><span class="s-name">目标分解法</span><span class="s-hint">大拆成小</span></a>
-    <a href="#s10" class="catalog-item"><span class="s-emoji">🧩</span><span class="s-num" style="background:var(--c9)">09</span><span class="s-name">联想记忆法</span><span class="s-hint">编故事记忆</span></a>
-    <a href="#s11" class="catalog-item"><span class="s-emoji">✅</span><span class="s-num" style="background:var(--c10)">10</span><span class="s-name">自我检测法</span><span class="s-hint">考考自己</span></a>
+<!-- ==================== CATEGORY 1: TIME ==================== -->
+<section class="slide cat-header-slide" id="s2">
+  <div class="ch-icon">⏰</div>
+  <h2>时间与任务管理</h2>
+  <p class="ch-sub">学会管理时间、安排任务，是高效学习的第一步。这5种方法帮你从小养成好习惯。</p>
+  <div class="ch-methods">
+    <a href="#s3" class="ch-method-link" style="background:var(--c2)">🍅 番茄专注法</a>
+    <a href="#s4" class="ch-method-link" style="background:var(--c6)">📅 间隔记忆法</a>
+    <a href="#s5" class="ch-method-link" style="background:var(--c8)">🪜 目标分解法</a>
+    <a href="#s6" class="ch-method-link" style="background:var(--c1)">🟩 四象限法</a>
+    <a href="#s7" class="ch-method-link" style="background:var(--c2)">🌅 晨间规划法</a>
   </div>
+  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow"></div></div>
 </section>
 
-<!-- ==================== SLIDE 2: 预习与复习法 ==================== -->
-<section class="slide method-slide" id="s2">
+<!-- s3: 番茄专注法 -->
+<section class="slide method-slide" id="s3">
+  <div class="accent-bar" style="background:var(--c2)"></div>
   <div class="slide-inner">
-    <div class="slide-img">
-      <img src="images/01-preview-review.png" alt="预习与复习法" loading="lazy">
-    </div>
+    <div class="slide-img"><img src="images/02-pomodoro-focus.png" alt="番茄专注法" loading="lazy"></div>
     <div class="slide-text">
       <span class="slide-number">01</span>
-      <span class="card-badge" style="background:var(--c1)">🔍 学习方法 01</span>
-      <h2>预习与复习法</h2>
-      <p class="method-subtitle">形成学习闭环，让知识牢牢扎根</p>
-      <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c1)">
-          <h4>📖 这是什么？</h4>
-          <p>预习是上课前快速浏览新内容，带着问题去听课；复习是课后及时巩固，把短期记忆变成长期记忆。两者结合形成一个完整的学习循环。</p>
-        </div>
-        <div class="info-block" style="border-left-color:var(--c3)">
-          <h4>🧠 为什么有效？</h4>
-          <p>大脑像一座图书馆，预习帮你"搭好空书架"，复习帮你"把书放对位置"。提前了解内容会让你在课堂上更容易理解老师的讲解。</p>
-        </div>
-      </div>
-      <div class="magic-spell">
-        <span class="spell-icon">✨</span>
-        <div>
-          <div class="spell-label">魔法咒语</div>
-          <div class="spell-text">"每天睡觉前，用3句话告诉爸爸妈妈今天学到了什么！睡前回忆是记忆的黄金时间。"</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== SLIDE 3: 番茄专注法 ==================== -->
-<section class="slide method-slide" id="s3">
-  <div class="slide-inner">
-    <div class="slide-img">
-      <img src="images/02-pomodoro-focus.png" alt="番茄专注法" loading="lazy">
-    </div>
-    <div class="slide-text">
-      <span class="slide-number">02</span>
-      <span class="card-badge" style="background:var(--c2)">🍅 学习方法 02</span>
+      <span class="card-badge" style="background:var(--c2)">⏰ 时间管理 · 番茄专注法</span>
       <h2>番茄专注法</h2>
       <p class="method-subtitle">25分钟专注 + 5分钟休息，让注意力像激光一样集中</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c2)">
-          <h4>⏱️ 这是什么？</h4>
-          <p>把学习时间切成"番茄钟"：专注学习25分钟，然后休息5分钟。每完成4个番茄钟，就休息15-30分钟。一次只做一件事，效率翻倍！</p>
-        </div>
-        <div class="info-block" style="border-left-color:var(--c6)">
-          <h4>🧠 为什么有效？</h4>
-          <p>小学生的注意力大约能集中20-30分钟。番茄法正好配合大脑的注意力节奏，让你在最佳状态下学习，累了就休息，起来活动一下再继续。</p>
-        </div>
+        <div class="info-block" style="border-left-color:var(--c2)"><h4>⏱️ 这是什么？</h4><p>把学习时间切成"番茄钟"：专注学习25分钟，休息5分钟。每4个番茄钟休息15-30分钟。一次只做一件事！</p></div>
+        <div class="info-block" style="border-left-color:var(--c6)"><h4>🧠 为什么有效？</h4><p>小学生注意力约20-30分钟。番茄法配合大脑节奏，最佳状态学习，累了就休息再继续。</p></div>
       </div>
-      <div class="magic-spell">
-        <span class="spell-icon">✨</span>
-        <div>
-          <div class="spell-label">魔法咒语</div>
-          <div class="spell-text">"让爸爸妈妈帮你用手机设一个25分钟的闹钟，响铃之前只做一件事，像进入了专注结界一样！"</div>
-        </div>
-      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"让爸爸妈妈用手机设一个25分钟闹钟，响铃前只做一件事，像进入专注结界一样！"</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SLIDE 4: 费曼小老师法 ==================== -->
+<!-- s4: 间隔记忆法 -->
 <section class="slide method-slide" id="s4">
+  <div class="accent-bar" style="background:var(--c6)"></div>
   <div class="slide-inner">
-    <div class="slide-img">
-      <img src="images/03-feynman-teacher.png" alt="费曼小老师法" loading="lazy">
+    <div class="slide-img"><img src="images/06-spaced-repetition.png" alt="间隔记忆法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">02</span>
+      <span class="card-badge" style="background:var(--c6)">⏰ 时间管理 · 间隔记忆法</span>
+      <h2>间隔记忆法</h2>
+      <p class="method-subtitle">像浇花一样复习，知识越记越牢</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c6)"><h4>📅 这是什么？</h4><p>不要考前临时抱佛脚！学完新知识后，在固定时间间隔复习：当天→第二天→一周后→一个月后。每次复习时间越来越短，记忆越来越深。</p></div>
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>🧠 为什么有效？</h4><p>每次在"快要忘记"时复习，记忆就会更牢固。像给记忆之树浇水：不是一次浇很多，而是每隔几天浇一点。</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"在日历上圈出复习日：📌第2天 → 📌第7天 → 📌第30天，像寻宝游戏一样期待每个复习日！"</div></div></div>
     </div>
+  </div>
+</section>
+
+<!-- s5: 目标分解法 -->
+<section class="slide method-slide" id="s5">
+  <div class="accent-bar" style="background:var(--c8)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/08-goal-decomposition.png" alt="目标分解法" loading="lazy"></div>
     <div class="slide-text">
       <span class="slide-number">03</span>
-      <span class="card-badge" style="background:var(--c3)">👨‍🏫 学习方法 03</span>
-      <h2>费曼小老师法</h2>
-      <p class="method-subtitle">把学到的知识讲出来，讲得清楚才算真的会了</p>
+      <span class="card-badge" style="background:var(--c8)">⏰ 时间管理 · 目标分解法</span>
+      <h2>目标分解法</h2>
+      <p class="method-subtitle">把大目标切成小台阶，一步一步走到最高处</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c3)">
-          <h4>🎓 这是什么？</h4>
-          <p>假装自己是小老师，把刚学的知识讲给毛绒玩具、宠物或者家人听。用最简单的语言讲清楚——如果讲着讲着卡住了，那个地方就是你需要再去学的地方！</p>
-        </div>
-        <div class="info-block" style="border-left-color:var(--c7)">
-          <h4>🧠 为什么有效？</h4>
-          <p>听懂了 ≠ 学会了。只有能用简单的话把知识讲清楚，才说明大脑真正理解并组织了这些知识。这是诺贝尔奖得主费曼的学习秘诀！</p>
-        </div>
+        <div class="info-block" style="border-left-color:var(--c8)"><h4>🪜 这是什么？</h4><p>面对大目标（如"背完100个单词"），别被吓到。拆成小步骤：每天背5个→每周复习→每月测试。每步完成后给自己一个小奖励！</p></div>
+        <div class="info-block" style="border-left-color:var(--c6)"><h4>🧠 为什么有效？</h4><p>大脑面对太大任务会焦虑拖延。小步骤容易完成，成就感激励你继续前进。这就是游戏设计的原理！</p></div>
       </div>
-      <div class="magic-spell">
-        <span class="spell-icon">✨</span>
-        <div>
-          <div class="spell-label">魔法咒语</div>
-          <div class="spell-text">"今天学到的知识，试着用最简单的话教给你的玩偶小熊吧！讲不通的地方就是你要重新学习的宝藏。"</div>
-        </div>
-      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"把本周最大的学习任务写在纸上，像画楼梯一样写下5个小步骤，做完一个划掉一个！"</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SLIDE 5: 思维导图法 ==================== -->
-<section class="slide method-slide" id="s5">
+<!-- s6: 四象限法 -->
+<section class="slide method-slide" id="s6">
+  <div class="accent-bar" style="background:var(--c1)"></div>
   <div class="slide-inner">
-    <div class="slide-img">
-      <img src="images/04-mind-map.png" alt="思维导图法" loading="lazy">
-    </div>
+    <div class="slide-img"><img src="images/11-quadrant-method.png" alt="四象限法" loading="lazy"></div>
     <div class="slide-text">
       <span class="slide-number">04</span>
-      <span class="card-badge" style="background:var(--c4)">🗺️ 学习方法 04</span>
-      <h2>思维导图法</h2>
-      <p class="method-subtitle">用画图的方式整理知识，把零散的信息变成一棵知识大树</p>
+      <span class="card-badge" style="background:var(--c1)">⏰ 时间管理 · 四象限法</span>
+      <h2>四象限法</h2>
+      <p class="method-subtitle">把事情按重要和紧急分类，先做最重要的事</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c4)">
-          <h4>🎨 这是什么？</h4>
-          <p>在一张大白纸的中心写下主题，然后用彩色线条向外画出分支。每个分支代表一个大知识点，再在分支上添加关键词和小图标。这就像在画一棵知识树！</p>
-        </div>
-        <div class="info-block" style="border-left-color:var(--c8)">
-          <h4>🧠 为什么有效？</h4>
-          <p>大脑天生喜欢图像和颜色，讨厌长长的文字。思维导图把文字变成了画面，左右脑一起工作，理解和记忆效果都大大提升。</p>
-        </div>
+        <div class="info-block" style="border-left-color:var(--c1)"><h4>🟩 这是什么？</h4><p>画一个十字分成四格：①重要+紧急（马上做）②重要+不紧急（计划做⭐重点）③不重要+紧急（快速处理）④不重要+不紧急（尽量不做）。</p></div>
+        <div class="info-block" style="border-left-color:var(--c6)"><h4>🧠 为什么有效？</h4><p>很多小朋友"看起来很忙"是因为总在做第③④象限的事。把时间花在第②象限，你会越来越轻松——这就是聪明人的秘密！</p></div>
       </div>
-      <div class="magic-spell">
-        <span class="spell-icon">✨</span>
-        <div>
-          <div class="spell-label">魔法咒语</div>
-          <div class="spell-text">"用不同颜色的彩笔来画思维导图，红色标重点、蓝色写定义、绿色举例子，像画画一样整理知识！"</div>
-        </div>
-      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每天晚上花1分钟想一想：明天最重要的一件事是什么？把它写下来贴在书桌上！"</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SLIDE 6: 错题宝藏法 ==================== -->
-<section class="slide method-slide" id="s6">
+<!-- s7: 晨间规划法 -->
+<section class="slide method-slide" id="s7">
+  <div class="accent-bar" style="background:var(--c2)"></div>
   <div class="slide-inner">
-    <div class="slide-img">
-      <img src="images/05-error-treasure.png" alt="错题宝藏法" loading="lazy">
-    </div>
+    <div class="slide-img"><img src="images/12-morning-planning.png" alt="晨间规划法" loading="lazy"></div>
     <div class="slide-text">
       <span class="slide-number">05</span>
-      <span class="card-badge" style="background:var(--c5)">💎 学习方法 05</span>
-      <h2>错题宝藏法</h2>
-      <p class="method-subtitle">每一道错题都是一颗宝石，收集它们就是收集进步</p>
+      <span class="card-badge" style="background:var(--c2)">⏰ 时间管理 · 晨间规划法</span>
+      <h2>晨间规划法</h2>
+      <p class="method-subtitle">每天早上3分钟，列好"今日三件事"</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c5)">
-          <h4>💎 这是什么？</h4>
-          <p>准备一个专门的"错题本"，把做错的题目抄下来。关键是：分析为什么错了、写出正确的解法、标注需要注意的地方。每周翻看一次，确保同样的错误不再犯。</p>
-        </div>
-        <div class="info-block" style="border-left-color:var(--c1)">
-          <h4>🧠 为什么有效？</h4>
-          <p>做对的题目你不会进步，做错的题目才是成长的机会！大脑从错误中学习的效率是从成功中学习的3倍。错题本就是你的"进步路线图"。</p>
-        </div>
+        <div class="info-block" style="border-left-color:var(--c2)"><h4>🌅 这是什么？</h4><p>每天早上起床后，在笔记本上写下今天要完成的最重要的3件事。按顺序完成，做完一项划掉一项。</p></div>
+        <div class="info-block" style="border-left-color:var(--c8)"><h4>🧠 为什么有效？</h4><p>一天没有计划就像没有地图的旅行。花3分钟规划，就能知道自己今天要做什么、先做什么——效率翻倍！</p></div>
       </div>
-      <div class="magic-spell">
-        <span class="spell-icon">✨</span>
-        <div>
-          <div class="spell-label">魔法咒语</div>
-          <div class="spell-text">"准备一个漂亮的笔记本作为专属'错题宝藏盒'，每道错题分三栏：错题→正确解法→我为什么会错。"</div>
-        </div>
-      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"准备一个晨间小本子，每天早上写下'今日三件事'。划掉时那个爽感会让你爱上规划！"</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SLIDE 7: 间隔记忆法 ==================== -->
-<section class="slide method-slide" id="s7">
+<!-- ==================== CATEGORY 2: MEMORY ==================== -->
+<section class="slide cat-header-slide" id="s8">
+  <div class="ch-icon">🧠</div>
+  <h2>记忆强化技巧</h2>
+  <p class="ch-sub">记东西不需要死记硬背！这6种方法让你的记忆力像超级英雄一样强大。</p>
+  <div class="ch-methods">
+    <a href="#s9" class="ch-method-link" style="background:var(--c1)">🔍 预习与复习法</a>
+    <a href="#s10" class="ch-method-link" style="background:var(--c9)">🧩 联想记忆法</a>
+    <a href="#s11" class="ch-method-link" style="background:var(--c4)">🗺️ 思维导图法</a>
+    <a href="#s12" class="ch-method-link" style="background:var(--c5)">🧱 组块记忆法</a>
+    <a href="#s13" class="ch-method-link" style="background:var(--c7)">🌙 睡前复习法</a>
+    <a href="#s14" class="ch-method-link" style="background:var(--c8)">🎨 双编码法</a>
+  </div>
+  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow"></div></div>
+</section>
+
+<!-- s9: 预习与复习法 -->
+<section class="slide method-slide" id="s9">
+  <div class="accent-bar" style="background:var(--c1)"></div>
   <div class="slide-inner">
-    <div class="slide-img">
-      <img src="images/06-spaced-repetition.png" alt="间隔记忆法" loading="lazy">
-    </div>
+    <div class="slide-img"><img src="images/01-preview-review.png" alt="预习与复习法" loading="lazy"></div>
     <div class="slide-text">
       <span class="slide-number">06</span>
-      <span class="card-badge" style="background:var(--c6)">📅 学习方法 06</span>
-      <h2>间隔记忆法</h2>
-      <p class="method-subtitle">像浇花一样复习，不多不少刚刚好，知识越记越牢</p>
+      <span class="card-badge" style="background:var(--c1)">🧠 记忆强化 · 预习与复习法</span>
+      <h2>预习与复习法</h2>
+      <p class="method-subtitle">形成学习闭环，知识牢牢扎根</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c6)">
-          <h4>📅 这是什么？</h4>
-          <p>不要考前临时抱佛脚！学完新知识后，在固定的时间间隔复习：当天→第二天→一周后→一个月后。每次复习的时间会越来越短，但记忆越来越深。</p>
-        </div>
-        <div class="info-block" style="border-left-color:var(--c3)">
-          <h4>🧠 为什么有效？</h4>
-          <p>大脑会忘记东西——但每次在"快要忘记"的时候复习，记忆就会变得更牢固。这就像给记忆之树浇水：不是一次浇很多，而是每隔几天浇一点。</p>
-        </div>
+        <div class="info-block" style="border-left-color:var(--c1)"><h4>📖 这是什么？</h4><p>课前快速浏览新内容带着问题听课；课后及时巩固，把短期记忆变成长期记忆。两者结合形成完整学习循环。</p></div>
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>🧠 为什么有效？</h4><p>大脑像图书馆，预习"搭空书架"，复习"把书放对位置"。提前了解让你在课堂上更容易理解老师。</p></div>
       </div>
-      <div class="magic-spell">
-        <span class="spell-icon">✨</span>
-        <div>
-          <div class="spell-label">魔法咒语</div>
-          <div class="spell-text">"在日历上圈出复习日：📌第2天 → 📌第7天 → 📌第30天，像寻宝游戏一样期待每个复习日！"</div>
-        </div>
-      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每天睡觉前，用3句话告诉爸爸妈妈今天学到了什么！睡前回忆是记忆的黄金时间。"</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SLIDE 8: 提问学习法 ==================== -->
-<section class="slide method-slide" id="s8">
+<!-- s10: 联想记忆法 -->
+<section class="slide method-slide" id="s10">
+  <div class="accent-bar" style="background:var(--c9)"></div>
   <div class="slide-inner">
-    <div class="slide-img">
-      <img src="images/07-question-learning.png" alt="提问学习法" loading="lazy">
-    </div>
+    <div class="slide-img"><img src="images/09-association-memory.png" alt="联想记忆法" loading="lazy"></div>
     <div class="slide-text">
       <span class="slide-number">07</span>
-      <span class="card-badge" style="background:var(--c7)">❓ 学习方法 07</span>
-      <h2>提问学习法</h2>
-      <p class="method-subtitle">带着"为什么"去学习，好奇心是最好的老师</p>
+      <span class="card-badge" style="background:var(--c9)">🧠 记忆强化 · 联想记忆法</span>
+      <h2>联想记忆法</h2>
+      <p class="method-subtitle">给枯燥的知识编一个有趣的故事</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c7)">
-          <h4>❓ 这是什么？</h4>
-          <p>在开始学习新课之前，先写下你最想知道的3个问题。然后带着这些问题去阅读、听课，像侦探一样寻找答案。找到答案后，用自己的话总结出来。</p>
-        </div>
-        <div class="info-block" style="border-left-color:var(--c8)">
-          <h4>🧠 为什么有效？</h4>
-          <p>有问题的大脑就像一个磁铁，会自动吸引相关信息。当你带着具体问题去学习时，注意力会大幅提升，因为你有了明确的目标——找到答案！</p>
-        </div>
+        <div class="info-block" style="border-left-color:var(--c9)"><h4>🧩 这是什么？</h4><p>把知识点和熟悉有趣的事物联系起来。比如记"apple"，想象大红苹果戴着墨镜跳disco。越夸张越搞笑，记得越牢！</p></div>
+        <div class="info-block" style="border-left-color:var(--c4)"><h4>🧠 为什么有效？</h4><p>大脑特别喜欢新奇有趣的画面。枯燥知识易忘，有趣故事被牢牢记住。这也是为什么我们能记住动画片却记不住课本！</p></div>
       </div>
-      <div class="magic-spell">
-        <span class="spell-icon">✨</span>
-        <div>
-          <div class="spell-label">魔法咒语</div>
-          <div class="spell-text">"每次学新课前，像一个小记者一样在纸上写下3个'为什么'，然后带着它们去找答案吧！"</div>
-        </div>
-      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"给今天要记的5个知识点各编一句夸张联想。比如'李白乘舟将欲行，突然想吃冰淇淋'。"</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SLIDE 9: 目标分解法 ==================== -->
-<section class="slide method-slide" id="s9">
+<!-- s11: 思维导图法 -->
+<section class="slide method-slide" id="s11">
+  <div class="accent-bar" style="background:var(--c4)"></div>
   <div class="slide-inner">
-    <div class="slide-img">
-      <img src="images/08-goal-decomposition.png" alt="目标分解法" loading="lazy">
-    </div>
+    <div class="slide-img"><img src="images/04-mind-map.png" alt="思维导图法" loading="lazy"></div>
     <div class="slide-text">
       <span class="slide-number">08</span>
-      <span class="card-badge" style="background:var(--c8)">🪜 学习方法 08</span>
-      <h2>目标分解法</h2>
-      <p class="method-subtitle">把大目标切成小台阶，一步一步轻松走到最高处</p>
+      <span class="card-badge" style="background:var(--c4)">🧠 记忆强化 · 思维导图法</span>
+      <h2>思维导图法</h2>
+      <p class="method-subtitle">用画图的方式整理知识</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c8)">
-          <h4>🪜 这是什么？</h4>
-          <p>面对一个大目标（比如"背完100个单词"），不要被吓到。把它拆成小步骤：每天背5个→每周复习→每月测试。每完成一步就给自己一个小奖励，不知不觉就做到了！</p>
-        </div>
-        <div class="info-block" style="border-left-color:var(--c6)">
-          <h4>🧠 为什么有效？</h4>
-          <p>大脑面对太大的任务会感到焦虑而拖延。但小步骤看起来很容易完成，完成后的成就感会激励你继续前进。这是游戏设计的原理——把大关卡拆成小关卡！</p>
-        </div>
+        <div class="info-block" style="border-left-color:var(--c4)"><h4>🎨 这是什么？</h4><p>在白纸中心写主题，用彩色线条向外画分支。每个分支代表一个知识点，添加关键词和小图标。就像画一棵知识树！</p></div>
+        <div class="info-block" style="border-left-color:var(--c8)"><h4>🧠 为什么有效？</h4><p>大脑喜欢图像和颜色，讨厌长文字。思维导图把文字变成画面，左右脑一起工作，理解和记忆效果都大大提升。</p></div>
       </div>
-      <div class="magic-spell">
-        <span class="spell-icon">✨</span>
-        <div>
-          <div class="spell-label">魔法咒语</div>
-          <div class="spell-text">"把本周最大的学习任务写在纸的最上面，然后像画楼梯一样，依次写下5个你能做到的小步骤，做完一个划掉一个！"</div>
-        </div>
-      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"用不同颜色的彩笔画思维导图：红色标重点、蓝色写定义、绿色举例子，像画画一样学习！"</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SLIDE 10: 联想记忆法 ==================== -->
-<section class="slide method-slide" id="s10">
+<!-- s12: 组块记忆法 -->
+<section class="slide method-slide" id="s12">
+  <div class="accent-bar" style="background:var(--c5)"></div>
   <div class="slide-inner">
-    <div class="slide-img">
-      <img src="images/09-association-memory.png" alt="联想记忆法" loading="lazy">
-    </div>
+    <div class="slide-img"><img src="images/13-chunking-memory.png" alt="组块记忆法" loading="lazy"></div>
     <div class="slide-text">
       <span class="slide-number">09</span>
-      <span class="card-badge" style="background:var(--c9)">🧩 学习方法 09</span>
-      <h2>联想记忆法</h2>
-      <p class="method-subtitle">给枯燥的知识编一个有趣的故事，记忆从此不再困难</p>
+      <span class="card-badge" style="background:var(--c5)">🧠 记忆强化 · 组块记忆法</span>
+      <h2>组块记忆法</h2>
+      <p class="method-subtitle">把零散信息打包成块，一次记住更多</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c9)">
-          <h4>🧩 这是什么？</h4>
-          <p>把需要记忆的知识点和生活中熟悉、有趣的事物联系起来。比如记"apple"这个词，想象一个大红苹果戴着墨镜在跳disco。越是夸张、搞笑、有画面感的联想，记得越牢。</p>
-        </div>
-        <div class="info-block" style="border-left-color:var(--c4)">
-          <h4>🧠 为什么有效？</h4>
-          <p>大脑特别喜欢新奇的、有趣的、有画面感的信息。枯燥的知识容易被忘记，但有趣的故事和画面会被牢牢记住。这也是为什么我们能记住动画片的情节却记不住课本。</p>
-        </div>
+        <div class="info-block" style="border-left-color:var(--c5)"><h4>🧱 这是什么？</h4><p>把零散的信息打包成有意义的"块"。比如记手机号"138-1234-5678"是3个块而非11个数字。背课文也按段落分块来记。</p></div>
+        <div class="info-block" style="border-left-color:var(--c6)"><h4>🧠 为什么有效？</h4><p>人脑一次只能记住4-7个独立信息。但组块后，每个块只占一个"槽位"，原来只能记7个数字，组块后能记7组信息！</p></div>
       </div>
-      <div class="magic-spell">
-        <span class="spell-icon">✨</span>
-        <div>
-          <div class="spell-label">魔法咒语</div>
-          <div class="spell-text">"给今天要记的5个知识点各编一句夸张的联想，越搞笑越好！比如'李白乘舟将欲行，突然想吃冰淇淋'。"</div>
-        </div>
-      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"背长课文时，先分3-4个段落块，一块一块地记，最后串起来，比整篇硬背轻松10倍！"</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SLIDE 11: 自我检测法 ==================== -->
-<section class="slide method-slide" id="s11">
+<!-- s13: 睡前复习法 -->
+<section class="slide method-slide" id="s13">
+  <div class="accent-bar" style="background:var(--c7)"></div>
   <div class="slide-inner">
-    <div class="slide-img">
-      <img src="images/10-self-testing.png" alt="自我检测法" loading="lazy">
-    </div>
+    <div class="slide-img"><img src="images/14-sleep-review.png" alt="睡前复习法" loading="lazy"></div>
     <div class="slide-text">
       <span class="slide-number">10</span>
-      <span class="card-badge" style="background:var(--c10)">✅ 学习方法 10</span>
-      <h2>自我检测法</h2>
-      <p class="method-subtitle">学完后考考自己，能回忆出来的知识才是真正属于你的</p>
+      <span class="card-badge" style="background:var(--c7)">🧠 记忆强化 · 睡前复习法</span>
+      <h2>睡前复习法</h2>
+      <p class="method-subtitle">睡前15分钟是记忆的黄金窗口</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c10)">
-          <h4>✅ 这是什么？</h4>
-          <p>学完一个知识点后，不要只是"再看一遍"。合上书本，闭上眼睛，尝试回忆主要内容。然后做几道练习题来检测。发现不会的地方，立刻回去重新学习——这才是真正有效的复习。</p>
-        </div>
-        <div class="info-block" style="border-left-color:var(--c2)">
-          <h4>🧠 为什么有效？</h4>
-          <p>重读课本会让你产生"我已经会了"的错觉，但回忆才是真正的记忆提取练习。每次成功回忆，大脑中的记忆通路就会加强一次。检测不是为了打分，而是为了找到学习盲区！</p>
-        </div>
+        <div class="info-block" style="border-left-color:var(--c7)"><h4>🌙 这是什么？</h4><p>睡觉前花15分钟快速过一遍今天学的内容。然后安心入睡——大脑会在你睡觉时自动整理和巩固这些知识。</p></div>
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>🧠 为什么有效？</h4><p>睡眠期间，大脑海马体会自动"重播"白天学过的内容。睡前复习相当于给你的大脑下达"这个很重要，请保存"的指令！</p></div>
       </div>
-      <div class="magic-spell">
-        <span class="spell-icon">✨</span>
-        <div>
-          <div class="spell-label">魔法咒语</div>
-          <div class="spell-text">"每学完一课，合上书本，拿出一张白纸，写下你能回忆出的所有要点。然后打开书对照，用彩色笔补上忘记的内容！"</div>
-        </div>
-      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"把课本放在床头，睡前翻10分钟，然后对自己说'大脑大脑，帮我记住这些'——你睡着后大脑真的会加班！"</div></div></div>
     </div>
   </div>
 </section>
 
-<!-- ==================== SLIDE 12: FOOTER ==================== -->
-<footer class="slide footer-slide" id="s12">
+<!-- s14: 双编码法 -->
+<section class="slide method-slide" id="s14">
+  <div class="accent-bar" style="background:var(--c8)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/15-dual-coding.png" alt="双编码法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">11</span>
+      <span class="card-badge" style="background:var(--c8)">🧠 记忆强化 · 双编码法</span>
+      <h2>双编码法</h2>
+      <p class="method-subtitle">文字+图像两条路，记住同一个知识</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c8)"><h4>🎨 这是什么？</h4><p>每学一个新概念，一边读文字一边画简图。比如学"水的循环"，文字描述的同时画一个太阳→蒸发→云→下雨的循环图。</p></div>
+        <div class="info-block" style="border-left-color:var(--c4)"><h4>🧠 为什么有效？</h4><p>大脑有两条记忆通路：语言文字和视觉图像。用两路同时编码，忘记文字时图像还能提醒你——相当于双重保险！</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每学一个新概念就画一个简笔画在旁边，哪怕只是火柴人！画出来 = 记住它的第二条路。"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CATEGORY 3: DEEP UNDERSTANDING ==================== -->
+<section class="slide cat-header-slide" id="s15">
+  <div class="ch-icon">💡</div>
+  <h2>深度理解方法</h2>
+  <p class="ch-sub">真正的学习不是死记硬背，而是深入理解。这5种方法帮你把知识真正"吃透"。</p>
+  <div class="ch-methods">
+    <a href="#s16" class="ch-method-link" style="background:var(--c3)">👨‍🏫 费曼小老师法</a>
+    <a href="#s17" class="ch-method-link" style="background:var(--c7)">❓ 提问学习法</a>
+    <a href="#s18" class="ch-method-link" style="background:var(--c10)">✅ 自我检测法</a>
+    <a href="#s19" class="ch-method-link" style="background:var(--c8)">📝 康奈尔笔记法</a>
+    <a href="#s20" class="ch-method-link" style="background:var(--c3)">🔄 SQ3R阅读法</a>
+  </div>
+  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow"></div></div>
+</section>
+
+<!-- s16: 费曼小老师法 -->
+<section class="slide method-slide" id="s16">
+  <div class="accent-bar" style="background:var(--c3)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/03-feynman-teacher.png" alt="费曼小老师法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">12</span>
+      <span class="card-badge" style="background:var(--c3)">💡 深度理解 · 费曼小老师法</span>
+      <h2>费曼小老师法</h2>
+      <p class="method-subtitle">把学到的知识讲出来，讲清楚才算真会了</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>🎓 这是什么？</h4><p>假装自己是小老师，把知识讲给毛绒玩具/宠物/家人听。用最简单的话讲清楚。讲着讲着卡住了？那个地方就是你需要再学的！</p></div>
+        <div class="info-block" style="border-left-color:var(--c7)"><h4>🧠 为什么有效？</h4><p>听懂了≠学会了。能用简单话讲清楚，才说明大脑真正组织理解了这些知识。这是诺贝尔奖得主费曼的学习秘诀！</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"用最简单的话把今天学的知识教给玩偶小熊。讲不通的地方 = 你需要重新学习的宝藏。"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- s17: 提问学习法 -->
+<section class="slide method-slide" id="s17">
+  <div class="accent-bar" style="background:var(--c7)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/07-question-learning.png" alt="提问学习法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">13</span>
+      <span class="card-badge" style="background:var(--c7)">💡 深度理解 · 提问学习法</span>
+      <h2>提问学习法</h2>
+      <p class="method-subtitle">带着"为什么"去学习</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c7)"><h4>❓ 这是什么？</h4><p>学新课前，先写下你最想知道的3个问题。然后带着问题去阅读和听课，像侦探寻找答案。找到后用自己话总结出来。</p></div>
+        <div class="info-block" style="border-left-color:var(--c8)"><h4>🧠 为什么有效？</h4><p>有问题的大脑像磁铁，会自动吸引相关信息。带着具体问题学习时，注意力大幅提升——因为你有明确目标：找到答案！</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每次学新课前，像小记者一样在纸上写下3个'为什么'，带着它们去找答案吧！"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- s18: 自我检测法 -->
+<section class="slide method-slide" id="s18">
+  <div class="accent-bar" style="background:var(--c10)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/10-self-testing.png" alt="自我检测法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">14</span>
+      <span class="card-badge" style="background:var(--c10)">💡 深度理解 · 自我检测法</span>
+      <h2>自我检测法</h2>
+      <p class="method-subtitle">学完后考考自己</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c10)"><h4>✅ 这是什么？</h4><p>学完后不要只是"再看一遍"。合上书本，闭眼回忆主要内容。然后做几道练习题检测。发现不会的地方立刻回去重学。</p></div>
+        <div class="info-block" style="border-left-color:var(--c2)"><h4>🧠 为什么有效？</h4><p>重读课本会产生"我已经会了"的错觉。但回忆才是真正的记忆提取练习。检测不是为了打分，而是找到学习盲区！</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"合上书本，拿出一张白纸写下能回忆的所有要点。然后打开书对照，用彩笔补上忘记的内容！"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- s19: 康奈尔笔记法 -->
+<section class="slide method-slide" id="s19">
+  <div class="accent-bar" style="background:var(--c8)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/16-cornell-notes.png" alt="康奈尔笔记法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">15</span>
+      <span class="card-badge" style="background:var(--c8)">💡 深度理解 · 康奈尔笔记法</span>
+      <h2>康奈尔笔记法</h2>
+      <p class="method-subtitle">把一页笔记分成三区，整理+复习一次搞定</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c8)"><h4>📝 这是什么？</h4><p>把笔记页分成三个区域：右边（大区）上课记要点；左边（窄条）课后提炼关键词和问题；底部用一句话总结整页内容。</p></div>
+        <div class="info-block" style="border-left-color:var(--c6)"><h4>🧠 为什么有效？</h4><p>结构化笔记本身就是复习提纲。复习时遮住右边看左边关键词，试着回忆内容——既是笔记又是自测工具！</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"把笔记本页面画两条线分成三区：左边写关键词、右边记笔记、底部一句话总结！"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- s20: SQ3R阅读法 -->
+<section class="slide method-slide" id="s20">
+  <div class="accent-bar" style="background:var(--c3)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/17-sq3r-reading.png" alt="SQ3R阅读法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">16</span>
+      <span class="card-badge" style="background:var(--c3)">💡 深度理解 · SQ3R阅读法</span>
+      <h2>SQ3R阅读法</h2>
+      <p class="method-subtitle">五步系统阅读法，把一本书真正读懂</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>🔄 这是什么？</h4><p>S=浏览(看标题图片)→Q=提问(写下3个问题)→R1=阅读(带着问题读)→R2=复述(合上书说一遍)→R3=复习(过几天再看)。</p></div>
+        <div class="info-block" style="border-left-color:var(--c7)"><h4>🧠 为什么有效？</h4><p>被动阅读只能记住10%，但加上提问和复述后，记忆留存率提升到90%！五步法把被动翻书变成主动探索。</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"读课文前先翻一遍标题和图片，猜猜这篇文章讲什么。带着猜想读，比直接读有趣10倍！"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CATEGORY 4: INTERACTION ==================== -->
+<section class="slide cat-header-slide" id="s21">
+  <div class="ch-icon">🤝</div>
+  <h2>互动与激励</h2>
+  <p class="ch-sub">学习不一定是孤独的！这4种方法让学习变得更有趣、更有动力。</p>
+  <div class="ch-methods">
+    <a href="#s22" class="ch-method-link" style="background:var(--c5)">💎 错题宝藏法</a>
+    <a href="#s23" class="ch-method-link" style="background:var(--c6)">🤝 合作学习法</a>
+    <a href="#s24" class="ch-method-link" style="background:var(--c4)">🏆 游戏化学习法</a>
+    <a href="#s25" class="ch-method-link" style="background:var(--c1)">🎯 刻意练习法</a>
+  </div>
+  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow"></div></div>
+</section>
+
+<!-- s22: 错题宝藏法 -->
+<section class="slide method-slide" id="s22">
+  <div class="accent-bar" style="background:var(--c5)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/05-error-treasure.png" alt="错题宝藏法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">17</span>
+      <span class="card-badge" style="background:var(--c5)">🤝 互动与激励 · 错题宝藏法</span>
+      <h2>错题宝藏法</h2>
+      <p class="method-subtitle">每道错题都是一颗宝石</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c5)"><h4>💎 这是什么？</h4><p>准备专门"错题本"把错题抄下来。关键：分析为什么错、写出正确解法、标注注意点。每周翻看一次，确保不会再犯。</p></div>
+        <div class="info-block" style="border-left-color:var(--c1)"><h4>🧠 为什么有效？</h4><p>做对题目不会进步，错题才是成长机会！大脑从错误中学习的效率是从成功中学习的3倍。错题本就是你的"进步路线图"。</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"准备漂亮笔记本作为'错题宝藏盒'，每道错题分三栏：错题→正确解法→我为什么会错。"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- s23: 合作学习法 -->
+<section class="slide method-slide" id="s23">
+  <div class="accent-bar" style="background:var(--c6)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/18-collaborative-learning.png" alt="合作学习法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">18</span>
+      <span class="card-badge" style="background:var(--c6)">🤝 互动与激励 · 合作学习法</span>
+      <h2>合作学习法</h2>
+      <p class="method-subtitle">找一个学习伙伴，互相讲给对方听</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c6)"><h4>🤝 这是什么？</h4><p>找一个同学或朋友当"学习伙伴"。互相讲解知识点、互相提问、互相批改作业。轮流当小老师，看谁讲得更清楚！</p></div>
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>🧠 为什么有效？</h4><p>学习金字塔理论：听讲只能记住5%，但教给别人能记住90%！两个人一起学，不仅更开心，效果也好得多。</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"和好朋友约定每周一次'小老师对决'，讲同一个知识点看谁更清楚。赢了的人请吃一块糖！"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- s24: 游戏化学习法 -->
+<section class="slide method-slide" id="s24">
+  <div class="accent-bar" style="background:var(--c4)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/19-gamified-learning.png" alt="游戏化学习法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">19</span>
+      <span class="card-badge" style="background:var(--c4)">🤝 互动与激励 · 游戏化学习法</span>
+      <h2>游戏化学习法</h2>
+      <p class="method-subtitle">把学习设计成闯关游戏</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c4)"><h4>🏆 这是什么？</h4><p>画一张"学习闯关地图"，每完成一个任务前进一格。攒够10颗星兑换小奖励。把枯燥的学习变成像打游戏一样有趣！</p></div>
+        <div class="info-block" style="border-left-color:var(--c5)"><h4>🧠 为什么有效？</h4><p>大脑对游戏的奖励系统和学习用的同一套回路。设定关卡→完成→获得奖励，这个循环让大脑源源不断产生动力和快乐！</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"画一张闯关地图贴在墙上，10个关卡对应10个学习任务。每完成一关贴一颗星星，集齐兑换冰淇淋！"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- s25: 刻意练习法 -->
+<section class="slide method-slide" id="s25">
+  <div class="accent-bar" style="background:var(--c1)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/20-deliberate-practice.png" alt="刻意练习法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">20</span>
+      <span class="card-badge" style="background:var(--c1)">🤝 互动与激励 · 刻意练习法</span>
+      <h2>刻意练习法</h2>
+      <p class="method-subtitle">不要只做会的题，专攻你的弱项</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c1)"><h4>🎯 这是什么？</h4><p>找出自己最薄弱的知识点，集中火力反复练习。不是简单重复已经会的，而是不断挑战自己还不会的。每次练习都瞄准"差一点点就能做到"的难度。</p></div>
+        <div class="info-block" style="border-left-color:var(--c8)"><h4>🧠 为什么有效？</h4><p>花1小时攻克弱项 > 花3小时做已经会的题。大脑在"有点难但能做出来"的区域学习效率最高——这叫"学习区"原理。</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每次做练习时问自己：这部分我做对了吗？没做对的才是今天要重点练习的！做10道简单题不如攻克1道难题。"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CATEGORY 5: EMOTION ==================== -->
+<section class="slide cat-header-slide" id="s26">
+  <div class="ch-icon">🌈</div>
+  <h2>情绪与习惯</h2>
+  <p class="ch-sub">好的学习状态来自好的情绪和习惯。这4种方法帮你建立最佳学习状态。</p>
+  <div class="ch-methods">
+    <a href="#s27" class="ch-method-link" style="background:var(--c7)">🧘 正念学习法</a>
+    <a href="#s28" class="ch-method-link" style="background:var(--c9)">🪞 自我对话法</a>
+    <a href="#s29" class="ch-method-link" style="background:var(--c3)">📍 固定学习角法</a>
+    <a href="#s30" class="ch-method-link" style="background:var(--c5)">⏳ 碎片时间利用法</a>
+  </div>
+  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow"></div></div>
+</section>
+
+<!-- s27: 正念学习法 -->
+<section class="slide method-slide" id="s27">
+  <div class="accent-bar" style="background:var(--c7)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/21-mindfulness-learning.png" alt="正念学习法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">21</span>
+      <span class="card-badge" style="background:var(--c7)">🌈 情绪与习惯 · 正念学习法</span>
+      <h2>正念学习法</h2>
+      <p class="method-subtitle">学习前做1分钟深呼吸，清空杂念再开始</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c7)"><h4>🧘 这是什么？</h4><p>开始学习前，先闭眼做10次深呼吸。只关注呼吸的起伏，把脑中杂念像云一样轻轻推开。然后睁开眼睛，带着平静的心开始学习。</p></div>
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>🧠 为什么有效？</h4><p>大脑从"β波"（紧张焦虑）切换到"α波"（放松专注），学习效率最高。1分钟深呼吸就像按下大脑的"重置"按钮。</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"学习前闭眼数10次呼吸，只感受吸气~呼气~。然后对自己说'准备好了！'——大脑就会切到专注模式。"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- s28: 自我对话法 -->
+<section class="slide method-slide" id="s28">
+  <div class="accent-bar" style="background:var(--c9)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/22-self-talk.png" alt="自我对话法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">22</span>
+      <span class="card-badge" style="background:var(--c9)">🌈 情绪与习惯 · 自我对话法</span>
+      <h2>自我对话法</h2>
+      <p class="method-subtitle">做题时把思路说出来，正确率提升30%</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c9)"><h4>🪞 这是什么？</h4><p>做题目时自言自语，把思考过程说出来："这个数先除2，然后加5，等于..."。就像给自己当实时小老师。</p></div>
+        <div class="info-block" style="border-left-color:var(--c8)"><h4>🧠 为什么有效？</h4><p>语言化迫使大脑把模糊思维变得清晰。研究发现，把解题思路说出来能提升30%正确率！说不清楚的地方=你还没真正理解的地方。</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"做数学题时小声把每一步说出来，就像在给自己讲解。你会发现以前模糊的地方突然变清晰了！"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- s29: 固定学习角法 -->
+<section class="slide method-slide" id="s29">
+  <div class="accent-bar" style="background:var(--c3)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/23-fixed-study-spot.png" alt="固定学习角法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">23</span>
+      <span class="card-badge" style="background:var(--c3)">🌈 情绪与习惯 · 固定学习角法</span>
+      <h2>固定学习角法</h2>
+      <p class="method-subtitle">整理一个专属学习角落，坐下就自动进入状态</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>📍 这是什么？</h4><p>在家整理一个只用于学习的固定角落：干净书桌、好灯光、学习用品整齐摆放。不放玩具和零食。每天在同一位置学习。</p></div>
+        <div class="info-block" style="border-left-color:var(--c6)"><h4>🧠 为什么有效？</h4><p>大脑会自动建立"位置-行为"关联（条件反射）。就像一进厕所就想刷牙，坐到你专属的学习角，大脑自动切换到"我要学习"模式。</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"收拾一个只用来学习的桌子角落，贴上'学习魔法区'标签。坐到这个位置，你就变成了学习小超人！"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- s30: 碎片时间利用法 -->
+<section class="slide method-slide" id="s30">
+  <div class="accent-bar" style="background:var(--c5)"></div>
+  <div class="slide-inner">
+    <div class="slide-img"><img src="images/24-fragmented-time.png" alt="碎片时间利用法" loading="lazy"></div>
+    <div class="slide-text">
+      <span class="slide-number">24</span>
+      <span class="card-badge" style="background:var(--c5)">🌈 情绪与习惯 · 碎片时间利用法</span>
+      <h2>碎片时间利用法</h2>
+      <p class="method-subtitle">把零碎时间拼起来，每天多出1小时</p>
+      <div class="info-blocks">
+        <div class="info-block" style="border-left-color:var(--c5)"><h4>⏳ 这是什么？</h4><p>把等车、排队、饭前等零碎时间利用起来。准备一张"口袋卡片"，上面写着本周要背的单词/古诗，随时拿出来看一眼。</p></div>
+        <div class="info-block" style="border-left-color:var(--c6)"><h4>🧠 为什么有效？</h4><p>每天的碎片时间加起来超过1小时！积少成多，每天用碎片时间背2个单词，一年就是730个——这比很多课本的词汇量都大！</p></div>
+      </div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"做一张小卡片写5个要记的知识点，放进口袋。等车、排队、饭前各看一遍，一天轻轻松松多学5个知识点！"</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== s31: SUMMARY ===== -->
+<section class="slide cat-overview-slide" id="s31">
+  <h2>🌟 选择你的第一个魔法吧！</h2>
+  <p class="co-sub">24种方法分成5大类，先选一个最喜欢的开始。每天进步一点点！</p>
+  <div class="cat-cards">
+    <a href="#s2" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务</span><span class="cc-count">5种</span></a>
+    <a href="#s8" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化</span><span class="cc-count">6种</span></a>
+    <a href="#s15" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解</span><span class="cc-count">5种</span></a>
+    <a href="#s21" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动与激励</span><span class="cc-count">4种</span></a>
+    <a href="#s26" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪与习惯</span><span class="cc-count">4种</span></a>
+  </div>
+</section>
+
+<!-- ===== s32: FOOTER ===== -->
+<footer class="slide footer-slide" id="s32">
   <h2 class="footer-title">🎉 恭喜你完成了魔法之旅！</h2>
-  <p class="footer-sub">你已经认识了全部10种学习方法。记住：不用一次全部掌握，先选一个最喜欢的开始吧！</p>
+  <p class="footer-sub">24种学习方法在手，学习变得轻松又有趣。记住：不用一次全部掌握，先选一种坚持一周！</p>
   <div class="footer-mini-grid">
-    <a href="#s2" class="fm-item">🔍 预习复习</a>
-    <a href="#s3" class="fm-item">🍅 番茄专注</a>
-    <a href="#s4" class="fm-item">👨‍🏫 费曼小老师</a>
-    <a href="#s5" class="fm-item">🗺️ 思维导图</a>
-    <a href="#s6" class="fm-item">💎 错题宝藏</a>
-    <a href="#s7" class="fm-item">📅 间隔记忆</a>
-    <a href="#s8" class="fm-item">❓ 提问学习</a>
-    <a href="#s9" class="fm-item">🪜 目标分解</a>
-    <a href="#s10" class="fm-item">🧩 联想记忆</a>
-    <a href="#s11" class="fm-item">✅ 自我检测</a>
+    <a href="#s3" style="background:var(--c2)">🍅 番茄专注</a><a href="#s4" style="background:var(--c6)">📅 间隔记忆</a>
+    <a href="#s5" style="background:var(--c8)">🪜 目标分解</a><a href="#s6" style="background:var(--c1)">🟩 四象限</a>
+    <a href="#s7" style="background:var(--c2)">🌅 晨间规划</a><a href="#s9" style="background:var(--c1)">🔍 预习复习</a>
+    <a href="#s10" style="background:var(--c9)">🧩 联想记忆</a><a href="#s11" style="background:var(--c4)">🗺️ 思维导图</a>
+    <a href="#s12" style="background:var(--c5)">🧱 组块记忆</a><a href="#s13" style="background:var(--c7)">🌙 睡前复习</a>
+    <a href="#s14" style="background:var(--c8)">🎨 双编码</a><a href="#s16" style="background:var(--c3)">👨‍🏫 费曼小老师</a>
+    <a href="#s17" style="background:var(--c7)">❓ 提问学习</a><a href="#s18" style="background:var(--c10)">✅ 自我检测</a>
+    <a href="#s19" style="background:var(--c8)">📝 康奈尔笔记</a><a href="#s20" style="background:var(--c3)">🔄 SQ3R</a>
+    <a href="#s22" style="background:var(--c5)">💎 错题宝藏</a><a href="#s23" style="background:var(--c6)">🤝 合作学习</a>
+    <a href="#s24" style="background:var(--c4)">🏆 游戏化</a><a href="#s25" style="background:var(--c1)">🎯 刻意练习</a>
+    <a href="#s27" style="background:var(--c7)">🧘 正念</a><a href="#s28" style="background:var(--c9)">🪞 自我对话</a>
+    <a href="#s29" style="background:var(--c3)">📍 固定学习角</a><a href="#s30" style="background:var(--c5)">⏳ 碎片时间</a>
   </div>
   <div class="footer-quote">"每天进步一点点，日积月累大改变" ✨</div>
   <p class="footer-heart">用 <span class="heart">❤️</span> 为爱学习的小朋友制作 · 2026</p>
 </footer>
 
 <script>
-(function() {
-  const slides = document.querySelectorAll('.slide');
-  const dots = document.querySelectorAll('#slideNav .dot');
-  const kbHint = document.getElementById('kbHint');
-  const topNav = document.getElementById('topMethodNav');
-  const navLinks = topNav.querySelectorAll('a');
-  const totalSlides = slides.length;
-  let currentIndex = 0;
+(function(){
+const slides = document.querySelectorAll('.slide');
+const topNav = document.getElementById('topMethodNav');
+const navDots = document.getElementById('slideNav');
+const kbHint = document.getElementById('kbHint');
+const totalSlides = slides.length;
+let currentIndex = 0;
 
-  function updateNav(index) {
-    dots.forEach((d, i) => d.classList.toggle('active', i === index));
-    currentIndex = index;
+// Build nav dots dynamically
+for(let i=0; i<totalSlides; i++){
+  const d = document.createElement('span');
+  d.className = 'dot' + (i===0?' hero-dot active':'');
+  d.dataset.index = i;
+  // Mark category header slides
+  if([2,8,15,21,26].includes(i)) d.classList.add('cat-dot');
+  d.title = slides[i].id;
+  d.addEventListener('click', ()=>goToSlide(i));
+  navDots.appendChild(d);
+}
+const dots = navDots.querySelectorAll('.dot');
 
-    // Show top method nav only on method slides (s2-s11 = indices 2-11)
-    if (index >= 2 && index <= 11) {
-      topNav.classList.add('visible');
-      // Highlight current method
-      navLinks.forEach(a => {
-        a.classList.toggle('active', parseInt(a.dataset.method) === index);
+// Category definitions: [startIdx, endIdx, categoryColor, methodsInfo]
+const categories = [
+  {start:3, end:7,  color:'var(--cat1)', name:'⏰ 时间管理',
+   methods:[
+     {id:3, label:'番茄专注', color:'var(--c2)'},
+     {id:4, label:'间隔记忆', color:'var(--c6)'},
+     {id:5, label:'目标分解', color:'var(--c8)'},
+     {id:6, label:'四象限', color:'var(--c1)'},
+     {id:7, label:'晨间规划', color:'var(--c2)'}
+   ]},
+  {start:9, end:14, color:'var(--cat2)', name:'🧠 记忆强化',
+   methods:[
+     {id:9, label:'预习复习', color:'var(--c1)'},
+     {id:10, label:'联想记忆', color:'var(--c9)'},
+     {id:11, label:'思维导图', color:'var(--c4)'},
+     {id:12, label:'组块记忆', color:'var(--c5)'},
+     {id:13, label:'睡前复习', color:'var(--c7)'},
+     {id:14, label:'双编码', color:'var(--c8)'}
+   ]},
+  {start:16, end:20, color:'var(--cat3)', name:'💡 深度理解',
+   methods:[
+     {id:16, label:'费曼小老师', color:'var(--c3)'},
+     {id:17, label:'提问学习', color:'var(--c7)'},
+     {id:18, label:'自我检测', color:'var(--c10)'},
+     {id:19, label:'康奈尔笔记', color:'var(--c8)'},
+     {id:20, label:'SQ3R阅读', color:'var(--c3)'}
+   ]},
+  {start:22, end:25, color:'var(--cat4)', name:'🤝 互动激励',
+   methods:[
+     {id:22, label:'错题宝藏', color:'var(--c5)'},
+     {id:23, label:'合作学习', color:'var(--c6)'},
+     {id:24, label:'游戏化', color:'var(--c4)'},
+     {id:25, label:'刻意练习', color:'var(--c1)'}
+   ]},
+  {start:27, end:30, color:'var(--cat5)', name:'🌈 情绪习惯',
+   methods:[
+     {id:27, label:'正念学习', color:'var(--c7)'},
+     {id:28, label:'自我对话', color:'var(--c9)'},
+     {id:29, label:'固定学习角', color:'var(--c3)'},
+     {id:30, label:'碎片时间', color:'var(--c5)'}
+   ]}
+];
+
+function updateNav(index){
+  dots.forEach((d,i)=>d.classList.toggle('active', i===index));
+  currentIndex = index;
+
+  // Find which category we're in
+  let cat = null;
+  for(const c of categories){
+    if(index >= c.start && index <= c.end){ cat = c; break; }
+  }
+
+  if(cat && index >= cat.start && index <= cat.end){
+    // Build top nav for this category
+    topNav.innerHTML = '';
+    cat.methods.forEach(m => {
+      const a = document.createElement('a');
+      a.href = '#s'+m.id;
+      a.textContent = m.label;
+      a.dataset.method = m.id;
+      a.style.setProperty('--link-color', m.color);
+      if(index === m.id){
+        a.classList.add('active');
+        a.style.background = m.color;
+      }
+      a.addEventListener('click',(e)=>{
+        e.preventDefault();
+        goToSlide(m.id);
       });
-      // Auto-scroll active link into view
-      const activeLink = topNav.querySelector('a.active');
-      if (activeLink) {
-        activeLink.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-      }
-    } else {
-      topNav.classList.remove('visible');
-    }
-  }
-
-  function goToSlide(index) {
-    if (index < 0 || index >= totalSlides) return;
-    slides[index].scrollIntoView({ behavior: 'smooth' });
-    updateNav(index);
-  }
-
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const idx = Array.from(slides).indexOf(entry.target);
-        if (idx >= 0) updateNav(idx);
-      }
+      topNav.appendChild(a);
     });
-  }, { threshold: 0.5 });
-
-  slides.forEach(s => io.observe(s));
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => goToSlide(i));
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown') {
-      e.preventDefault();
-      goToSlide(Math.min(currentIndex + 1, totalSlides - 1));
-    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
-      e.preventDefault();
-      goToSlide(Math.max(currentIndex - 1, 0));
-    } else if (e.key === 'Home') {
-      e.preventDefault();
-      goToSlide(0);
-    } else if (e.key === 'End') {
-      e.preventDefault();
-      goToSlide(totalSlides - 1);
-    }
-  });
-
-  let touchStartY = 0;
-  document.addEventListener('touchstart', (e) => {
-    touchStartY = e.touches[0].clientY;
-  }, { passive: true });
-
-  document.addEventListener('touchend', (e) => {
-    const diff = touchStartY - e.changedTouches[0].clientY;
-    if (Math.abs(diff) > 60) {
-      if (diff > 0) {
-        goToSlide(Math.min(currentIndex + 1, totalSlides - 1));
-      } else {
-        goToSlide(Math.max(currentIndex - 1, 0));
-      }
-    }
-  });
-
-  let hintHidden = false;
-  function hideHint() {
-    if (!hintHidden) {
-      kbHint.style.opacity = '0';
-      setTimeout(() => { kbHint.style.display = 'none'; }, 500);
-      hintHidden = true;
-    }
+    topNav.classList.add('visible');
+    // Scroll active link into view
+    setTimeout(()=>{
+      const active = topNav.querySelector('a.active');
+      if(active) active.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+    },200);
+  } else {
+    topNav.classList.remove('visible');
   }
-  document.addEventListener('keydown', hideHint, { once: true });
-  document.addEventListener('wheel', hideHint, { once: true });
-  document.addEventListener('touchstart', hideHint, { once: true });
-  setTimeout(() => {
-    if (!hintHidden) {
-      kbHint.style.opacity = '0';
-      setTimeout(() => { kbHint.style.display = 'none'; }, 500);
-      hintHidden = true;
+}
+
+function goToSlide(index){
+  if(index<0||index>=totalSlides) return;
+  slides[index].scrollIntoView({behavior:'smooth'});
+}
+
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const idx = Array.from(slides).indexOf(entry.target);
+      if(idx>=0) updateNav(idx);
     }
-  }, 8000);
+  });
+},{threshold:0.4});
+slides.forEach(s=>io.observe(s));
+
+document.addEventListener('keydown',(e)=>{
+  if(e.key==='ArrowDown'||e.key==='ArrowRight'||e.key==='PageDown'){
+    e.preventDefault(); goToSlide(Math.min(currentIndex+1,totalSlides-1));
+  }else if(e.key==='ArrowUp'||e.key==='ArrowLeft'||e.key==='PageUp'){
+    e.preventDefault(); goToSlide(Math.max(currentIndex-1,0));
+  }else if(e.key==='Home'){e.preventDefault();goToSlide(0);}
+  else if(e.key==='End'){e.preventDefault();goToSlide(totalSlides-1);}
+});
+
+let touchStartY=0;
+document.addEventListener('touchstart',e=>{touchStartY=e.touches[0].clientY},{passive:true});
+document.addEventListener('touchend',e=>{
+  const diff=touchStartY-e.changedTouches[0].clientY;
+  if(Math.abs(diff)>60){
+    diff>0?goToSlide(Math.min(currentIndex+1,totalSlides-1)):goToSlide(Math.max(currentIndex-1,0));
+  }
+});
+
+let hintHidden=false;
+function hideHint(){
+  if(!hintHidden){kbHint.style.opacity='0';setTimeout(()=>{kbHint.style.display='none'},500);hintHidden=true;}
+}
+document.addEventListener('keydown',hideHint,{once:true});
+document.addEventListener('wheel',hideHint,{once:true});
+setTimeout(()=>{if(!hintHidden){kbHint.style.opacity='0';setTimeout(()=>{kbHint.style.display='none'},500);}},8000);
 })();
 </script>
-
 </body>
 </html>
