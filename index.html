@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FFF8F0;--card:#FFFDF7;--coral:#E8725A;--teal:#2D8B8B;--gold:#F4C542;--text:#3D2C2C;--text-light:#7A6A6A;--sage:#7BAE7F;--lavender:#C4B5E0;--blush:#F0D5D0;--cream:#FEF9F0;--shadow:0 4px 24px rgba(61,44,44,.08);--radius:24px;--radius-sm:16px;--font-display:'ZCOOL KuaiLe','PingFang SC','Microsoft YaHei',cursive;--font-body:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;--transition:.4s cubic-bezier(.25,.46,.45,.94);--c1:#E8725A;--c2:#F08A5D;--c3:#3DA5A5;--c4:#E8919E;--c5:#F4C542;--c6:#7BAE7F;--c7:#9B7EC4;--c8:#5B9EED;--c9:#F0926B;--c10:#4ECB71;--cat1:#E8725A;--cat2:#7BAE7F;--cat3:#5B9EED;--cat4:#F4C542;--cat5:#9B7EC4}
+:root{--bg:#FFF8F0;--card:#FFFDF7;--coral:#E8725A;--teal:#2D8B8B;--gold:#F4C542;--text:#3D2C2C;--text-light:#7A6A6A;--sage:#7BAE7F;--lavender:#C4B5E0;--blush:#F0D5D0;--cream:#FEF9F0;--shadow:0 4px 24px rgba(61,44,44,.08);--radius:24px;--radius-sm:16px;--font-display:'ZCOOL KuaiLe','PingFang SC','Microsoft YaHei',cursive;--font-body:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;--transition:.4s cubic-bezier(.25,.46,.45,.94);--c1:#E8725A;--c2:#F08A5D;--c3:#3DA5A5;--c4:#E8919E;--c5:#F4C542;--c6:#7BAE7F;--c7:#9B7EC4;--c8:#5B9EED;--c9:#F0926B;--c10:#4ECB71}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-snap-type:y mandatory;scroll-behavior:smooth;font-size:18px}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.7;-webkit-font-smoothing:antialiased}
@@ -19,6 +19,8 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
 .bg-orb.o3{width:300px;height:300px;background:radial-gradient(circle,var(--lavender),transparent);top:50%;left:55%;animation-delay:-14s}
 .bg-orb.o4{width:250px;height:250px;background:radial-gradient(circle,var(--gold),transparent);top:25%;left:5%;animation-delay:-3s}
 @keyframes orbFloat{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(30px,-40px) scale(1.08)}50%{transform:translate(-20px,20px) scale(.94)}75%{transform:translate(-35px,-15px) scale(1.05)}}
+
+/* Navigation */
 .slide-nav{position:fixed;right:16px;top:50%;transform:translateY(-50%);z-index:200;display:flex;flex-direction:column;gap:4px}
 .slide-nav .dot{width:7px;height:7px;border-radius:50%;background:rgba(61,44,44,.16);cursor:pointer;transition:var(--transition);border:1px solid transparent}
 .slide-nav .dot:hover{background:var(--coral);transform:scale(1.5)}
@@ -33,18 +35,27 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
 .top-method-nav a{flex-shrink:0;text-decoration:none;padding:6px 14px;border-radius:20px;font-size:.83em;font-weight:600;color:var(--text-light);transition:var(--transition);white-space:nowrap}
 .top-method-nav a:hover{color:var(--coral);background:rgba(232,114,90,.08)}
 .top-method-nav a.active{color:#fff}
+
+/* Slides */
 .slide{scroll-snap-align:start;min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;z-index:1;padding:60px 40px}
-.hero-slide{flex-direction:column;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.7);backdrop-filter:blur(10px);border:2px solid var(--blush);border-radius:50px;padding:12px 28px;font-size:1.1em;font-weight:500;color:var(--coral);margin-bottom:32px;animation:fadeInUp .8s ease both}
+.hero-slide{flex-direction:column;text-align:center;padding:60px 40px 80px}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.7);backdrop-filter:blur(10px);border:2px solid var(--blush);border-radius:50px;padding:12px 28px;font-size:1.1em;font-weight:500;color:var(--coral);margin-bottom:24px;animation:fadeInUp .8s ease both}
 .hero-badge .dot{width:10px;height:10px;border-radius:50%;background:var(--coral);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.8);opacity:.5}}
-.hero-slide h1{font-family:var(--font-display);font-size:clamp(2.8em,6vw,5em);font-weight:400;line-height:1.2;margin-bottom:20px;animation:fadeInUp .8s ease .1s both}
+.hero-slide h1{font-family:var(--font-display);font-size:clamp(2.4em,5vw,4em);font-weight:400;line-height:1.2;margin-bottom:12px;animation:fadeInUp .8s ease .1s both}
 .hero-slide h1 .hl{background:linear-gradient(135deg,var(--coral),#F0A060,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-slide .subtitle{font-size:clamp(1.1em,2.5vw,1.4em);color:var(--text-light);max-width:650px;margin-bottom:36px;animation:fadeInUp .8s ease .2s both}
-.hero-scroll{margin-top:14px;color:var(--text-light);font-size:.95em;animation:fadeInUp .8s ease .45s both,bounce 2s ease-in-out 1.2s infinite;display:flex;flex-direction:column;align-items:center;gap:6px}
-.hero-scroll .arrow{width:28px;height:28px;border-right:3px solid var(--coral);border-bottom:3px solid var(--coral);transform:rotate(45deg)}
+.hero-slide .subtitle{font-size:clamp(1em,2vw,1.2em);color:var(--text-light);max-width:650px;margin-bottom:24px;animation:fadeInUp .8s ease .2s both}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+
+/* Hero category grid */
+.hero-cats{display:flex;flex-direction:column;gap:20px;max-width:1100px;width:100%;animation:fadeInUp .8s ease .3s both}
+.hero-cat-group{text-align:left}
+.hero-cat-group .hcg-title{font-family:var(--font-display);font-size:1.2em;font-weight:400;margin-bottom:8px;padding-left:8px;border-left:4px solid;display:inline-block}
+.hero-cat-group .hcg-methods{display:flex;flex-wrap:wrap;gap:6px}
+.hero-cat-group .hcg-methods a{text-decoration:none;padding:5px 12px;border-radius:16px;font-size:.78em;font-weight:600;color:#fff;transition:var(--transition);white-space:nowrap}
+.hero-cat-group .hcg-methods a:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.2)}
+
+/* Category Overview */
 .cat-overview-slide{flex-direction:column;text-align:center}
 .cat-overview-slide h2{font-family:var(--font-display);font-size:clamp(2.2em,4vw,3em);font-weight:400;margin-bottom:10px;background:linear-gradient(135deg,var(--coral),var(--lavender),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .cat-overview-slide .co-sub{color:var(--text-light);font-size:1.15em;margin-bottom:40px}
@@ -52,11 +63,15 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
 .cat-card{flex:0 1 200px;background:var(--card);border-radius:var(--radius);padding:28px 20px;text-align:center;text-decoration:none;color:var(--text);box-shadow:var(--shadow);transition:var(--transition);position:relative;overflow:hidden}
 .cat-card:hover{transform:translateY(-8px);box-shadow:0 16px 48px rgba(0,0,0,.15)}
 .cat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:6px}
-.cat-card:nth-child(1)::before{background:var(--cat1)}.cat-card:nth-child(2)::before{background:var(--cat2)}.cat-card:nth-child(3)::before{background:var(--cat3)}.cat-card:nth-child(4)::before{background:var(--cat4)}.cat-card:nth-child(5)::before{background:var(--cat5)}
+.cat-card:nth-child(1)::before{background:var(--c1)}.cat-card:nth-child(2)::before{background:var(--c6)}
+.cat-card:nth-child(3)::before{background:var(--c8)}.cat-card:nth-child(4)::before{background:var(--c5)}
+.cat-card:nth-child(5)::before{background:var(--c7)}
 .cat-card .cc-icon{font-size:3em;display:block;margin-bottom:12px}
 .cat-card .cc-name{font-family:var(--font-display);font-size:1.3em;font-weight:400;margin-bottom:4px}
 .cat-card .cc-count{font-size:.85em;color:var(--text-light)}
 .cat-card .cc-desc{font-size:.82em;color:var(--text-light);margin-top:6px;line-height:1.5}
+
+/* Category Header */
 .cat-header-slide{flex-direction:column;text-align:center}
 .cat-header-slide .ch-icon{font-size:4em;margin-bottom:16px}
 .cat-header-slide h2{font-family:var(--font-display);font-size:clamp(2.4em,5vw,3.5em);font-weight:400;margin-bottom:10px}
@@ -66,10 +81,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
 .cat-header-slide .ch-method-link:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
 .cat-header-slide .ch-scroll{color:var(--text-light);font-size:.9em;margin-top:24px;animation:bounce 2s ease-in-out infinite;display:flex;flex-direction:column;align-items:center;gap:4px}
 .cat-header-slide .ch-arrow{width:24px;height:24px;border-right:3px solid var(--coral);border-bottom:3px solid var(--coral);transform:rotate(45deg)}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+
+/* Method Slide */
 .method-slide{gap:0;padding:0}
 .method-slide .slide-inner{display:flex;align-items:stretch;width:100%;min-height:100vh}
-.method-slide .slide-img{flex:0 0 60%;display:flex;align-items:center;justify-content:center;padding:40px;position:relative}
-.method-slide .slide-img img{width:100%;max-height:85vh;object-fit:contain;border-radius:var(--radius-sm);box-shadow:0 12px 48px rgba(0,0,0,.12)}
 .method-slide .slide-text{flex:1;display:flex;flex-direction:column;justify-content:center;padding:68px 56px 48px 24px;position:relative;overflow-y:auto}
 .method-slide .slide-number{position:absolute;top:30px;right:40px;font-family:var(--font-display);font-size:8em;color:rgba(61,44,44,.04);line-height:1;pointer-events:none;user-select:none}
 .method-slide .card-badge{display:inline-flex;align-items:center;gap:6px;padding:7px 18px;border-radius:24px;font-size:.95em;font-weight:700;color:#fff;margin-bottom:18px;width:fit-content}
@@ -84,6 +100,22 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
 .method-slide .magic-spell .spell-label{font-size:.85em;font-weight:700;color:var(--gold);margin-bottom:2px}
 .method-slide .magic-spell .spell-text{font-size:1.08em;font-weight:500;color:var(--text);line-height:1.6}
 .method-slide .accent-bar{position:absolute;top:0;left:0;width:8px;height:100%;z-index:2}
+
+/* ===== FLIP CARD ===== */
+.flip-zone{flex:0 0 60%;display:flex;align-items:center;justify-content:center;padding:40px;position:relative}
+.flip-container{width:100%;max-width:600px;aspect-ratio:4/3;perspective:1200px;cursor:pointer}
+.flip-hint{position:absolute;bottom:50px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.6);color:#fff;padding:6px 16px;border-radius:20px;font-size:.8em;pointer-events:none;transition:opacity .3s;z-index:5}
+.flip-inner{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
+.flip-container.flipped .flip-inner{transform:rotateY(180deg)}
+.flip-front,.flip-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--radius-sm);overflow:hidden}
+.flip-front img{width:100%;height:100%;object-fit:contain;box-shadow:0 12px 48px rgba(0,0,0,.12);border-radius:var(--radius-sm)}
+.flip-back{transform:rotateY(180deg);background:linear-gradient(135deg,#FFFDF7,#FFF8F0);box-shadow:0 12px 48px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;padding:32px}
+.story-wrap{width:100%;height:100%;overflow-y:auto;padding:8px}
+.story-wrap h3{font-family:var(--font-display);font-size:1.5em;font-weight:400;margin-bottom:12px;color:var(--coral);text-align:center}
+.story-wrap p{font-size:1.05em;color:var(--text);line-height:1.8;margin-bottom:10px;text-indent:2em}
+.story-wrap p:last-child{margin-bottom:0}
+
+/* Footer */
 .footer-slide{flex-direction:column;text-align:center;gap:20px;border-top:3px solid var(--blush)}
 .footer-slide .footer-title{font-family:var(--font-display);font-size:clamp(1.8em,4vw,2.6em);font-weight:400;background:linear-gradient(135deg,var(--coral),var(--gold),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .footer-slide .footer-sub{font-size:1.1em;color:var(--text-light);max-width:550px}
@@ -93,58 +125,126 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
 .footer-quote{font-size:1.15em;font-weight:500;color:var(--text);font-style:italic;padding:14px 28px;background:var(--cream);border-radius:var(--radius-sm);border:2px dashed var(--blush);max-width:600px}
 .footer-heart{font-size:1.05em;color:var(--text-light)}
 .footer-slide .heart{color:var(--coral);animation:pulse 1.5s ease-in-out infinite;display:inline-block}
-@media(max-width:1024px){.method-slide .slide-inner{flex-direction:column}.top-method-nav{padding:0 12px;height:44px}.top-method-nav a{padding:5px 10px;font-size:.74em}.method-slide .slide-img{flex:0 0 auto;padding:60px 24px 8px}.method-slide .slide-img img{max-height:35vh;width:auto;max-width:90%}.method-slide .slide-text{padding:20px 28px 40px;overflow-y:visible}.method-slide .slide-number{font-size:5em;top:10px;right:20px}.method-slide h2{font-size:1.8em}.cat-cards{gap:12px}.cat-card{flex:0 1 150px;padding:20px 14px}.slide-nav{right:8px}.slide-nav .dot{width:5px;height:5px;gap:3px}.slide-nav .dot.active{width:7px;height:7px}}
-@media(max-width:640px){html{font-size:16px}.slide{padding:40px 16px}.method-slide{padding:0}.method-slide .slide-img{padding:52px 16px 4px}.method-slide .slide-img img{max-height:28vh}.method-slide .slide-text{padding:14px 18px 32px}.method-slide .slide-number{font-size:3.5em;top:5px;right:12px}.method-slide h2{font-size:1.6em}.method-slide .info-block p{font-size:.95em}.method-slide .magic-spell .spell-text{font-size:.95em}.method-slide .accent-bar{width:5px}.cat-card{flex:0 1 130px;padding:16px 10px}.cat-card .cc-icon{font-size:2em}.cat-card .cc-name{font-size:1em}.cat-header-slide h2{font-size:1.8em}.slide-nav{display:none}.kb-hint{display:none}.footer-mini-grid a{font-size:.72em;padding:5px 10px}.footer-quote{font-size:.95em;padding:10px 16px}}
+
+@media(max-width:1024px){
+  .method-slide .slide-inner{flex-direction:column}
+  .top-method-nav{padding:0 12px;height:44px}
+  .top-method-nav a{padding:5px 10px;font-size:.74em}
+  .flip-zone{flex:0 0 auto;padding:60px 24px 8px}
+  .flip-container{max-width:90%;max-height:35vh}
+  .flip-hint{bottom:16px}
+  .method-slide .slide-text{padding:20px 28px 40px;overflow-y:visible}
+  .method-slide .slide-number{font-size:5em;top:10px;right:20px}
+  .method-slide h2{font-size:1.8em}
+  .cat-cards{gap:12px}
+  .cat-card{flex:0 1 150px;padding:20px 14px}
+  .slide-nav{right:8px}
+  .slide-nav .dot{width:5px;height:5px;gap:3px}
+  .hero-cats{display:none}
+}
+@media(max-width:640px){
+  html{font-size:16px}
+  .slide{padding:40px 16px}
+  .method-slide{padding:0}
+  .flip-zone{padding:52px 16px 4px}
+  .flip-container{max-width:95%;max-height:28vh}
+  .flip-back{padding:16px}
+  .story-wrap{padding:4px}
+  .story-wrap h3{font-size:1.2em}
+  .story-wrap p{font-size:.9em;line-height:1.6}
+  .method-slide .slide-text{padding:14px 18px 32px}
+  .method-slide .slide-number{font-size:3.5em;top:5px;right:12px}
+  .method-slide h2{font-size:1.6em}
+  .slide-nav{display:none}
+  .kb-hint{display:none}
+  .hero-cats{display:none}
+  .footer-mini-grid a{font-size:.72em;padding:5px 10px}
+}
 </style>
 </head>
 <body>
 <div class="bg-layer"><div class="bg-orb o1"></div><div class="bg-orb o2"></div><div class="bg-orb o3"></div><div class="bg-orb o4"></div></div>
 <nav class="top-method-nav" id="topMethodNav"></nav>
 <nav class="slide-nav" id="slideNav"></nav>
-<div class="kb-hint" id="kbHint">按 <kbd>←</kbd> <kbd>→</kbd> 翻页 · 右侧圆点跳转 · 顶部导航切换分类内方法</div>
+<div class="kb-hint" id="kbHint">按 <kbd>←</kbd> <kbd>→</kbd> 翻页 · 点击图片翻转看 Rainbow 的故事 · 顶部导航切换方法</div>
 <!-- s0: HERO -->
 <section class="slide hero-slide" id="s0">
   <div class="hero-badge"><span class="dot"></span> 小学生必备学习指南</div>
   <h1>学习的<span class="hl">魔法之旅</span></h1>
-  <p class="subtitle">掌握这40个神奇的学习方法，按5大分类系统学习。让每一天都变成有趣的探险！</p>
-  <div class="hero-scroll"><span>向下滚动，先看看五大分类吧！</span><div class="arrow"></div></div>
+  <p class="subtitle">40个神奇的学习方法，5大分类。点击图片还能看Rainbow的学习故事哦！</p>
+  <div class="hero-cats">
+  <div class="hero-cat-group"><div class="hcg-title" style="border-left-color:var(--c1)">⏰ 时间与任务管理 (7)</div><div class="hcg-methods"><a href="#s3" style="background:var(--c2)">🍅番茄专注</a> <a href="#s4" style="background:var(--c6)">📅间隔记忆</a> <a href="#s5" style="background:var(--c8)">🪜目标分解</a> <a href="#s6" style="background:var(--c1)">🟩四象限</a> <a href="#s7" style="background:var(--c2)">🌅晨间规划</a> <a href="#s8" style="background:var(--c5)">🔄交叉学习</a> <a href="#s9" style="background:var(--c7)">🧠大脑休息</a></div></div>
+  <div class="hero-cat-group"><div class="hcg-title" style="border-left-color:var(--c6)">🧠 记忆强化技巧 (8)</div><div class="hcg-methods"><a href="#s11" style="background:var(--c1)">🔍预习复习</a> <a href="#s12" style="background:var(--c9)">🧩联想记忆</a> <a href="#s13" style="background:var(--c4)">🗺️思维导图</a> <a href="#s14" style="background:var(--c5)">🧱组块记忆</a> <a href="#s15" style="background:var(--c7)">🌙睡前复习</a> <a href="#s16" style="background:var(--c8)">🎨双编码</a> <a href="#s17" style="background:var(--c3)">🌉类比桥梁</a> <a href="#s18" style="background:var(--c9)">👀多感官</a></div></div>
+  <div class="hero-cat-group"><div class="hcg-title" style="border-left-color:var(--c8)">💡 深度理解方法 (9)</div><div class="hcg-methods"><a href="#s20" style="background:var(--c3)">👨‍🏫费曼小老师</a> <a href="#s21" style="background:var(--c7)">❓提问学习</a> <a href="#s22" style="background:var(--c10)">✅自我检测</a> <a href="#s23" style="background:var(--c8)">📝康奈尔笔记</a> <a href="#s24" style="background:var(--c3)">🔄SQ3R</a> <a href="#s25" style="background:var(--c1)">🔗精细加工</a> <a href="#s26" style="background:var(--c4)">🪜具体例子</a> <a href="#s27" style="background:var(--c3)">👂主动倾听</a> <a href="#s28" style="background:var(--c5)">🧵知识串珠</a></div></div>
+  <div class="hero-cat-group"><div class="hcg-title" style="border-left-color:var(--c5)">🤝 互动与激励 (6)</div><div class="hcg-methods"><a href="#s30" style="background:var(--c5)">💎错题宝藏</a> <a href="#s31" style="background:var(--c6)">🤝合作学习</a> <a href="#s32" style="background:var(--c4)">🏆游戏化</a> <a href="#s33" style="background:var(--c1)">🎯刻意练习</a> <a href="#s34" style="background:var(--c7)">🎭角色扮演</a> <a href="#s35" style="background:var(--c10)">📋考试策略</a></div></div>
+  <div class="hero-cat-group"><div class="hcg-title" style="border-left-color:var(--c7)">🌈 情绪与习惯 (10)</div><div class="hcg-methods"><a href="#s37" style="background:var(--c7)">🧘正念学习</a> <a href="#s38" style="background:var(--c9)">🪞自我对话</a> <a href="#s39" style="background:var(--c3)">📍固定学习角</a> <a href="#s40" style="background:var(--c5)">⏳碎片时间</a> <a href="#s41" style="background:var(--c4)">📓反思日记</a> <a href="#s42" style="background:var(--c6)">🌱成长心态</a> <a href="#s43" style="background:var(--c2)">🏃运动促学</a> <a href="#s44" style="background:var(--c8)">🔗习惯叠加</a> <a href="#s45" style="background:var(--c9)">🌊心流学习</a> <a href="#s46" style="background:var(--c10)">✍️手写优势</a></div></div>
+  </div>
 </section>
-
 <!-- s1: CATEGORY OVERVIEW -->
 <section class="slide cat-overview-slide" id="s1">
   <h2>📂 五大学习方法分类</h2>
-  <p class="co-sub">40种方法分成5大类，点击进入你想了解的类别</p>
+  <p class="co-sub">40种方法分成5大类，点击进入你想了解的类别。每个方法点击图片可以看 Rainbow 的故事！</p>
   <div class="cat-cards">
-    <a href="#s2" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务管理</span><span class="cc-count">7种</span><span class="cc-desc">学会管理时间、安排任务，是高效学习的第一...</span></a>
-    <a href="#s10" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化技巧</span><span class="cc-count">8种</span><span class="cc-desc">记东西不需要死记硬背！这8种方法让你的记...</span></a>
-    <a href="#s19" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解方法</span><span class="cc-count">9种</span><span class="cc-desc">真正的学习不是死记硬背，而是深入理解。这...</span></a>
-    <a href="#s29" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动与激励</span><span class="cc-count">6种</span><span class="cc-desc">学习不一定是孤独的！这6种方法让学习变得...</span></a>
-    <a href="#s36" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪与习惯</span><span class="cc-count">10种</span><span class="cc-desc">好的学习状态来自好的情绪和习惯。这10种...</span></a>
+    <a href="#s2" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务</span><span class="cc-count">7种</span></a>
+    <a href="#s10" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化</span><span class="cc-count">8种</span></a>
+    <a href="#s19" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解</span><span class="cc-count">9种</span></a>
+    <a href="#s29" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动激励</span><span class="cc-count">6种</span></a>
+    <a href="#s36" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪习惯</span><span class="cc-count">10种</span></a>
   </div>
 </section>
-
 <!-- s2: 时间与任务管理 Header -->
 <section class="slide cat-header-slide" id="s2">
   <div class="ch-icon">⏰</div>
   <h2>时间与任务管理</h2>
   <p class="ch-sub">学会管理时间、安排任务，是高效学习的第一步。这7种方法帮你从小养成好习惯。</p>
-  <div class="ch-methods">
-    <a href="#s3" class="ch-method-link" style="background:var(--c2)">🍅 番茄专注法</a>
-    <a href="#s4" class="ch-method-link" style="background:var(--c6)">📅 间隔记忆法</a>
-    <a href="#s5" class="ch-method-link" style="background:var(--c8)">🪜 目标分解法</a>
-    <a href="#s6" class="ch-method-link" style="background:var(--c1)">🟩 四象限法</a>
-    <a href="#s7" class="ch-method-link" style="background:var(--c2)">🌅 晨间规划法</a>
-    <a href="#s8" class="ch-method-link" style="background:var(--c5)">🔄 交叉学习法</a>
-    <a href="#s9" class="ch-method-link" style="background:var(--c7)">🧠 大脑休息法</a>
-  </div>
-  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow" style="border-color:var(--c1)"></div></div>
+  <div class="ch-methods"><a href="#s3" class="ch-method-link" style="background:⏰ 时间管理">🍅 番茄专注法</a> <a href="#s4" class="ch-method-link" style="background:⏰ 时间管理">📅 间隔记忆法</a> <a href="#s5" class="ch-method-link" style="background:⏰ 时间管理">🪜 目标分解法</a> <a href="#s6" class="ch-method-link" style="background:⏰ 时间管理">🟩 四象限法</a> <a href="#s7" class="ch-method-link" style="background:⏰ 时间管理">🌅 晨间规划法</a> <a href="#s8" class="ch-method-link" style="background:⏰ 时间管理">🔄 交叉学习法</a> <a href="#s9" class="ch-method-link" style="background:⏰ 时间管理">🧠 大脑休息法</a></div>
+  <div class="ch-scroll"><span>向下滚动查看详情 · 点击图片看 Rainbow 的故事</span><div class="ch-arrow"></div></div>
 </section>
-
+<!-- s10: 记忆强化技巧 Header -->
+<section class="slide cat-header-slide" id="s10">
+  <div class="ch-icon">🧠</div>
+  <h2>记忆强化技巧</h2>
+  <p class="ch-sub">记东西不需要死记硬背！这8种方法让你的记忆力像超级英雄一样强大。</p>
+  <div class="ch-methods"><a href="#s11" class="ch-method-link" style="background:🧠 记忆强化">🔍 预习与复习法</a> <a href="#s12" class="ch-method-link" style="background:🧠 记忆强化">🧩 联想记忆法</a> <a href="#s13" class="ch-method-link" style="background:🧠 记忆强化">🗺️ 思维导图法</a> <a href="#s14" class="ch-method-link" style="background:🧠 记忆强化">🧱 组块记忆法</a> <a href="#s15" class="ch-method-link" style="background:🧠 记忆强化">🌙 睡前复习法</a> <a href="#s16" class="ch-method-link" style="background:🧠 记忆强化">🎨 双编码法</a> <a href="#s17" class="ch-method-link" style="background:🧠 记忆强化">🌉 类比桥梁法</a> <a href="#s18" class="ch-method-link" style="background:🧠 记忆强化">👀 多感官学习法</a></div>
+  <div class="ch-scroll"><span>向下滚动查看详情 · 点击图片看 Rainbow 的故事</span><div class="ch-arrow"></div></div>
+</section>
+<!-- s19: 深度理解方法 Header -->
+<section class="slide cat-header-slide" id="s19">
+  <div class="ch-icon">💡</div>
+  <h2>深度理解方法</h2>
+  <p class="ch-sub">真正的学习不是死记硬背，而是深入理解。这9种方法帮你把知识真正吃透。</p>
+  <div class="ch-methods"><a href="#s20" class="ch-method-link" style="background:💡 深度理解">👨‍🏫 费曼小老师法</a> <a href="#s21" class="ch-method-link" style="background:💡 深度理解">❓ 提问学习法</a> <a href="#s22" class="ch-method-link" style="background:💡 深度理解">✅ 自我检测法</a> <a href="#s23" class="ch-method-link" style="background:💡 深度理解">📝 康奈尔笔记法</a> <a href="#s24" class="ch-method-link" style="background:💡 深度理解">🔄 SQ3R阅读法</a> <a href="#s25" class="ch-method-link" style="background:💡 深度理解">🔗 精细加工法</a> <a href="#s26" class="ch-method-link" style="background:💡 深度理解">🪜 具体例子法</a> <a href="#s27" class="ch-method-link" style="background:💡 深度理解">👂 主动倾听法</a> <a href="#s28" class="ch-method-link" style="background:💡 深度理解">🧵 知识串珠法</a></div>
+  <div class="ch-scroll"><span>向下滚动查看详情 · 点击图片看 Rainbow 的故事</span><div class="ch-arrow"></div></div>
+</section>
+<!-- s29: 互动与激励 Header -->
+<section class="slide cat-header-slide" id="s29">
+  <div class="ch-icon">🤝</div>
+  <h2>互动与激励</h2>
+  <p class="ch-sub">学习不一定是孤独的！这6种方法让学习变得更有趣、更有动力。</p>
+  <div class="ch-methods"><a href="#s30" class="ch-method-link" style="background:🤝 互动激励">💎 错题宝藏法</a> <a href="#s31" class="ch-method-link" style="background:🤝 互动激励">🤝 合作学习法</a> <a href="#s32" class="ch-method-link" style="background:🤝 互动激励">🏆 游戏化学习法</a> <a href="#s33" class="ch-method-link" style="background:🤝 互动激励">🎯 刻意练习法</a> <a href="#s34" class="ch-method-link" style="background:🤝 互动激励">🎭 角色扮演法</a> <a href="#s35" class="ch-method-link" style="background:🤝 互动激励">📋 考试策略法</a></div>
+  <div class="ch-scroll"><span>向下滚动查看详情 · 点击图片看 Rainbow 的故事</span><div class="ch-arrow"></div></div>
+</section>
+<!-- s36: 情绪与习惯 Header -->
+<section class="slide cat-header-slide" id="s36">
+  <div class="ch-icon">🌈</div>
+  <h2>情绪与习惯</h2>
+  <p class="ch-sub">好的学习状态来自好的情绪和习惯。这10种方法帮你建立最佳学习状态。</p>
+  <div class="ch-methods"><a href="#s37" class="ch-method-link" style="background:🌈 情绪习惯">🧘 正念学习法</a> <a href="#s38" class="ch-method-link" style="background:🌈 情绪习惯">🪞 自我对话法</a> <a href="#s39" class="ch-method-link" style="background:🌈 情绪习惯">📍 固定学习角法</a> <a href="#s40" class="ch-method-link" style="background:🌈 情绪习惯">⏳ 碎片时间利用法</a> <a href="#s41" class="ch-method-link" style="background:🌈 情绪习惯">📓 反思日记法</a> <a href="#s42" class="ch-method-link" style="background:🌈 情绪习惯">🌱 成长心态法</a> <a href="#s43" class="ch-method-link" style="background:🌈 情绪习惯">🏃 运动促学法</a> <a href="#s44" class="ch-method-link" style="background:🌈 情绪习惯">🔗 习惯叠加法</a> <a href="#s45" class="ch-method-link" style="background:🌈 情绪习惯">🌊 心流学习法</a> <a href="#s46" class="ch-method-link" style="background:🌈 情绪习惯">✍️ 手写优势法</a></div>
+  <div class="ch-scroll"><span>向下滚动查看详情 · 点击图片看 Rainbow 的故事</span><div class="ch-arrow"></div></div>
+</section>
 <!-- s3: 番茄专注法 -->
 <section class="slide method-slide" id="s3">
   <div class="accent-bar" style="background:var(--c2)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/02-pomodoro-focus.png" alt="番茄专注法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s3" onclick="toggleFlip('flip_s3')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/02-pomodoro-focus.png" alt="番茄专注法" loading="lazy"></div>
+          <div class="flip-back" id="story_s3"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">01</span>
       <span class="card-badge" style="background:var(--c2)">⏰ 时间管理 · 番茄专注法</span>
@@ -158,885 +258,1059 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
     </div>
   </div>
 </section>
-
 <!-- s4: 间隔记忆法 -->
 <section class="slide method-slide" id="s4">
   <div class="accent-bar" style="background:var(--c6)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/06-spaced-repetition.png" alt="间隔记忆法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s4" onclick="toggleFlip('flip_s4')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/06-spaced-repetition.png" alt="间隔记忆法" loading="lazy"></div>
+          <div class="flip-back" id="story_s4"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">02</span>
       <span class="card-badge" style="background:var(--c6)">⏰ 时间管理 · 间隔记忆法</span>
       <h2>间隔记忆法</h2>
-      <p class="method-subtitle">像浇花一样复习，知识越记越牢</p>
+      <p class="method-subtitle">像浇花一样复习</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c6)"><h4>📅 这是什么？</h4><p>不要考前临时抱佛脚！学完新知识后，在固定时间间隔复习：当天→第二天→一周后→一个月后。每次复习时间越来越短，记忆越来越深。</p></div>
+        <div class="info-block" style="border-left-color:var(--c6)"><h4>📅 这是什么？</h4><p>不要考前临时抱佛脚！学完新知识后，在固定时间间隔复习：当天→第二天→一周后→一个月后。</p></div>
         <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>每次在快要忘记时复习，记忆就会更牢固。像给记忆之树浇水：不是一次浇很多，而是每隔几天浇一点。</p></div>
       </div>
       <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"在日历上圈出复习日：📌第2天→📌第7天→📌第30天，像寻宝游戏一样期待！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s5: 目标分解法 -->
 <section class="slide method-slide" id="s5">
   <div class="accent-bar" style="background:var(--c8)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/08-goal-decomposition.png" alt="目标分解法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s5" onclick="toggleFlip('flip_s5')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/08-goal-decomposition.png" alt="目标分解法" loading="lazy"></div>
+          <div class="flip-back" id="story_s5"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">03</span>
       <span class="card-badge" style="background:var(--c8)">⏰ 时间管理 · 目标分解法</span>
       <h2>目标分解法</h2>
       <p class="method-subtitle">把大目标切成小台阶</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c8)"><h4>🪜 这是什么？</h4><p>面对大目标别被吓到。拆成小步骤：每天背5个→每周复习→每月测试。每步完成后给自己一个小奖励！</p></div>
+        <div class="info-block" style="border-left-color:var(--c8)"><h4>🪜 这是什么？</h4><p>面对大目标别被吓到。拆成小步骤：每天背5个→每周复习→每月测试。每步完成后给自己小奖励！</p></div>
         <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑面对太大任务会焦虑拖延。小步骤容易完成，成就感激励继续前进。这就是游戏设计的原理！</p></div>
       </div>
       <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"把本周最大的学习任务写在纸上，像画楼梯一样写下5个小步骤，做完一个划掉一个！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s6: 四象限法 -->
 <section class="slide method-slide" id="s6">
   <div class="accent-bar" style="background:var(--c1)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/11-quadrant-method.png" alt="四象限法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s6" onclick="toggleFlip('flip_s6')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/11-quadrant-method.png" alt="四象限法" loading="lazy"></div>
+          <div class="flip-back" id="story_s6"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">04</span>
       <span class="card-badge" style="background:var(--c1)">⏰ 时间管理 · 四象限法</span>
       <h2>四象限法</h2>
-      <p class="method-subtitle">按重要和紧急分类，先做最重要的事</p>
+      <p class="method-subtitle">重要/紧急矩阵，先做最重要的</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c1)"><h4>🟩 这是什么？</h4><p>画一个十字分成四格：①重要+紧急(马上做)②重要+不紧急(计划做⭐重点)③不重要+紧急(快速处理)④不重要+不紧急(尽量不做)。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>很多小朋友看起来很忙是因为总在做③④象限的事。把时间花在第②象限，你会越来越轻松——这是聪明人的秘密！</p></div>
+        <div class="info-block" style="border-left-color:var(--c1)"><h4>🟩 这是什么？</h4><p>画十字分四格：①重要+紧急(马上做)②重要+不紧急(计划做⭐)③不重要+紧急(快速处理)④不重要+不紧急(少做)。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>很多小朋友看起来很忙是因为总在做③④。把时间花在第②象限，你会越来越轻松——这是聪明人的秘密！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每天晚上花1分钟想一想：明天最重要的一件事是什么？把它写下来贴在书桌上！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每天晚上花1分钟想：明天最重要的一件事是什么？写下来贴在书桌上！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s7: 晨间规划法 -->
 <section class="slide method-slide" id="s7">
   <div class="accent-bar" style="background:var(--c2)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/12-morning-planning.png" alt="晨间规划法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s7" onclick="toggleFlip('flip_s7')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/12-morning-planning.png" alt="晨间规划法" loading="lazy"></div>
+          <div class="flip-back" id="story_s7"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">05</span>
       <span class="card-badge" style="background:var(--c2)">⏰ 时间管理 · 晨间规划法</span>
       <h2>晨间规划法</h2>
-      <p class="method-subtitle">每天早上3分钟，列出今日三件事</p>
+      <p class="method-subtitle">每天早上3分钟列三件事</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c2)"><h4>🌅 这是什么？</h4><p>每天早上起床后，在笔记本上写下今天要完成的最重要的3件事。按顺序完成，做完一项划掉一项。</p></div>
+        <div class="info-block" style="border-left-color:var(--c2)"><h4>🌅 这是什么？</h4><p>每天早上写下今天要完成的最重要的3件事。按顺序完成，做完一项划掉一项。</p></div>
         <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>一天没有计划就像没有地图的旅行。花3分钟规划，就知道今天要做什么、先做什么——效率翻倍！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"准备一个晨间小本子，每天早上写下今日三件事。划掉时那个爽感会让你爱上规划！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"准备一个晨间小本子，每天早上写下今日三件事。划掉时的爽感会让你爱上规划！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s8: 交叉学习法 -->
 <section class="slide method-slide" id="s8">
   <div class="accent-bar" style="background:var(--c5)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/25-interleaving.png" alt="交叉学习法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s8" onclick="toggleFlip('flip_s8')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/25-interleaving.png" alt="交叉学习法" loading="lazy"></div>
+          <div class="flip-back" id="story_s8"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">06</span>
       <span class="card-badge" style="background:var(--c5)">⏰ 时间管理 · 交叉学习法</span>
       <h2>交叉学习法</h2>
-      <p class="method-subtitle">多科目交替穿插，记得更牢</p>
+      <p class="method-subtitle">多科目交替穿插</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c5)"><h4>🔄 这是什么？</h4><p>不要一晚上只学一门课！数学20分钟→语文20分钟→英语20分钟→回到数学，交替穿插着学。每次切换科目时，大脑被迫重新提取刚才的内容。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>集中学习产生我已很熟了的错觉。交叉学习每次切换=强制回忆=最强记忆强化。科学证明长期记忆效果是集中学习的2倍以上！</p></div>
+        <div class="info-block" style="border-left-color:var(--c5)"><h4>🔄 这是什么？</h4><p>不要一晚上只学一门！数学20分钟→语文20分钟→英语20分钟→回到数学。每次切换=强制回忆=最强记忆强化。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>集中学习产生假象。交叉学习每次切换大脑被迫重新提取知识，长期记忆效果是集中学习的2倍以上！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"今晚做作业时试试：数学20分钟→语文20分钟→英语20分钟，循环两轮，你会发现记得特别牢！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"今晚试试：数学20分钟→语文20分钟→英语20分钟，循环两轮，你会发现记得特别牢！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s9: 大脑休息法 -->
 <section class="slide method-slide" id="s9">
   <div class="accent-bar" style="background:var(--c7)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/31-brain-rest.png" alt="大脑休息法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s9" onclick="toggleFlip('flip_s9')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/31-brain-rest.png" alt="大脑休息法" loading="lazy"></div>
+          <div class="flip-back" id="story_s9"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">07</span>
       <span class="card-badge" style="background:var(--c7)">⏰ 时间管理 · 大脑休息法</span>
       <h2>大脑休息法</h2>
-      <p class="method-subtitle">专注后必须放空，灵感自然来</p>
+      <p class="method-subtitle">专注后放空，灵感自现</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c7)"><h4>🧠 这是什么？</h4><p>大脑有两种模式：①专注模式(聚焦学习，像聚光灯)②发散模式(放松放空，像泛光灯)。专注40分钟后必须休息10分钟，发呆也是学习的一部分！</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>发散模式下大脑在后台自动整理知识、产生新连接。很多天才灵感都来自洗澡、散步时的放空状态。不是浪费时间！</p></div>
+        <div class="info-block" style="border-left-color:var(--c7)"><h4>🧠 这是什么？</h4><p>大脑有两种模式：专注模式(聚光灯)和发散模式(泛光灯)。专注40分钟后必须休息10分钟，发呆也是学习的一部分！</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>发散模式下大脑在后台自动整理知识、产生新连接。很多天才灵感都来自洗澡、散步时的放空。</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"学习40分钟后站起来走一走、看看窗外、喝杯水。发呆的10分钟大脑在帮你自动整理知识！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"学习40分钟后站起走走看窗外喝杯水。发呆的10分钟大脑在帮你自动整理知识！"</div></div></div>
     </div>
   </div>
 </section>
-
-<!-- s10: 记忆强化技巧 Header -->
-<section class="slide cat-header-slide" id="s10">
-  <div class="ch-icon">🧠</div>
-  <h2>记忆强化技巧</h2>
-  <p class="ch-sub">记东西不需要死记硬背！这8种方法让你的记忆力像超级英雄一样强大。</p>
-  <div class="ch-methods">
-    <a href="#s11" class="ch-method-link" style="background:var(--c1)">🔍 预习与复习法</a>
-    <a href="#s12" class="ch-method-link" style="background:var(--c9)">🧩 联想记忆法</a>
-    <a href="#s13" class="ch-method-link" style="background:var(--c4)">🗺️ 思维导图法</a>
-    <a href="#s14" class="ch-method-link" style="background:var(--c5)">🧱 组块记忆法</a>
-    <a href="#s15" class="ch-method-link" style="background:var(--c7)">🌙 睡前复习法</a>
-    <a href="#s16" class="ch-method-link" style="background:var(--c8)">🎨 双编码法</a>
-    <a href="#s17" class="ch-method-link" style="background:var(--c3)">🌉 类比桥梁法</a>
-    <a href="#s18" class="ch-method-link" style="background:var(--c9)">👀 多感官学习法</a>
-  </div>
-  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow" style="border-color:var(--c6)"></div></div>
-</section>
-
 <!-- s11: 预习与复习法 -->
 <section class="slide method-slide" id="s11">
   <div class="accent-bar" style="background:var(--c1)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/01-preview-review.png" alt="预习与复习法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s11" onclick="toggleFlip('flip_s11')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/01-preview-review.png" alt="预习与复习法" loading="lazy"></div>
+          <div class="flip-back" id="story_s11"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">08</span>
       <span class="card-badge" style="background:var(--c1)">🧠 记忆强化 · 预习与复习法</span>
       <h2>预习与复习法</h2>
-      <p class="method-subtitle">形成学习闭环，知识牢牢扎根</p>
+      <p class="method-subtitle">形成学习闭环</p>
       <div class="info-blocks">
         <div class="info-block" style="border-left-color:var(--c1)"><h4>🔍 这是什么？</h4><p>课前快速浏览新内容带着问题听课；课后及时巩固，把短期记忆变成长期记忆。两者结合形成完整学习循环。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑像图书馆，预习搭好空书架，复习把书放对位置。提前了解让你在课堂上更容易理解老师。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑像图书馆，预习搭空书架，复习把书放对位置。提前了解让你课堂上更容易理解老师。</p></div>
       </div>
       <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每天睡觉前，用3句话告诉爸爸妈妈今天学到了什么！睡前回忆是记忆的黄金时间。"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s12: 联想记忆法 -->
 <section class="slide method-slide" id="s12">
   <div class="accent-bar" style="background:var(--c9)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/09-association-memory.png" alt="联想记忆法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s12" onclick="toggleFlip('flip_s12')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/09-association-memory.png" alt="联想记忆法" loading="lazy"></div>
+          <div class="flip-back" id="story_s12"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">09</span>
       <span class="card-badge" style="background:var(--c9)">🧠 记忆强化 · 联想记忆法</span>
       <h2>联想记忆法</h2>
-      <p class="method-subtitle">给枯燥的知识编一个有趣的故事</p>
+      <p class="method-subtitle">编故事让记忆变有趣</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c9)"><h4>🧩 这是什么？</h4><p>把知识点和熟悉有趣的事物联系起来。比如记apple，想象大红苹果戴着墨镜跳disco。越夸张越搞笑，记得越牢！</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑特别喜欢新奇有趣的画面。枯燥知识易忘，有趣故事被牢牢记住。这也是为什么我们能记住动画片却记不住课本！</p></div>
+        <div class="info-block" style="border-left-color:var(--c9)"><h4>🧩 这是什么？</h4><p>把知识点和熟悉有趣的事物联系起来。越夸张越搞笑，记得越牢！</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑特别喜欢新奇有趣的画面。这也是为什么我们能记住动画片情节却记不住课本！</p></div>
       </div>
       <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"给今天要记的5个知识点各编一句夸张联想。比如李白乘舟将欲行，突然想吃冰淇淋。"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s13: 思维导图法 -->
 <section class="slide method-slide" id="s13">
   <div class="accent-bar" style="background:var(--c4)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/04-mind-map.png" alt="思维导图法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s13" onclick="toggleFlip('flip_s13')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/04-mind-map.png" alt="思维导图法" loading="lazy"></div>
+          <div class="flip-back" id="story_s13"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">10</span>
       <span class="card-badge" style="background:var(--c4)">🧠 记忆强化 · 思维导图法</span>
       <h2>思维导图法</h2>
       <p class="method-subtitle">用画图的方式整理知识</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c4)"><h4>🗺️ 这是什么？</h4><p>在白纸中心写主题，用彩色线条向外画分支。每个分支代表一个知识点，添加关键词和小图标。就像画一棵知识树！</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑喜欢图像和颜色，讨厌长文字。思维导图把文字变成画面，左右脑一起工作，理解和记忆效果都大大提升。</p></div>
+        <div class="info-block" style="border-left-color:var(--c4)"><h4>🗺️ 这是什么？</h4><p>在白纸中心写主题，用彩色线条向外画分支。每个分支代表一个知识点，添加关键词和小图标。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑喜欢图像和颜色，讨厌长文字。思维导图把文字变成画面，左右脑一起工作。</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"用不同颜色的彩笔画思维导图：红色标重点、蓝色写定义、绿色举例子，像画画一样学习！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"用不同颜色彩笔画思维导图：红色标重点、蓝色写定义、绿色举例子，像画画一样学习！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s14: 组块记忆法 -->
 <section class="slide method-slide" id="s14">
   <div class="accent-bar" style="background:var(--c5)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/13-chunking-memory.png" alt="组块记忆法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s14" onclick="toggleFlip('flip_s14')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/13-chunking-memory.png" alt="组块记忆法" loading="lazy"></div>
+          <div class="flip-back" id="story_s14"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">11</span>
       <span class="card-badge" style="background:var(--c5)">🧠 记忆强化 · 组块记忆法</span>
       <h2>组块记忆法</h2>
-      <p class="method-subtitle">把零散信息打包成块</p>
+      <p class="method-subtitle">打包信息一次记更多</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c5)"><h4>🧱 这是什么？</h4><p>把零散信息打包成有意义的块。比如记手机号138-1234-5678是3个块而非11个数字。背课文也按段落分块来记。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>人脑一次只能记住4-7个独立信息。但组块后每个块只占一个槽位，原来只能记7个数字，组块后能记7组信息！</p></div>
+        <div class="info-block" style="border-left-color:var(--c5)"><h4>🧱 这是什么？</h4><p>把零散信息打包成有意义的块。比如手机号138-1234-5678是3个块。背课文也按段落分块来记。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>人脑一次只能记住4-7个独立信息。组块后每个块只占一个槽位，容量翻倍！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"背长课文时先分3-4个段落块，一块一块地记，最后串起来，比整篇硬背轻松10倍！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"背长课文时先分3-4个段落块，一块一块记最后串起来，比整篇硬背轻松10倍！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s15: 睡前复习法 -->
 <section class="slide method-slide" id="s15">
   <div class="accent-bar" style="background:var(--c7)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/14-sleep-review.png" alt="睡前复习法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s15" onclick="toggleFlip('flip_s15')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/14-sleep-review.png" alt="睡前复习法" loading="lazy"></div>
+          <div class="flip-back" id="story_s15"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">12</span>
       <span class="card-badge" style="background:var(--c7)">🧠 记忆强化 · 睡前复习法</span>
       <h2>睡前复习法</h2>
-      <p class="method-subtitle">睡前15分钟是记忆的黄金窗口</p>
+      <p class="method-subtitle">睡前15分钟黄金窗口</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c7)"><h4>🌙 这是什么？</h4><p>睡觉前花15分钟快速过一遍今天学的内容。然后安心入睡——大脑会在你睡觉时自动整理和巩固这些知识。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>睡眠期间大脑海马体会自动重播白天学过的内容。睡前复习相当于给你的大脑下达这个很重要，请保存的指令！</p></div>
+        <div class="info-block" style="border-left-color:var(--c7)"><h4>🌙 这是什么？</h4><p>睡觉前花15分钟快速过一遍今天学的内容。然后安心入睡——大脑会在你睡觉时自动整理和巩固。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>睡眠期间大脑海马体会自动重播白天学过的内容。睡前复习=给大脑下达保存指令！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"把课本放在床头，睡前翻10分钟，然后对自己说大脑大脑帮我记住这些——你睡着后大脑真的会加班！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"把课本放在床头，睡前翻10分钟，然后对自己说'大脑大脑帮我记住这些'——你睡着后大脑真的会加班！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s16: 双编码法 -->
 <section class="slide method-slide" id="s16">
   <div class="accent-bar" style="background:var(--c8)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/15-dual-coding.png" alt="双编码法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s16" onclick="toggleFlip('flip_s16')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/15-dual-coding.png" alt="双编码法" loading="lazy"></div>
+          <div class="flip-back" id="story_s16"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">13</span>
       <span class="card-badge" style="background:var(--c8)">🧠 记忆强化 · 双编码法</span>
       <h2>双编码法</h2>
-      <p class="method-subtitle">文字+图像两条路记住同一个知识</p>
+      <p class="method-subtitle">文字+图像双重保险</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c8)"><h4>🎨 这是什么？</h4><p>每学一个新概念，一边读文字一边画简图。比如学水的循环，文字描述的同时画一个太阳→蒸发→云→下雨的循环图。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑有两条记忆通路：语言文字和视觉图像。用两路同时编码，忘记文字时图像还能提醒你——相当于双重保险！</p></div>
+        <div class="info-block" style="border-left-color:var(--c8)"><h4>🎨 这是什么？</h4><p>每学一个新概念，一边读文字一边画简图。用两路同时编码，忘记文字时图像还能提醒你。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑有两条记忆通路：语言文字和视觉图像。双路编码相当于双重保险！</p></div>
       </div>
       <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每学一个新概念就画一个简笔画在旁边，哪怕只是火柴人！画出来=记住它的第二条路。"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s17: 类比桥梁法 -->
 <section class="slide method-slide" id="s17">
   <div class="accent-bar" style="background:var(--c3)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/26-analogy-bridge.png" alt="类比桥梁法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s17" onclick="toggleFlip('flip_s17')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/26-analogy-bridge.png" alt="类比桥梁法" loading="lazy"></div>
+          <div class="flip-back" id="story_s17"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">14</span>
       <span class="card-badge" style="background:var(--c3)">🧠 记忆强化 · 类比桥梁法</span>
       <h2>类比桥梁法</h2>
       <p class="method-subtitle">用熟悉事物类比陌生概念</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c3)"><h4>🌉 这是什么？</h4><p>用熟悉的事物类比陌生的概念。比如学电流→电流就像水流，电压像水压，电阻像水管粗细。找到新旧知识之间的共同规律。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>类比是人类最强大的思维工具。所有重大科学发现都始于类比：DNA双螺旋、原子模型。用已知解释未知，理解快10倍！</p></div>
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>🌉 这是什么？</h4><p>用熟悉的事物类比陌生的概念。比如学电流→电流就像水流，电压像水压，电阻像水管粗细。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>类比是人类最强大的思维工具。所有重大科学发现都始于类比。用已知解释未知，理解快10倍！</p></div>
       </div>
       <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"遇到难懂的概念问自己：这个东西像什么我已经知道的？用你最熟悉的东西来比喻它！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s18: 多感官学习法 -->
 <section class="slide method-slide" id="s18">
   <div class="accent-bar" style="background:var(--c9)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/32-multi-sensory.png" alt="多感官学习法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s18" onclick="toggleFlip('flip_s18')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/32-multi-sensory.png" alt="多感官学习法" loading="lazy"></div>
+          <div class="flip-back" id="story_s18"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">15</span>
       <span class="card-badge" style="background:var(--c9)">🧠 记忆强化 · 多感官学习法</span>
       <h2>多感官学习法</h2>
-      <p class="method-subtitle">眼看+耳听+手写+口读</p>
+      <p class="method-subtitle">四管齐下记得牢</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c9)"><h4>👀 这是什么？</h4><p>同时调动多个感官学习：👀眼看(阅读)、👂耳听(朗读/听讲)、✍️手写(记笔记)、🗣️口读(说出来)。四种感官一起上，记住80%以上！</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>只用眼睛看只能记住20%。但多感官协同时，大脑建立了多条提取路径——一条忘了，其他还能帮你回忆。</p></div>
+        <div class="info-block" style="border-left-color:var(--c9)"><h4>👀 这是什么？</h4><p>同时调动多个感官：眼看+耳听+手写+口读。四种感官一起上，记住80%以上！</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>只用眼看只能记住20%。多感官建立多条提取路径——一条忘了，其他还能帮回忆。</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"背单词时同时做到：眼看拼写、大声读出来、用手写一遍、耳朵听自己的发音——四管齐下记得最牢！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"背单词时同时做到：眼看拼写、大声读出来、用手写一遍、耳朵听自己发音——四管齐下！"</div></div></div>
     </div>
   </div>
 </section>
-
-<!-- s19: 深度理解方法 Header -->
-<section class="slide cat-header-slide" id="s19">
-  <div class="ch-icon">💡</div>
-  <h2>深度理解方法</h2>
-  <p class="ch-sub">真正的学习不是死记硬背，而是深入理解。这9种方法帮你把知识真正吃透。</p>
-  <div class="ch-methods">
-    <a href="#s20" class="ch-method-link" style="background:var(--c3)">👨‍🏫 费曼小老师法</a>
-    <a href="#s21" class="ch-method-link" style="background:var(--c7)">❓ 提问学习法</a>
-    <a href="#s22" class="ch-method-link" style="background:var(--c10)">✅ 自我检测法</a>
-    <a href="#s23" class="ch-method-link" style="background:var(--c8)">📝 康奈尔笔记法</a>
-    <a href="#s24" class="ch-method-link" style="background:var(--c3)">🔄 SQ3R阅读法</a>
-    <a href="#s25" class="ch-method-link" style="background:var(--c1)">🔗 精细加工法</a>
-    <a href="#s26" class="ch-method-link" style="background:var(--c4)">🪜 具体例子法</a>
-    <a href="#s27" class="ch-method-link" style="background:var(--c3)">👂 主动倾听法</a>
-    <a href="#s28" class="ch-method-link" style="background:var(--c5)">🧵 知识串珠法</a>
-  </div>
-  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow" style="border-color:var(--c8)"></div></div>
-</section>
-
 <!-- s20: 费曼小老师法 -->
 <section class="slide method-slide" id="s20">
   <div class="accent-bar" style="background:var(--c3)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/03-feynman-teacher.png" alt="费曼小老师法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s20" onclick="toggleFlip('flip_s20')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/03-feynman-teacher.png" alt="费曼小老师法" loading="lazy"></div>
+          <div class="flip-back" id="story_s20"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">16</span>
       <span class="card-badge" style="background:var(--c3)">💡 深度理解 · 费曼小老师法</span>
       <h2>费曼小老师法</h2>
       <p class="method-subtitle">讲给别人听才是真学会</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c3)"><h4>👨‍🏫 这是什么？</h4><p>假装自己是小老师，把知识讲给毛绒玩具、宠物或家人听。用最简单的话讲清楚。讲着讲着卡住了？那个地方就是你需要再学的！</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>听懂了不等于学会了。能用简单话讲清楚，才说明大脑真正组织理解了这些知识。这是诺贝尔奖得主费曼的学习秘诀！</p></div>
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>👨‍🏫 这是什么？</h4><p>假装自己是小老师，把知识讲给毛绒玩具/宠物/家人听。用最简单的话讲清楚。讲着讲着卡住了？那个地方需要再学！</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>听懂了≠学会了。能用简单话讲清楚，才说明大脑真正理解了。这是诺贝尔奖得主费曼的秘诀！</p></div>
       </div>
       <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"用最简单的话把今天学的知识教给玩偶小熊。讲不通的地方=你需要重新学习的宝藏。"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s21: 提问学习法 -->
 <section class="slide method-slide" id="s21">
   <div class="accent-bar" style="background:var(--c7)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/07-question-learning.png" alt="提问学习法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s21" onclick="toggleFlip('flip_s21')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/07-question-learning.png" alt="提问学习法" loading="lazy"></div>
+          <div class="flip-back" id="story_s21"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">17</span>
       <span class="card-badge" style="background:var(--c7)">💡 深度理解 · 提问学习法</span>
       <h2>提问学习法</h2>
-      <p class="method-subtitle">带着为什么去学习</p>
+      <p class="method-subtitle">带着问题去学习</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c7)"><h4>❓ 这是什么？</h4><p>学新课前先写下你最想知道的3个问题。然后带着问题去阅读和听课，像侦探寻找答案。找到后用自己话总结出来。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>有问题的大脑像磁铁，会自动吸引相关信息。带着具体问题学习时注意力大幅提升——因为你有明确目标：找到答案！</p></div>
+        <div class="info-block" style="border-left-color:var(--c7)"><h4>❓ 这是什么？</h4><p>学新课前先写下你最想知道的3个问题。然后带着问题去阅读和听课，像侦探寻找答案。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>有问题的大脑像磁铁，会自动吸引相关信息。带着具体问题学习时注意力大幅提升！</p></div>
       </div>
       <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每次学新课前，像小记者一样在纸上写下3个为什么，带着它们去找答案吧！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s22: 自我检测法 -->
 <section class="slide method-slide" id="s22">
   <div class="accent-bar" style="background:var(--c10)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/10-self-testing.png" alt="自我检测法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s22" onclick="toggleFlip('flip_s22')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/10-self-testing.png" alt="自我检测法" loading="lazy"></div>
+          <div class="flip-back" id="story_s22"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">18</span>
       <span class="card-badge" style="background:var(--c10)">💡 深度理解 · 自我检测法</span>
       <h2>自我检测法</h2>
       <p class="method-subtitle">学完后考考自己</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c10)"><h4>✅ 这是什么？</h4><p>学完后不要只是再看一遍。合上书本，闭眼回忆主要内容。然后做几道练习题检测。发现不会的地方立刻回去重学。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>重读课本会产生我已经会了的错觉。但回忆才是真正的记忆提取练习。检测不是为了打分，而是找到学习盲区！</p></div>
+        <div class="info-block" style="border-left-color:var(--c10)"><h4>✅ 这是什么？</h4><p>学完后不要只是再看一遍。合上书本闭眼回忆主要内容。做练习题检测。发现不会的地方立刻回去重学。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>重读课本产生我会了的错觉。回忆才是真正记忆提取练习。检测不是打分，是找到学习盲区！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"合上书本，拿出一张白纸写下能回忆的所有要点。然后打开书对照，用彩笔补上忘记的内容！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"合上书本拿出白纸写下能回忆的所有要点。然后打开书对照，用彩笔补上忘记的内容！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s23: 康奈尔笔记法 -->
 <section class="slide method-slide" id="s23">
   <div class="accent-bar" style="background:var(--c8)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/16-cornell-notes.png" alt="康奈尔笔记法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s23" onclick="toggleFlip('flip_s23')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/16-cornell-notes.png" alt="康奈尔笔记法" loading="lazy"></div>
+          <div class="flip-back" id="story_s23"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">19</span>
       <span class="card-badge" style="background:var(--c8)">💡 深度理解 · 康奈尔笔记法</span>
       <h2>康奈尔笔记法</h2>
-      <p class="method-subtitle">把一页笔记分成三区</p>
+      <p class="method-subtitle">一页笔记三区结构</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c8)"><h4>📝 这是什么？</h4><p>把笔记页分成三个区域：右边(大区)上课记要点；左边(窄条)课后提炼关键词和问题；底部用一句话总结整页内容。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>结构化笔记本身就是复习提纲。复习时遮住右边看左边关键词，试着回忆内容——既是笔记又是自测工具！</p></div>
+        <div class="info-block" style="border-left-color:var(--c8)"><h4>📝 这是什么？</h4><p>把笔记页分成三区：右边(大区)上课记要点；左边(窄条)课后提炼关键词和问题；底部一句话总结。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>结构化笔记本身就是复习提纲。遮住右边看左边关键词回忆内容——既是笔记又是自测工具！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"把笔记本页面画两条线分成三区：左边写关键词、右边记笔记、底部一句话总结！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"把笔记本画两条线分三区：左边写关键词、右边记笔记、底部一句话总结！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s24: SQ3R阅读法 -->
 <section class="slide method-slide" id="s24">
   <div class="accent-bar" style="background:var(--c3)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/17-sq3r-reading.png" alt="SQ3R阅读法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s24" onclick="toggleFlip('flip_s24')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/17-sq3r-reading.png" alt="SQ3R阅读法" loading="lazy"></div>
+          <div class="flip-back" id="story_s24"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">20</span>
       <span class="card-badge" style="background:var(--c3)">💡 深度理解 · SQ3R阅读法</span>
       <h2>SQ3R阅读法</h2>
-      <p class="method-subtitle">五步系统阅读，把书读透</p>
+      <p class="method-subtitle">五步把书读透</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c3)"><h4>🔄 这是什么？</h4><p>S=浏览(看标题图片)→Q=提问(写下3个问题)→R1=阅读(带着问题读)→R2=复述(合上书说一遍)→R3=复习(过几天再看)。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>被动阅读只能记住10%，但加上提问和复述后记忆留存率提升到90%！五步法把被动翻书变成主动探索。</p></div>
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>🔄 这是什么？</h4><p>S=浏览→Q=提问→R1=阅读→R2=复述→R3=复习。五步把被动翻书变成主动探索。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>被动阅读只能记住10%，加上提问和复述后记忆留存率提升到90%！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"读课文前先翻一遍标题和图片，猜猜这篇文章讲什么。带着猜想读比直接读有趣10倍！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"读课文前先翻一遍标题和图片，猜猜讲什么。带着猜想读比直接读有趣10倍！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s25: 精细加工法 -->
 <section class="slide method-slide" id="s25">
   <div class="accent-bar" style="background:var(--c1)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/27-elaboration.png" alt="精细加工法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s25" onclick="toggleFlip('flip_s25')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/27-elaboration.png" alt="精细加工法" loading="lazy"></div>
+          <div class="flip-back" id="story_s25"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">21</span>
       <span class="card-badge" style="background:var(--c1)">💡 深度理解 · 精细加工法</span>
       <h2>精细加工法</h2>
       <p class="method-subtitle">把新知识粘到旧知识上</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c1)"><h4>🔗 这是什么？</h4><p>学新知识时主动问自己：这和我之前学的有什么联系？为什么会这样？如果…会怎样？把孤立的新知识通过问题连接到已有的知识网上。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>孤立知识1周后忘记70%，但与已有知识建立3个以上连接后遗忘率降到10%。连接越多记得越牢！</p></div>
+        <div class="info-block" style="border-left-color:var(--c1)"><h4>🔗 这是什么？</h4><p>学新知识时主动问自己：这和我学过的什么有关？为什么会这样？如果…会怎样？把孤立知识连接到已有知识网。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>孤立知识1周后忘记70%，但与已有知识建立3个连接后遗忘率降到10%。连接越多记得越牢！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"学新知识时主动问3个和什么有关——把新知识粘到旧知识上，它们就永远不会分开了！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"学新知识时主动问3个'和什么有关'——把新知识粘到旧知识上，它们就永远不会分开了！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s26: 具体例子法 -->
 <section class="slide method-slide" id="s26">
   <div class="accent-bar" style="background:var(--c4)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/28-concrete-examples.png" alt="具体例子法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s26" onclick="toggleFlip('flip_s26')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/28-concrete-examples.png" alt="具体例子法" loading="lazy"></div>
+          <div class="flip-back" id="story_s26"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">22</span>
       <span class="card-badge" style="background:var(--c4)">💡 深度理解 · 具体例子法</span>
       <h2>具体例子法</h2>
-      <p class="method-subtitle">每个抽象概念找3个生活中的例子</p>
+      <p class="method-subtitle">每个概念找3个例子</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c4)"><h4>🪜 这是什么？</h4><p>学抽象概念时自己找3个生活中的例子。比如学对称→蝴蝶翅膀、人脸、折纸。例子越多越具体，理解越深入。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>人类大脑理解抽象概念的神经基础是复用具体经验的脑区。光看定义很难理解，3个例子胜过100遍死记！</p></div>
+        <div class="info-block" style="border-left-color:var(--c4)"><h4>🪜 这是什么？</h4><p>学抽象概念时找3个生活中的例子。比如学对称→蝴蝶翅膀、人脸、折纸。例子越多理解越深入。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>人类大脑理解抽象概念的神经基础是复用具体经验的脑区。3个例子胜过100遍死记！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每个抽象概念找3个生活中的例子，画下来或写下来。知识就活起来不再是书本上的死文字！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每个抽象概念找3个生活中的例子画下来或写下来。知识就活起来了不再是死文字！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s27: 主动倾听法 -->
 <section class="slide method-slide" id="s27">
   <div class="accent-bar" style="background:var(--c3)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/33-active-listening.png" alt="主动倾听法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s27" onclick="toggleFlip('flip_s27')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/33-active-listening.png" alt="主动倾听法" loading="lazy"></div>
+          <div class="flip-back" id="story_s27"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">23</span>
       <span class="card-badge" style="background:var(--c3)">💡 深度理解 · 主动倾听法</span>
       <h2>主动倾听法</h2>
-      <p class="method-subtitle">课堂上像侦探一样听讲</p>
+      <p class="method-subtitle">课堂上像侦探听讲</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c3)"><h4>👂 这是什么？</h4><p>课堂上用三步法听讲：①预测(老师接下来会讲什么？)②抓关键词(用关键词快速记笔记)③提问(有疑问立刻标记)。像侦探一样主动捕捉信息。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>被动听讲只能吸收20-30%。主动预测+抓重点+提问，吸收率提升到70%以上。这是学霸和普通学生的本质区别！</p></div>
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>👂 这是什么？</h4><p>用三步法听讲：①预测(老师会讲什么？)②抓关键词(快速笔记)③提问(有疑问立刻标记)。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>被动听讲只能吸收20-30%。主动预测+抓重点+提问，吸收率提升到70%以上！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"上课前猜一猜今天老师会讲什么，上课时像侦探一样验证你的猜想——听课变成了寻宝游戏！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"上课前猜猜今天老师会讲什么，上课时像侦探验证猜想——听课变成了寻宝游戏！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s28: 知识串珠法 -->
 <section class="slide method-slide" id="s28">
   <div class="accent-bar" style="background:var(--c5)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/34-knowledge-weaving.png" alt="知识串珠法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s28" onclick="toggleFlip('flip_s28')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/34-knowledge-weaving.png" alt="知识串珠法" loading="lazy"></div>
+          <div class="flip-back" id="story_s28"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">24</span>
       <span class="card-badge" style="background:var(--c5)">💡 深度理解 · 知识串珠法</span>
       <h2>知识串珠法</h2>
-      <p class="method-subtitle">把不同学科知识串成项链</p>
+      <p class="method-subtitle">把不同学科知识串起来</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c5)"><h4>🧵 这是什么？</h4><p>不同学科的知识不是孤岛！数学的对称=美术的对称=自然的对称；语文的节奏=音乐的节拍=体育的步伐。找到不同学科之间的共同规律。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑以网络方式存储知识。当你把不同学科的知识串起来时，它们互相强化——一个领域的理解会加深另一个领域！</p></div>
+        <div class="info-block" style="border-left-color:var(--c5)"><h4>🧵 这是什么？</h4><p>不同学科不是孤岛！数学的对称=美术的对称=自然的对称。找到不同学科之间的共同规律。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑以网络方式存储知识。不同学科知识串起来它们互相强化——一个领域理解加深另一个！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每学完一个知识点想一想：这个在其他学科里有没有类似的东西？找到规律你就跨学科了！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每学完一个知识点想一想：这个在其他学科有没有类似的？找到规律你就跨学科了！"</div></div></div>
     </div>
   </div>
 </section>
-
-<!-- s29: 互动与激励 Header -->
-<section class="slide cat-header-slide" id="s29">
-  <div class="ch-icon">🤝</div>
-  <h2>互动与激励</h2>
-  <p class="ch-sub">学习不一定是孤独的！这6种方法让学习变得更有趣、更有动力。</p>
-  <div class="ch-methods">
-    <a href="#s30" class="ch-method-link" style="background:var(--c5)">💎 错题宝藏法</a>
-    <a href="#s31" class="ch-method-link" style="background:var(--c6)">🤝 合作学习法</a>
-    <a href="#s32" class="ch-method-link" style="background:var(--c4)">🏆 游戏化学习法</a>
-    <a href="#s33" class="ch-method-link" style="background:var(--c1)">🎯 刻意练习法</a>
-    <a href="#s34" class="ch-method-link" style="background:var(--c7)">🎭 角色扮演法</a>
-    <a href="#s35" class="ch-method-link" style="background:var(--c10)">📋 考试策略法</a>
-  </div>
-  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow" style="border-color:var(--c5)"></div></div>
-</section>
-
 <!-- s30: 错题宝藏法 -->
 <section class="slide method-slide" id="s30">
   <div class="accent-bar" style="background:var(--c5)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/05-error-treasure.png" alt="错题宝藏法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s30" onclick="toggleFlip('flip_s30')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/05-error-treasure.png" alt="错题宝藏法" loading="lazy"></div>
+          <div class="flip-back" id="story_s30"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">25</span>
       <span class="card-badge" style="background:var(--c5)">🤝 互动激励 · 错题宝藏法</span>
       <h2>错题宝藏法</h2>
-      <p class="method-subtitle">每道错题都是进步的宝石</p>
+      <p class="method-subtitle">每道错题都是宝石</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c5)"><h4>💎 这是什么？</h4><p>准备专门错题本把错题抄下来。关键：分析为什么错、写出正确解法、标注注意点。每周翻看一次，确保不会再犯。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>做对题目不会进步，错题才是成长机会！大脑从错误中学习的效率是从成功中学习的3倍。错题本就是你的进步路线图。</p></div>
+        <div class="info-block" style="border-left-color:var(--c5)"><h4>💎 这是什么？</h4><p>准备专门错题本抄错题。分析为什么错、写出正确解法、标注注意点。每周翻看一次。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑从错误中学习的效率是从成功中学的3倍。错题本就是进步路线图！</p></div>
       </div>
       <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"准备漂亮笔记本作为错题宝藏盒，每道错题分三栏：错题→正确解法→我为什么会错。"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s31: 合作学习法 -->
 <section class="slide method-slide" id="s31">
   <div class="accent-bar" style="background:var(--c6)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/18-collaborative-learning.png" alt="合作学习法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s31" onclick="toggleFlip('flip_s31')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/18-collaborative-learning.png" alt="合作学习法" loading="lazy"></div>
+          <div class="flip-back" id="story_s31"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">26</span>
       <span class="card-badge" style="background:var(--c6)">🤝 互动激励 · 合作学习法</span>
       <h2>合作学习法</h2>
-      <p class="method-subtitle">找一个学习伙伴，互相讲给对方听</p>
+      <p class="method-subtitle">伙伴共学互相讲解</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c6)"><h4>🤝 这是什么？</h4><p>找一个同学或朋友当学习伙伴。互相讲解知识点、互相提问、互相批改作业。轮流当小老师，看谁讲得更清楚！</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>学习金字塔理论：听讲只能记住5%，但教给别人能记住90%！两个人一起学不仅更开心，效果也好得多。</p></div>
+        <div class="info-block" style="border-left-color:var(--c6)"><h4>🤝 这是什么？</h4><p>找学习伙伴互相讲解知识点、互相提问、互相批改。轮流当小老师看谁讲得更清楚！</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>学习金字塔：听讲记住5%，教给别人记住90%！两个人学更开心效果也好得多。</p></div>
       </div>
       <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"和好朋友约定每周一次小老师对决，讲同一个知识点看谁更清楚。赢了的人请吃一块糖！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s32: 游戏化学习法 -->
 <section class="slide method-slide" id="s32">
   <div class="accent-bar" style="background:var(--c4)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/19-gamified-learning.png" alt="游戏化学习法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s32" onclick="toggleFlip('flip_s32')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/19-gamified-learning.png" alt="游戏化学习法" loading="lazy"></div>
+          <div class="flip-back" id="story_s32"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">27</span>
       <span class="card-badge" style="background:var(--c4)">🤝 互动激励 · 游戏化学习法</span>
       <h2>游戏化学习法</h2>
-      <p class="method-subtitle">把学习设计成闯关游戏</p>
+      <p class="method-subtitle">把学习变成闯关</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c4)"><h4>🏆 这是什么？</h4><p>画一张学习闯关地图，每完成一个任务前进一格。攒够10颗星兑换小奖励。把枯燥的学习变成像打游戏一样有趣！</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑对游戏的奖励系统和学习用的同一套回路。设定关卡→完成→获得奖励，这个循环让大脑源源不断产生动力和快乐！</p></div>
+        <div class="info-block" style="border-left-color:var(--c4)"><h4>🏆 这是什么？</h4><p>画学习闯关地图，每完成一个任务前进一格。攒够10颗星兑换奖励。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑对游戏奖励系统和学习用同一套回路。关卡→完成→奖励=源源不断的动力！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"画一张闯关地图贴在墙上，10个关卡对应10个学习任务。每完成一关贴一颗星星，集齐兑换冰淇淋！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"画闯关地图贴墙上，10关对应10个学习任务。每关贴一颗星星，集齐兑换冰淇淋！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s33: 刻意练习法 -->
 <section class="slide method-slide" id="s33">
   <div class="accent-bar" style="background:var(--c1)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/20-deliberate-practice.png" alt="刻意练习法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s33" onclick="toggleFlip('flip_s33')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/20-deliberate-practice.png" alt="刻意练习法" loading="lazy"></div>
+          <div class="flip-back" id="story_s33"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">28</span>
       <span class="card-badge" style="background:var(--c1)">🤝 互动激励 · 刻意练习法</span>
       <h2>刻意练习法</h2>
-      <p class="method-subtitle">不要只做会的题，专攻弱项</p>
+      <p class="method-subtitle">专攻弱项不做会的</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c1)"><h4>🎯 这是什么？</h4><p>找出自己最薄弱的知识点，集中火力反复练习。不是简单重复已经会的，而是不断挑战自己还不会的。瞄准有点难但能做出来的难度。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>花1小时攻克弱项>花3小时做已经会的题。大脑在有点难但能做出来的区域学习效率最高——这叫学习区原理。</p></div>
+        <div class="info-block" style="border-left-color:var(--c1)"><h4>🎯 这是什么？</h4><p>找出最薄弱的知识点集中火力反复练习。瞄准有点难但能做出来的难度。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>花1小时攻克弱项>花3小时做已经会的题。学习区原理：效率最高在有点难但能做出来处。</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每次做练习时问自己：这部分我做对了吗？没做对的才是今天要重点练习的！做10道简单题不如攻克1道难题。"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"每次练习问自己：没做对的才是今天要重点练的！做10道简单题不如攻克1道难题。"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s34: 角色扮演法 -->
 <section class="slide method-slide" id="s34">
   <div class="accent-bar" style="background:var(--c7)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/35-role-playing.png" alt="角色扮演法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s34" onclick="toggleFlip('flip_s34')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/35-role-playing.png" alt="角色扮演法" loading="lazy"></div>
+          <div class="flip-back" id="story_s34"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">29</span>
       <span class="card-badge" style="background:var(--c7)">🤝 互动激励 · 角色扮演法</span>
       <h2>角色扮演法</h2>
-      <p class="method-subtitle">假装你是科学家或诗人来思考</p>
+      <p class="method-subtitle">换角色思考开脑洞</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c7)"><h4>🎭 这是什么？</h4><p>学习时换一个角色思考：如果我是数学家会怎么解这道题？如果我是李白会怎么写这首诗？如果是科学家会怎么观察这个现象？换个角色思路大开！</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>角色扮演激活大脑中不同的神经网络。当你站在不同角度看问题时，往往能发现平常发现不了的答案——这就是创造力的来源！</p></div>
+        <div class="info-block" style="border-left-color:var(--c7)"><h4>🎭 这是什么？</h4><p>假装你是科学家、诗人或数学家来思考问题。换个角色思路大开！</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>角色扮演激活不同神经网络。站不同角度看问题，往往发现平常发现不了的答案。</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"做一道难题时假装你是老师，要给学生讲清楚。你会发现自己突然有了新的理解！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"做难题时假装你是老师要给学生讲清楚。你会突然有了新的理解！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s35: 考试策略法 -->
 <section class="slide method-slide" id="s35">
   <div class="accent-bar" style="background:var(--c10)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/36-exam-strategy.png" alt="考试策略法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s35" onclick="toggleFlip('flip_s35')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/36-exam-strategy.png" alt="考试策略法" loading="lazy"></div>
+          <div class="flip-back" id="story_s35"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">30</span>
       <span class="card-badge" style="background:var(--c10)">🤝 互动激励 · 考试策略法</span>
       <h2>考试策略法</h2>
       <p class="method-subtitle">会学也要会考</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c10)"><h4>📋 这是什么？</h4><p>考试有策略：①先浏览全卷(1分钟)②先易后难(把会做的先做完)③合理分配时间(大题多花时间)④留5分钟检查。这不是取巧，是科学应考！</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>考试成绩=知识储备×考试策略。很多小朋友知识储备够但策略不对导致发挥失常。好的考试策略能让你多拿10分！</p></div>
+        <div class="info-block" style="border-left-color:var(--c10)"><h4>📋 这是什么？</h4><p>考试口诀：先浏览(1分钟)→先易后难(把会做的先做完)→合理分配时间→留5分钟检查。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>考试成绩=知识储备×考试策略。好的策略能让你多拿10分！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"考试记住口诀：先浏览→先易后难→分好时间→留空检查。最重要的是先把会做的全部做完！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"考试记住：先浏览→先易后难→分好时间→留空检查。最重要的是先把会做的全部做完！"</div></div></div>
     </div>
   </div>
 </section>
-
-<!-- s36: 情绪与习惯 Header -->
-<section class="slide cat-header-slide" id="s36">
-  <div class="ch-icon">🌈</div>
-  <h2>情绪与习惯</h2>
-  <p class="ch-sub">好的学习状态来自好的情绪和习惯。这10种方法帮你建立最佳学习状态。</p>
-  <div class="ch-methods">
-    <a href="#s37" class="ch-method-link" style="background:var(--c7)">🧘 正念学习法</a>
-    <a href="#s38" class="ch-method-link" style="background:var(--c9)">🪞 自我对话法</a>
-    <a href="#s39" class="ch-method-link" style="background:var(--c3)">📍 固定学习角法</a>
-    <a href="#s40" class="ch-method-link" style="background:var(--c5)">⏳ 碎片时间利用法</a>
-    <a href="#s41" class="ch-method-link" style="background:var(--c4)">📓 反思日记法</a>
-    <a href="#s42" class="ch-method-link" style="background:var(--c6)">🌱 成长心态法</a>
-    <a href="#s43" class="ch-method-link" style="background:var(--c2)">🏃 运动促学法</a>
-    <a href="#s44" class="ch-method-link" style="background:var(--c8)">🔗 习惯叠加法</a>
-    <a href="#s45" class="ch-method-link" style="background:var(--c9)">🌊 心流学习法</a>
-    <a href="#s46" class="ch-method-link" style="background:var(--c10)">✍️ 手写优势法</a>
-  </div>
-  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow" style="border-color:var(--c7)"></div></div>
-</section>
-
 <!-- s37: 正念学习法 -->
 <section class="slide method-slide" id="s37">
   <div class="accent-bar" style="background:var(--c7)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/21-mindfulness-learning.png" alt="正念学习法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s37" onclick="toggleFlip('flip_s37')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/21-mindfulness-learning.png" alt="正念学习法" loading="lazy"></div>
+          <div class="flip-back" id="story_s37"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">31</span>
       <span class="card-badge" style="background:var(--c7)">🌈 情绪习惯 · 正念学习法</span>
       <h2>正念学习法</h2>
-      <p class="method-subtitle">学习前做1分钟深呼吸</p>
+      <p class="method-subtitle">1分钟深呼吸清空杂念</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c7)"><h4>🧘 这是什么？</h4><p>开始学习前先闭眼做10次深呼吸。只关注呼吸的起伏，把脑中杂念像云一样轻轻推开。然后睁开眼睛带着平静的心开始学习。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑从β波(紧张焦虑)切换到α波(放松专注)，学习效率最高。1分钟深呼吸就像按下大脑的重置按钮。</p></div>
+        <div class="info-block" style="border-left-color:var(--c7)"><h4>🧘 这是什么？</h4><p>开始学习前闭眼做10次深呼吸。只关注呼吸起伏，把杂念像云一样推开。然后睁眼平静学习。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑从β波(紧张)切换到α波(放松专注)，学习效率最高。1分钟深呼吸=按下大脑重置按钮。</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"学习前闭眼数10次呼吸，只感受吸气~呼气~。然后对自己说准备好了！大脑就切到专注模式。"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"学习前闭眼数10次呼吸，只感受吸气~呼气~。然后说'准备好了！'大脑切到专注模式。"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s38: 自我对话法 -->
 <section class="slide method-slide" id="s38">
   <div class="accent-bar" style="background:var(--c9)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/22-self-talk.png" alt="自我对话法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s38" onclick="toggleFlip('flip_s38')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/22-self-talk.png" alt="自我对话法" loading="lazy"></div>
+          <div class="flip-back" id="story_s38"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">32</span>
       <span class="card-badge" style="background:var(--c9)">🌈 情绪习惯 · 自我对话法</span>
       <h2>自我对话法</h2>
-      <p class="method-subtitle">做题时把思路说出来</p>
+      <p class="method-subtitle">把思路说出来</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c9)"><h4>🪞 这是什么？</h4><p>做题目时自言自语，把思考过程说出来：这个数先除2，然后加5，等于…就像给自己当实时小老师。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>语言化迫使大脑把模糊思维变得清晰。研究发现把解题思路说出来能提升30%正确率！说不清楚的地方=还没真正理解的地方。</p></div>
+        <div class="info-block" style="border-left-color:var(--c9)"><h4>🪞 这是什么？</h4><p>做题目时自言自语把思考过程说出来。就像给自己当实时小老师。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>语言化迫使大脑把模糊思维变清晰。说出来能提升30%正确率！说不清楚=没真理解。</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"做数学题时小声把每一步说出来，就像在给自己讲解。你会发现以前模糊的地方突然变清晰了！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"做数学题时小声把每一步说出来像给自己讲解。以前模糊的地方突然变清晰！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s39: 固定学习角法 -->
 <section class="slide method-slide" id="s39">
   <div class="accent-bar" style="background:var(--c3)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/23-fixed-study-spot.png" alt="固定学习角法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s39" onclick="toggleFlip('flip_s39')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/23-fixed-study-spot.png" alt="固定学习角法" loading="lazy"></div>
+          <div class="flip-back" id="story_s39"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">33</span>
       <span class="card-badge" style="background:var(--c3)">🌈 情绪习惯 · 固定学习角法</span>
       <h2>固定学习角法</h2>
-      <p class="method-subtitle">专属学习角落，坐下就进入状态</p>
+      <p class="method-subtitle">专属空间自动进入状态</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c3)"><h4>📍 这是什么？</h4><p>在家整理一个只用于学习的固定角落：干净书桌、好灯光、学习用品整齐摆放。不放玩具和零食。每天在同一位置学习。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑会自动建立位置-行为关联(条件反射)。就像一进厕所就想刷牙，坐到你专属的学习角，大脑自动切换到我要学习模式。</p></div>
+        <div class="info-block" style="border-left-color:var(--c3)"><h4>📍 这是什么？</h4><p>整理一个只用于学习的固定角落：干净书桌、好灯光、学习用品整齐。不放玩具和零食。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>大脑建立位置-行为条件反射。坐到专属学习角，大脑自动切换学习模式。</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"收拾一个只用来学习的桌子角落，贴上学习魔法区标签。坐到这个位置你就变成了学习小超人！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"收拾一个只用来学习的桌子角落贴上'学习魔法区'。坐到这里你就是学习小超人！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s40: 碎片时间利用法 -->
 <section class="slide method-slide" id="s40">
   <div class="accent-bar" style="background:var(--c5)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/24-fragmented-time.png" alt="碎片时间利用法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s40" onclick="toggleFlip('flip_s40')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/24-fragmented-time.png" alt="碎片时间利用法" loading="lazy"></div>
+          <div class="flip-back" id="story_s40"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">34</span>
       <span class="card-badge" style="background:var(--c5)">🌈 情绪习惯 · 碎片时间利用法</span>
       <h2>碎片时间利用法</h2>
-      <p class="method-subtitle">口袋卡片，积少成多</p>
+      <p class="method-subtitle">口袋卡片积少成多</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c5)"><h4>⏳ 这是什么？</h4><p>把等车、排队、饭前等零碎时间利用起来。准备一张口袋卡片，上面写着本周要背的单词/古诗，随时拿出来看一眼。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>每天的碎片时间加起来超过1小时！积少成多，每天用碎片时间背2个单词，一年就是730个——这比很多课本的词汇量都大！</p></div>
+        <div class="info-block" style="border-left-color:var(--c5)"><h4>⏳ 这是什么？</h4><p>把等车、排队、饭前等零碎时间利用起来。准备口袋卡片，写本周要背的内容随时看。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>每天碎片时间加起来超过1小时！每天用碎片背2个单词，一年730个——比课本词汇量还大！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"做一张小卡片写5个要记的知识点放进口袋。等车、排队、饭前各看一遍，一天轻轻松松多学5个知识点！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"做小卡片写5个知识点放口袋。等车排队饭前各看一遍，一天轻轻松松多学5个！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s41: 反思日记法 -->
 <section class="slide method-slide" id="s41">
   <div class="accent-bar" style="background:var(--c4)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/29-reflection-journal.png" alt="反思日记法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s41" onclick="toggleFlip('flip_s41')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/29-reflection-journal.png" alt="反思日记法" loading="lazy"></div>
+          <div class="flip-back" id="story_s41"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">35</span>
       <span class="card-badge" style="background:var(--c4)">🌈 情绪习惯 · 反思日记法</span>
       <h2>反思日记法</h2>
-      <p class="method-subtitle">每天5分钟写三句话反思学习</p>
+      <p class="method-subtitle">每天三句话反思学习</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c4)"><h4>📓 这是什么？</h4><p>每天花5分钟写三句话：①今天学到了什么？②哪里学得比较难？③明天怎么改进？从被动学变成主动管——这就是元认知。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>对自己思考过程的思考(元认知)是预测学业成绩的最强指标之一。反思帮你发现自己的学习规律，越学越聪明！</p></div>
+        <div class="info-block" style="border-left-color:var(--c4)"><h4>📓 这是什么？</h4><p>每天花5分钟写三句话：①今天学到什么？②哪里比较难？③明天怎么改进？从被动学变成主动管。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>对自己思考的思考(元认知)是预测学业成绩的最强指标。反思帮你发现学习规律！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"准备一个小日记本，每天睡前写三句话：今天学了什么？哪里难？明天怎么改？坚持一周你就能发现自己的学习秘密！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"准备小日记本每天睡前写三句话：今天学了什么？哪里难？明天怎么改？坚持一周发现秘密！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s42: 成长心态法 -->
 <section class="slide method-slide" id="s42">
   <div class="accent-bar" style="background:var(--c6)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/30-growth-mindset.png" alt="成长心态法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s42" onclick="toggleFlip('flip_s42')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/30-growth-mindset.png" alt="成长心态法" loading="lazy"></div>
+          <div class="flip-back" id="story_s42"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">36</span>
       <span class="card-badge" style="background:var(--c6)">🌈 情绪习惯 · 成长心态法</span>
       <h2>成长心态法</h2>
-      <p class="method-subtitle">把我做不到改成我还做不到</p>
+      <p class="method-subtitle">"我还没做到"的力量</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c6)"><h4>🌱 这是什么？</h4><p>相信大脑像肌肉一样越练越聪明。把这次我没考好改成这次我没考好，但我可以更努力。面对困难时不放弃，因为每一次努力都在让大脑变强。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>斯坦福30年研究发现：相信智力可成长的学生面对困难时坚持时间延长2倍，最终成绩更高。一句话改变一生！</p></div>
+        <div class="info-block" style="border-left-color:var(--c6)"><h4>🌱 这是什么？</h4><p>相信大脑像肌肉越练越聪明。把'这次没考好'改成'这次没考好但我可以更努力'。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>斯坦福30年研究：相信智力可成长的学生面对困难坚持时间延长2倍。一句话改变一生！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"从现在开始把我不会改成我还不会但我在学。多一个字，多无限可能！每次犯错都是大脑在长肌肉。"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"从现在开始把'我不会'改成'我还不会但我在学'。多一个字多无限可能！每次犯错大脑在长肌肉。"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s43: 运动促学法 -->
 <section class="slide method-slide" id="s43">
   <div class="accent-bar" style="background:var(--c2)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/37-exercise-learning.png" alt="运动促学法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s43" onclick="toggleFlip('flip_s43')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/37-exercise-learning.png" alt="运动促学法" loading="lazy"></div>
+          <div class="flip-back" id="story_s43"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">37</span>
       <span class="card-badge" style="background:var(--c2)">🌈 情绪习惯 · 运动促学法</span>
       <h2>运动促学法</h2>
-      <p class="method-subtitle">学习前运动20分钟效率翻倍</p>
+      <p class="method-subtitle">先运动20分钟再学习</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c2)"><h4>🏃 这是什么？</h4><p>学习前先运动20分钟——跳绳、跑步、打球都行。运动后大脑产生BDNF(脑细胞生长因子)，记忆力和专注力都大幅提升！</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>运动是大脑最好的营养剂。BDNF被称为大脑的奇迹肥料，让神经元生长新连接。运动后学习效率相当于大脑升级了CPU！</p></div>
+        <div class="info-block" style="border-left-color:var(--c2)"><h4>🏃 这是什么？</h4><p>学习前先运动20分钟——跳绳跑步打球。运动后大脑产生BDNF(脑细胞肥料)，记忆力专注力大幅提升！</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>BDNF是大脑的超级肥料，让神经元生长新连接。运动后学习=大脑升级了CPU！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"做作业前先跳绳或跑步20分钟，你会发现自己背东西特别快，做题也特别清醒！运动=给大脑加油。"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"做作业前先跳绳或跑步20分钟，你会发现背东西特别快做题也特别清醒！运动=给大脑加油。"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s44: 习惯叠加法 -->
 <section class="slide method-slide" id="s44">
   <div class="accent-bar" style="background:var(--c8)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/38-habit-stacking.png" alt="习惯叠加法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s44" onclick="toggleFlip('flip_s44')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/38-habit-stacking.png" alt="习惯叠加法" loading="lazy"></div>
+          <div class="flip-back" id="story_s44"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">38</span>
       <span class="card-badge" style="background:var(--c8)">🌈 情绪习惯 · 习惯叠加法</span>
       <h2>习惯叠加法</h2>
-      <p class="method-subtitle">把新习惯挂到旧习惯上</p>
+      <p class="method-subtitle">新习惯挂到旧习惯上</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c8)"><h4>🔗 这是什么？</h4><p>不靠意志力靠惯性！把新学习习惯挂到已有习惯上：刷牙后→背1个单词、吃饭前→看1页书、睡觉前→写反思日记、放学回家→先复习10分钟。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>意志力有限但习惯无限。当新行为附着在老习惯上时，不需要额外努力——大脑自动执行。这是最省力的养成方法！</p></div>
+        <div class="info-block" style="border-left-color:var(--c8)"><h4>🔗 这是什么？</h4><p>不靠意志力靠惯性！公式：在[现有习惯]之后我会[新学习习惯]。如刷牙后→背1个单词。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>意志力有限但习惯无限。新行为附着在老习惯上时不需要额外努力——自动执行！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"用这个公式：在[现有习惯]之后我会[新学习习惯]。比如：刷牙后我会背1个单词。试一周看看有多轻松！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"用这个公式：在[现有习惯]之后我会[新学习习惯]。试试刷牙后→背1个单词。试一周看多轻松！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s45: 心流学习法 -->
 <section class="slide method-slide" id="s45">
   <div class="accent-bar" style="background:var(--c9)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/39-flow-learning.png" alt="心流学习法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s45" onclick="toggleFlip('flip_s45')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/39-flow-learning.png" alt="心流学习法" loading="lazy"></div>
+          <div class="flip-back" id="story_s45"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">39</span>
       <span class="card-badge" style="background:var(--c9)">🌈 情绪习惯 · 心流学习法</span>
       <h2>心流学习法</h2>
       <p class="method-subtitle">找到难度刚好的甜蜜点</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c9)"><h4>🌊 这是什么？</h4><p>太简单的任务无聊，太难的焦虑。找到那个有点难但能做出来的甜蜜点——你会完全沉浸在学习中，忘记时间飞逝。这就是心流状态。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>心流是心理学家发现的最佳体验状态。在心流中学1小时=普通状态学3小时。关键是持续调整难度保持在甜蜜区！</p></div>
+        <div class="info-block" style="border-left-color:var(--c9)"><h4>🌊 这是什么？</h4><p>太简单无聊太难焦虑。找到有点难但能做出来的甜蜜点——完全沉浸忘记时间。这就是心流状态。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>心流中学1小时=普通状态学3小时。关键持续调整难度保持在甜蜜区！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"做题目时如果觉得太简单就加难度，太难就降难度。保持在做对70%刚好有点挑战的水平，你就进入了心流！"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"做题时太简单就加难度太难就降难度。保持做对70%恰有挑战水平，你就进入了心流！"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s46: 手写优势法 -->
 <section class="slide method-slide" id="s46">
   <div class="accent-bar" style="background:var(--c10)"></div>
   <div class="slide-inner">
-    <div class="slide-img"><img src="images/40-handwriting.png" alt="手写优势法" loading="lazy"></div>
+    <div class="flip-zone">
+      <div class="flip-container" id="flip_s46" onclick="toggleFlip('flip_s46')">
+        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        <div class="flip-inner">
+          <div class="flip-front"><img src="images/40-handwriting.png" alt="手写优势法" loading="lazy"></div>
+          <div class="flip-back" id="story_s46"></div>
+        </div>
+      </div>
+    </div>
     <div class="slide-text">
       <span class="slide-number">40</span>
       <span class="card-badge" style="background:var(--c10)">🌈 情绪习惯 · 手写优势法</span>
       <h2>手写优势法</h2>
-      <p class="method-subtitle">手写比打字记得深3倍</p>
+      <p class="method-subtitle">手写记忆深度是打字3倍</p>
       <div class="info-blocks">
-        <div class="info-block" style="border-left-color:var(--c10)"><h4>✍️ 这是什么？</h4><p>重要的知识一定要手写！打字太快大脑来不及深度加工，手写时大脑被迫提炼总结。研究发现手写的记忆深度是打字的3倍。</p></div>
-        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>手写激活大脑中更大的神经网络——包括运动皮层和空间处理区域。慢就是快，少就是多。手写=大脑深度加工！</p></div>
+        <div class="info-block" style="border-left-color:var(--c10)"><h4>✍️ 这是什么？</h4><p>重要知识一定要手写！打字太快大脑来不及深度加工，手写时大脑被迫提炼总结。</p></div>
+        <div class="info-block" style="border-left-color:var(--teal)"><h4>🧠 为什么有效？</h4><p>手写激活大脑更大神经网络——包括运动皮层和空间处理区。慢就是快少就是多！</p></div>
       </div>
-      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"记重点时关掉电脑拿起笔！手写的每一个字都经过了大脑的深度加工——你会发现自己记得特别清楚。"</div></div></div>
+      <div class="magic-spell"><span class="spell-icon">✨</span><div><div class="spell-label">魔法咒语</div><div class="spell-text">"记重点时关掉电脑拿起笔！手写的每个字都经过大脑深度加工——你会发现自己记得特别清楚。"</div></div></div>
     </div>
   </div>
 </section>
-
 <!-- s47: SUMMARY -->
 <section class="slide cat-overview-slide" id="s47">
   <h2>🌟 选择你的第一个魔法吧！</h2>
   <p class="co-sub">40种方法分成5大类，先选一个最喜欢的开始。每天进步一点点！</p>
   <div class="cat-cards">
-    <a href="#s2" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务管理</span><span class="cc-count">7种</span></a>
-    <a href="#s10" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化技巧</span><span class="cc-count">8种</span></a>
-    <a href="#s19" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解方法</span><span class="cc-count">9种</span></a>
-    <a href="#s29" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动与激励</span><span class="cc-count">6种</span></a>
-    <a href="#s36" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪与习惯</span><span class="cc-count">10种</span></a>
+    <a href="#s2" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务</span><span class="cc-count">7种</span></a>
+    <a href="#s10" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化</span><span class="cc-count">8种</span></a>
+    <a href="#s19" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解</span><span class="cc-count">9种</span></a>
+    <a href="#s29" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动激励</span><span class="cc-count">6种</span></a>
+    <a href="#s36" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪习惯</span><span class="cc-count">10种</span></a>
   </div>
 </section>
-
 <!-- s48: FOOTER -->
 <footer class="slide footer-slide" id="s48">
   <h2 class="footer-title">🎉 恭喜你完成了魔法之旅！</h2>
-  <p class="footer-sub">40种学习方法在手，学习变得轻松又有趣。记住：不用一次全部掌握，先选一种坚持一周！</p>
-  <div class="footer-mini-grid">
-    <a href="#s3" style="background:var(--c2)">🍅 番茄专注法</a>
-    <a href="#s4" style="background:var(--c6)">📅 间隔记忆法</a>
-    <a href="#s5" style="background:var(--c8)">🪜 目标分解法</a>
-    <a href="#s6" style="background:var(--c1)">🟩 四象限法</a>
-    <a href="#s7" style="background:var(--c2)">🌅 晨间规划法</a>
-    <a href="#s8" style="background:var(--c5)">🔄 交叉学习法</a>
-    <a href="#s9" style="background:var(--c7)">🧠 大脑休息法</a>
-    <a href="#s11" style="background:var(--c1)">🔍 预习与复习法</a>
-    <a href="#s12" style="background:var(--c9)">🧩 联想记忆法</a>
-    <a href="#s13" style="background:var(--c4)">🗺️ 思维导图法</a>
-    <a href="#s14" style="background:var(--c5)">🧱 组块记忆法</a>
-    <a href="#s15" style="background:var(--c7)">🌙 睡前复习法</a>
-    <a href="#s16" style="background:var(--c8)">🎨 双编码法</a>
-    <a href="#s17" style="background:var(--c3)">🌉 类比桥梁法</a>
-    <a href="#s18" style="background:var(--c9)">👀 多感官学习法</a>
-    <a href="#s20" style="background:var(--c3)">👨‍🏫 费曼小老师法</a>
-    <a href="#s21" style="background:var(--c7)">❓ 提问学习法</a>
-    <a href="#s22" style="background:var(--c10)">✅ 自我检测法</a>
-    <a href="#s23" style="background:var(--c8)">📝 康奈尔笔记法</a>
-    <a href="#s24" style="background:var(--c3)">🔄 SQ3R阅读法</a>
-    <a href="#s25" style="background:var(--c1)">🔗 精细加工法</a>
-    <a href="#s26" style="background:var(--c4)">🪜 具体例子法</a>
-    <a href="#s27" style="background:var(--c3)">👂 主动倾听法</a>
-    <a href="#s28" style="background:var(--c5)">🧵 知识串珠法</a>
-    <a href="#s30" style="background:var(--c5)">💎 错题宝藏法</a>
-    <a href="#s31" style="background:var(--c6)">🤝 合作学习法</a>
-    <a href="#s32" style="background:var(--c4)">🏆 游戏化学习法</a>
-    <a href="#s33" style="background:var(--c1)">🎯 刻意练习法</a>
-    <a href="#s34" style="background:var(--c7)">🎭 角色扮演法</a>
-    <a href="#s35" style="background:var(--c10)">📋 考试策略法</a>
-    <a href="#s37" style="background:var(--c7)">🧘 正念学习法</a>
-    <a href="#s38" style="background:var(--c9)">🪞 自我对话法</a>
-    <a href="#s39" style="background:var(--c3)">📍 固定学习角法</a>
-    <a href="#s40" style="background:var(--c5)">⏳ 碎片时间利用法</a>
-    <a href="#s41" style="background:var(--c4)">📓 反思日记法</a>
-    <a href="#s42" style="background:var(--c6)">🌱 成长心态法</a>
-    <a href="#s43" style="background:var(--c2)">🏃 运动促学法</a>
-    <a href="#s44" style="background:var(--c8)">🔗 习惯叠加法</a>
-    <a href="#s45" style="background:var(--c9)">🌊 心流学习法</a>
-    <a href="#s46" style="background:var(--c10)">✍️ 手写优势法</a>
-  </div>
+  <p class="footer-sub">40种学习方法在手，学习变得轻松又有趣。不用一次全部掌握，先选一种坚持一周！</p>
+  <div class="footer-mini-grid"><a href="#s3" style="background:var(--c2)">🍅 番茄专注法</a><a href="#s4" style="background:var(--c6)">📅 间隔记忆法</a><a href="#s5" style="background:var(--c8)">🪜 目标分解法</a><a href="#s6" style="background:var(--c1)">🟩 四象限法</a><a href="#s7" style="background:var(--c2)">🌅 晨间规划法</a><a href="#s8" style="background:var(--c5)">🔄 交叉学习法</a><a href="#s9" style="background:var(--c7)">🧠 大脑休息法</a><a href="#s11" style="background:var(--c1)">🔍 预习与复习法</a><a href="#s12" style="background:var(--c9)">🧩 联想记忆法</a><a href="#s13" style="background:var(--c4)">🗺️ 思维导图法</a><a href="#s14" style="background:var(--c5)">🧱 组块记忆法</a><a href="#s15" style="background:var(--c7)">🌙 睡前复习法</a><a href="#s16" style="background:var(--c8)">🎨 双编码法</a><a href="#s17" style="background:var(--c3)">🌉 类比桥梁法</a><a href="#s18" style="background:var(--c9)">👀 多感官学习法</a><a href="#s20" style="background:var(--c3)">👨‍🏫 费曼小老师法</a><a href="#s21" style="background:var(--c7)">❓ 提问学习法</a><a href="#s22" style="background:var(--c10)">✅ 自我检测法</a><a href="#s23" style="background:var(--c8)">📝 康奈尔笔记法</a><a href="#s24" style="background:var(--c3)">🔄 SQ3R阅读法</a><a href="#s25" style="background:var(--c1)">🔗 精细加工法</a><a href="#s26" style="background:var(--c4)">🪜 具体例子法</a><a href="#s27" style="background:var(--c3)">👂 主动倾听法</a><a href="#s28" style="background:var(--c5)">🧵 知识串珠法</a><a href="#s30" style="background:var(--c5)">💎 错题宝藏法</a><a href="#s31" style="background:var(--c6)">🤝 合作学习法</a><a href="#s32" style="background:var(--c4)">🏆 游戏化学习法</a><a href="#s33" style="background:var(--c1)">🎯 刻意练习法</a><a href="#s34" style="background:var(--c7)">🎭 角色扮演法</a><a href="#s35" style="background:var(--c10)">📋 考试策略法</a><a href="#s37" style="background:var(--c7)">🧘 正念学习法</a><a href="#s38" style="background:var(--c9)">🪞 自我对话法</a><a href="#s39" style="background:var(--c3)">📍 固定学习角法</a><a href="#s40" style="background:var(--c5)">⏳ 碎片时间利用法</a><a href="#s41" style="background:var(--c4)">📓 反思日记法</a><a href="#s42" style="background:var(--c6)">🌱 成长心态法</a><a href="#s43" style="background:var(--c2)">🏃 运动促学法</a><a href="#s44" style="background:var(--c8)">🔗 习惯叠加法</a><a href="#s45" style="background:var(--c9)">🌊 心流学习法</a><a href="#s46" style="background:var(--c10)">✍️ 手写优势法</a></div>
   <div class="footer-quote">"每天进步一点点，日积月累大改变" ✨</div>
   <p class="footer-heart">用 <span class="heart">❤️</span> 为爱学习的小朋友制作 · 2026</p>
 </footer>
-
 <script>
+const STORIES = {"s3": "<div class=\"story-wrap\">\n<h3>🍅 Rainbow 的番茄大作战</h3>\n<p>周五下午，Rainbow 面对一堆作业发愁：数学卷子、英语单词、语文作文……她一会儿写数学，一会儿背单词，结果一小时过去了，什么都没做完。</p>\n<p>她想起「番茄专注法」，拿出妈妈的手机设了25分钟闹钟。「叮！」第一轮只做数学，连厕所都不去。闹钟响了，她跳了100下绳。第二轮只背单词，第三轮只写作文。</p>\n<p>一个半小时后，三门作业全部完成！Rainbow 开心地说：「原来一次只做一件事，比同时做好几件事快多了！」</p>\n</div>", "s4": "<div class=\"story-wrap\">\n<h3>📅 Rainbow 再也不怕听写了</h3>\n<p>英语老师说下周一要听写20个新单词。Rainbow 的同桌小雨打算周日晚上一口气背完。Rainbow 却有个秘密武器——「间隔记忆法」。</p>\n<p>周三学完当天就复习一遍，周四睡前再看5分钟，周六早上用卡片自测，周日晚上最后过一遍。每次只花10分钟，轻轻松松。</p>\n<p>周一早上，小雨顶着黑眼圈说昨晚背到11点。Rainbow 却精神抖擞。听写成绩下来：Rainbow 全对，小雨错了6个。Rainbow 悄悄告诉小雨：「像浇花一样每天浇一点，比一次浇一大桶有用多啦！」</p>\n</div>", "s5": "<div class=\"story-wrap\">\n<h3>🪜 从100个到5个的魔法</h3>\n<p>「背完100个成语？！怎么可能！」Rainbow 看着语文老师布置的月目标，觉得像一座大山压过来。</p>\n<p>她拿出本子，把100拆成小台阶：每天背5个→周末复习本周25个→月底总复习。她还画了一张楼梯图贴在墙上，每完成一天就往上涂一格颜色。</p>\n<p>第20天，Rainbow 惊喜地发现楼梯已经涂满了！她不仅背完了100个成语，还因为每天只背5个，每个都记得特别牢。期末考试时，她的作文里用上了30多个成语，老师画了满满的红圈圈！</p>\n</div>", "s6": "<div class=\"story-wrap\">\n<h3>🟩 Rainbow 的四象限魔法阵</h3>\n<p>周日晚上，Rainbow 列了一堆事：背单词、做手抄报、整理书包、看电视、帮妈妈收衣服……她不知道该先做哪个，急得团团转。</p>\n<p>她拿出一张纸画了个十字，分成四个格子。第①格「重要+紧急」：明天要交的手抄报（马上做！）。第②格「重要+不紧急」：背周五要考的单词（计划每天背）。第③格「紧急+不重要」：帮妈妈收衣服（请爸爸帮忙）。第④格「不重要+不紧急」：看电视（做完正事再说）。</p>\n<p>画完四象限，Rainbow 一下子就不慌了。她笑着说：「原来分清轻重缓急，比拼命埋头苦干聪明100倍！」</p>\n</div>", "s7": "<div class=\"story-wrap\">\n<h3>🌅 Rainbow 的清晨三件事</h3>\n<p>Rainbow 以前每天早上都手忙脚乱：找袜子、收书包、吃早饭……经常差点迟到。妈妈送了她一个小本子，说：「试试每天早上花3分钟写三件事」。</p>\n<p>第一天，Rainbow 写下：①背5个单词②中午去图书馆还书③放学先完成数学作业。然后按顺序一件件完成，划掉的感觉特别爽！</p>\n<p>坚持一周后，Rainbow 发现自己不再忘事了，作业也从来没有漏交过。她对妈妈说：「原来花3分钟列计划，比瞎忙一天有效多了！我现在每天早上起来第一件事就是打开我的魔法小本子！」</p>\n</div>", "s8": "<div class=\"story-wrap\">\n<h3>🔄 Rainbow 的学科旋转木马</h3>\n<p>期末考试前，Rainbow 决定一晚上把数学复习完。她连续做了两小时数学题，越做越晕，最后连最简单的计算都出错了。</p>\n<p>爸爸建议她试试「交叉学习法」：数学20分钟→语文20分钟→英语20分钟→再回到数学。Rainbow 半信半疑地试了试——神奇的事发生了！每次切换回来，她都觉得思路比刚才更清晰了。</p>\n<p>爸爸解释：「大脑切换科目时被迫重新提取刚才的知识，这本身就是最好的记忆强化！就像吃饭不能只吃米饭，要饭菜汤交替着来。」Rainbow 从此爱上了这种旋转木马式的学习节奏！</p>\n</div>", "s9": "<div class=\"story-wrap\">\n<h3>🧠 发呆居然也是学习？</h3>\n<p>Rainbow 有个习惯：做完40分钟作业就到阳台上站一会儿，看看远处的树，发发呆。奶奶总说：「又在偷懒！」</p>\n<p>直到科学老师讲了大脑的两种模式。Rainbow 才明白——她不是在偷懒，是在用「大脑休息法」！专注模式像聚光灯，适合攻克难题。发散模式像泛光灯，适合产生灵感。很多发明家的灵感都来自散步和洗澡时的放空状态。</p>\n<p>现在 Rainbow 理直气壮地对奶奶说：「我在让大脑后台自动整理知识呢！」奶奶笑着摇了摇头，但再也不说她了。而且 Rainbow 发现，休息回来后的学习效率真的高了很多。</p>\n</div>", "s11": "<div class=\"story-wrap\">\n<h3>🔍 Rainbow 的预习超能力</h3>\n<p>每次数学课，Rainbow 的同桌小胖都一脸懵：「老师怎么讲这么快？」Rainbow 却听得津津有味，还能举手回答问题。</p>\n<p>秘密就在前一天晚上——Rainbow 花了5分钟翻了翻明天要学的小数乘法，把不懂的地方用荧光笔标出来。第二天上课，她就像带着地图找宝藏一样，特别留意老师讲那些标记过的地方。</p>\n<p>下课后她又花10分钟整理笔记，把今天学的和之前学的整数乘法做了对比。Rainbow 告诉小胖：「预习帮你搭好空书架，复习帮你把书放对位置。你试试，明天数学课你也能举手！」</p>\n</div>", "s12": "<div class=\"story-wrap\">\n<h3>🧩 李白突然想吃冰淇淋</h3>\n<p>语文课要背《望庐山瀑布》，Rainbow 怎么也记不住「飞流直下三千尺」的下一句。她盯着课本发呆，突然想到一个好玩的：</p>\n<p>「飞流直下三千尺，疑是银河落九天」——她想象李白站在瀑布顶上，突然想吃冰淇淋（疑是），抬头一看，银河（银色的河）从天上落下来，变成了一根巨大的冰淇淋！</p>\n<p>她把这个搞笑的联想告诉好朋友，好朋友笑得前仰后合。但神奇的是——两个人都再也忘不掉这句诗了。Rainbow 得意地说：「大脑最喜欢搞笑的东西，越夸张越记得牢！」</p>\n</div>", "s13": "<div class=\"story-wrap\">\n<h3>🗺️ Rainbow 的知识大树</h3>\n<p>期中复习时，Rainbow 看着满书密密麻麻的笔记，不知道从哪里开始。她拿出一张大白纸和彩色笔，决定画一棵「知识大树」。</p>\n<p>树干中间写「植物的一生」，然后用绿色画光合作用分支、红色画种子发芽分支、蓝色画花的构造分支。每个分支上她画了小图标：太阳代表光合作用、小苗代表发芽、🌻代表开花。</p>\n<p>画完之后，Rainbow 惊讶地发现：原来零散的知识点之间是有联系的！她只看了一眼自己画的大树，就把整章内容回忆出来了。从此，她的书桌上总贴着一张五彩斑斓的思维导图。</p>\n</div>", "s14": "<div class=\"story-wrap\">\n<h3>🧱 从11个数字到3个块</h3>\n<p>Rainbow 的爸爸报了一个新手机号，让她帮忙记下来。Rainbow 看着13812345678这串数字发愁——11个数字怎么记得住？</p>\n<p>妈妈教她一个诀窍：「把数字打包成块！」138是一个块（移动号段），1234是一个块（像顺子），5678是一个块（也是顺子）。本来11个独立数字变成了3个有意义的块。</p>\n<p>Rainbow 恍然大悟，把同样的方法用在背课文上：一篇200字的课文，她先分4个段落块，每块再提炼3个关键词。只用了15分钟，她就能熟练背诵了。她开心地说：「组块记忆法，就是把散珠子串成项链！」</p>\n</div>", "s15": "<div class=\"story-wrap\">\n<h3>🌙 大脑加班，Rainbow 睡觉</h3>\n<p>期末考试前一天晚上，Rainbow 没有像其他同学那样复习到很晚。她9点就洗漱完毕，坐在床上花了15分钟快速翻了一遍笔记，然后安心地闭上眼睛睡觉了。</p>\n<p>第二天考语文，Rainbow 看到一道题是昨天翻过的知识点，脑海里清晰地浮现出了那页笔记的内容——就像大脑在夜里偷偷帮她重新播放了一遍！</p>\n<p>成绩出来后，周五熬夜复习的小雨只考了82分，而早睡的Rainbow 考了97分。Rainbow 悄悄告诉小雨：「睡前15分钟复习=给大脑下达保存指令。你睡觉的时候，大脑在加班帮你巩固记忆呢！」</p>\n</div>", "s16": "<div class=\"story-wrap\">\n<h3>🎨 一条信息两条路</h3>\n<p>科学课上学「水的三态变化」，Rainbow 看着文字描述怎么也记不住：液态→固态叫凝固，液态→气态叫蒸发……她决定画一幅图：</p>\n<p>一个圆圈代表水分子，圆圈紧密排列是冰（固态），稍微分开流动是水（液态），四散飞舞是水蒸气（气态）。她在箭头旁画了🔥代表加热（蒸发）、❄️代表冷却（凝固）。</p>\n<p>考试时，Rainbow 虽然忘了「蒸发」的定义，但她脑海中浮现出自己画的那幅图——水分子从圆圈变成四散飞舞的样子。答案脱口而出！Rainbow 得意地说：「文字这条路忘了，图画那条路还能救你——这就是双编码法的魔力！」</p>\n</div>", "s17": "<div class=\"story-wrap\">\n<h3>🌉 电流就像水流</h3>\n<p>物理课上老师讲电路，Rainbow 听得一头雾水：「电流是什么？电压又是什么？它们有什么区别？」</p>\n<p>放学后爸爸带Rainbow 到后院浇花。他拧开水龙头，水流哗哗地冲出来。爸爸说：「电流就像这水流。电压呢，就像水压——水龙头开得越大，水压越大，水流越急。电阻呢，就像水管粗细——水管越细，水流越不顺畅。」</p>\n<p>Rainbow 的眼睛一下子亮了！回到课本上，她把电流想象成水流、电压想象成水龙头开关、电阻想象成水管粗细——所有概念瞬间清晰了。她开心地说：「原来把新东西比作我已经知道的，理解速度能快10倍！」</p>\n</div>", "s18": "<div class=\"story-wrap\">\n<h3>👀 四管齐下记单词</h3>\n<p>英语听写，Rainbow 的同桌小红又错了8个。小红委屈地说：「我明明看了好多遍！」Rainbow 问：「你看的时候读出来了吗？写了吗？」小红摇摇头。</p>\n<p>Rainbow 分享了自己的方法：①眼睛看着单词（视觉）②嘴巴大声读出来（听觉+口语）③手同时在纸上写（运动觉）④耳朵听自己的发音（听觉）。</p>\n<p>「四管齐下，在大脑里建了4条路！一条路堵了还有另外三条呢。」Rainbow 示范了一遍：她大声读apple，手上写a-p-p-l-e，耳朵听自己的声音——只花了30秒就牢固地记住了。</p>\n<p>小红试了一个星期，下次听写只错了2个。她激动地抱住Rainbow：「你也太厉害了吧！」</p>\n</div>", "s20": "<div class=\"story-wrap\">\n<h3>👨‍🏫 玩偶小熊是Rainbow 最好的学生</h3>\n<p>Rainbow 刚学完分数的加减法，觉得自己已经懂了。但当她试着讲给玩具小熊听时，刚说到「先通分再相加减」，就卡住了：「呃……通分是什么意思来着？」</p>\n<p>她又翻了一遍课本，这次用最简单的比喻：「通分就像两个不同大小的蛋糕，要切成一样大的小块才能放一起数。」讲完之后她才真正理解了通分的本质。</p>\n<p>妈妈说：「能教给别人，才是真正学会了。这是诺贝尔奖得主费曼爷爷的学习秘诀！」现在 Rain-bow 的玩偶小熊已经是全班最聪明的小熊了——它「听过」所有科目。</p>\n</div>", "s21": "<div class=\"story-wrap\">\n<h3>❓ 带着侦探帽去上课</h3>\n<p>下节课要学「植物的光合作用」。Rainbow 上课前在笔记本上写了3个问题：「①植物吃什么？②为什么叶子是绿的？③光合作用需要阳光吗？」</p>\n<p>然后她像福尔摩斯一样戴上想象中的侦探帽，带着这三个问题走进课堂。老师讲到「叶绿体」时，Rainbow 心里一喜：「原来绿色是因为叶绿体！第一个问题要的答案！」讲到「二氧化碳+水→葡萄糖+氧气」时，她在心里打勾：「植物吃的是二氧化碳和水！第三个问题也解决了！」</p>\n<p>课后，她的笔记本上不仅记满了知识点，更重要的是——她一直在主动寻找答案，整堂课注意力高度集中。「带着问题学习，就像带着藏宝图去寻宝。」</p>\n</div>", "s22": "<div class=\"story-wrap\">\n<h3>✅ 白纸大法好</h3>\n<p>Rainbow 的数学老师布置复习第三单元：小数的加减乘除。Rainbow 没有直接翻笔记——她拿出一张白纸，盖上书本，试着写下能回忆的所有公式、解题步骤和易错点。</p>\n<p>写完一看：三步小数加法会了，但小数除法有个步骤想不起来了。她翻开课本对照，用红笔补上了忘记的部分。然后找了3道小数除法练习题，全部做对。</p>\n<p>第二天小测验，全班有12个人在小数除法那道题上栽了跟头——但Rainbow 做对了。她告诉好朋友：「翻书复习只是眼睛会了，白纸回忆才是大脑会了。能回忆出来的，才是真正属于你的！」</p>\n</div>", "s23": "<div class=\"story-wrap\">\n<h3>📝 一页纸等于三遍复习</h3>\n<p>Rainbow 看同学的笔记本密密麻麻像天书，复习时根本找不到重点。她决定教同学一个自己刚学会的方法。</p>\n<p>她拿出一张纸画了两条线，分成三个区：右边大区上课记要点，左边窄条课后提炼关键词和问题，底部用一句话总结。Rainbow 说：「比如这课关于分数——右边记老师讲的内容，左边写通分、约分、加减法这些关键词，最后在底部写一句把分数想象成切蛋糕。」</p>\n<p>「复习的时候，遮住右边，看左边的关键词回忆内容——回忆出来了就说明记住了，回忆不出来的再看右边。」同学试了一次，惊喜地说：「这不就是笔记和自测二合一吗？太聪明了！」</p>\n</div>", "s24": "<div class=\"story-wrap\">\n<h3>🔄 猜猜这篇讲什么</h3>\n<p>语文课要学新课《桂林山水》。Rainbow 没有直接翻开读——她先看了标题和两幅插图，猜：「这篇文章应该是写桂林的山和水有多美吧？」然后她在本子上写了3个问题：</p>\n<p>①桂林的山有什么特点？②漓江的水有什么特点？③为什么说桂林山水甲天下？带着这些问题，她开始仔细阅读课文。读到「山如碧玉簪」时，她在第三个问题旁打了个勾。</p>\n<p>读完合上书，她用自己的话说了一遍桂林山水是什么样的。第二天老师提问时，Rainbow 对答如流。她得意地想：「SQ3R——浏览→提问→阅读→复述→复习，五步下来，课文就像刻在脑子里一样。」</p>\n</div>", "s25": "<div class=\"story-wrap\">\n<h3>🔗 天安门和长方形是亲戚</h3>\n<p>数学课上学长方形的周长公式：(长+宽)×2。Rainbow 觉得好抽象。放学路过小区广场，她突然发现：「广场不就是个大长方形吗！」</p>\n<p>她沿着广场走了一圈：先走长边（约50步），再走宽边（约30步），又走长边（50步），最后走宽边（30步）。一共160步。这不就是(50+30)×2吗？跟公式一模一样！</p>\n<p>更让她惊喜的是——她又联想到了语文课上学过的天安门广场，还有体育课的篮球场。她把「长方形周长」这个概念和已有的三个记忆连接起来，从此想忘都忘不掉。Rainbow 明白了：「精细加工就是把新知识焊接到旧知识网上——焊点越多越牢固。」</p>\n</div>", "s26": "<div class=\"story-wrap\">\n<h3>🪜 三个例子胜过一百遍死记</h3>\n<p>Rainbow 在科学课上学了一个词：「浮力」。课本定义是「浸在液体中的物体受到向上的力」。她读了5遍还是觉得抽象。</p>\n<p>她想起具体例子法，开始在生活中找例子：①游泳时整个人漂起来，水把自己往上托——那就是浮力！②洗澡时橡皮小鸭浮在水面上——浮力！③轮船那么大却不会沉——因为水的浮力托着它！</p>\n<p>三个例子下来，浮力再也不是课本上冷冰冰的定义了。Rainbow 在笔记本上画了游泳小人、橡皮鸭和大轮船，旁边写上「浮力」。考试考到浮力概念时，她脑子里的不是文字——而是那三个鲜活的画面。</p>\n</div>", "s27": "<div class=\"story-wrap\">\n<h3>👂 戴侦探帽听讲的Rainbow</h3>\n<p>Rainbow 以前上课也认真听，但经常听着听着就走神了。直到她发明了「侦探三步法」。</p>\n<p>第一步「预测」：上课前快速浏览一遍标题和插图，猜猜今天老师会讲什么。第二步「抓关键词」：老师在黑板写的内容和自己觉得重要的地方，快速用关键词记下来。第三步「提问」：有疑问的地方画个小问号，下课立刻问老师或自己查。</p>\n<p>第一次用这个方法，Rainbow 发现一节40分钟的课过得特别快——因为她一直在主动捕捉信息，根本没有机会走神！课后翻开笔记，关-键词一目了然。妈妈问她今天学了什么，她噼里啪啦说了一大堆，妈妈惊讶地说：「你今天怎么记住这么多？」</p>\n</div>", "s28": "<div class=\"story-wrap\">\n<h3>🧵 串珠成链的Rainbow</h3>\n<p>一天Rainbow 突然发现了一个秘密：数学课的对称图形、美术课的对称剪纸、科学课的蝴蝶翅膀——三件不同学科的事情，背后是同一个原理！</p>\n<p>她兴奋地拿出一根线和彩色珠子：红色珠子写「数学·轴对称」，蓝色珠写「美术·对称剪纸」，绿色珠子写「科学·蝴蝶对称」，黄色珠子写「语文·对仗句式」。她把珠子串在一起，做成了一条知识项链。</p>\n<p>从此她养成了习惯：每学一个新知识，就问自己「这个在其他学科里有没有类似的？」语文的节奏↔音乐的节拍↔体育的步伐；历史的时间线↔数学的数轴。Rainbow 说：「孤立的知识是散珠子，串起来才是项链！」</p>\n</div>", "s30": "<div class=\"story-wrap\">\n<h3>💎 错题是地雷，也是宝藏</h3>\n<p>Rainbow 以前最讨厌看到错题，每次卷子发下来她都想把错题藏起来。直到妈妈送了她一本漂亮的笔记本，封面上写着「Rainbow 的宝藏盒」。</p>\n<p>妈妈说：「每道错题都是一颗宝石——它告诉你在哪个地方需要加油。」Rainbow 开始认真收集每一道错题：把题目抄下来，用红笔分析为什么错了（粗心？不会？理解错了？），用蓝笔写出正确解法，再用绿笔标注「下次注意什么」。</p>\n<p>期中考试前，她没有翻厚重的课本，只看这本宝藏盒里的题目。成绩出来那天，她开心地抱着笔记本跳了起来：「我的错题宝藏盒比任何复习资料都有用！因为每一页都是为我量身定做的。」</p>\n</div>", "s31": "<div class=\"story-wrap\">\n<h3>🤝 双人学习，快乐翻倍</h3>\n<p>Rainbow 和好朋友小雨约定：每周三下午是「小老师对决日」。这周的主题是分数的比较大小。</p>\n<p>Rainbow 先当老师，用巧克力掰成两半举例：「1/2就是一半，1/4就是四分之一——当然是半个巧克力比四分之一大啦！」小雨听得连连点头。轮到小雨当老师时，她画了圆形图来解释，Rainbow 发现了一个自己没注意到的点。</p>\n<p>最有趣的是两人互相出题考对方——做错了就罚做鬼脸。一个学期下来，两人的数学成绩都进步了十几名。Rainbow 说：「听老师讲只能记住5%，但互相讲给对方听能记住90%！而且一起学比一个人学开心多了！」</p>\n</div>", "s32": "<div class=\"story-wrap\">\n<h3>🏆 Rainbow 的10星闯关地图</h3>\n<p>暑假作业来了——背80个成语、读5本课外书、完成数学练习册。Rainbow 看着任务清单，觉得像一座大山。她灵机一动，画了一张彩色闯关地图贴在墙上。</p>\n<p>地图上有10个关卡：背8个成语=1颗星，读完1本书=2颗星，做10页数学=1颗星。每攒够5颗星可以兑换一个奖励：看一集动画片、吃一根冰淇淋、多玩20分钟。</p>\n<p>Rainbow 每天迫不及待地闯关攒星——本来枯燥的暑假作业突然变成了升级打怪的游戏！一个半月后她不仅完成了所有作业，还攒了30多颗星。她开心地说：「把学习设计成闯关游戏，大脑就会源源不断地产生动力！」</p>\n</div>", "s33": "<div class=\"story-wrap\">\n<h3>🎯 不做会的，专攻不会的</h3>\n<p>Rainbow 以前做数学练习册的方式是：从第一页开始，一题接一题往下做。做了2小时，累得不行，翻了翻——90%都是她已经会的题。</p>\n<p>老师注意到这个问题，对她说：「Rainbow，你试试只做你不会的题。」Rainbow 开始改变策略：每次翻开练习册，先扫一遍，把已经会的题打叉跳过，只做那些有点难、需要想一想、或者之前做错过类似的题。</p>\n<p>刚开始有点不习惯——因为做不会的题确实比较费脑。但两周后她发现，以前老是错的那几类题现在都能做对了！Rainbow 明白了：「花1小时攻克弱项，比花3小时做已经会的题有效得多——这是刻意练习的魔法！」</p>\n</div>", "s34": "<div class=\"story-wrap\">\n<h3>🎭 今天Rainbow 是李白</h3>\n<p>语文作业：写一首关于春天的小诗。Rainbow 咬着笔头发呆——写诗？她从来没写过诗。</p>\n<p>她闭上眼睛想：「如果我是李白，看到春天的柳树，会怎么写呢？」她想象自己穿着古装站在河边，春风拂面，柳条飘飘。她在心里默念：「柳树的长头发在风里跳舞，春天是大地最漂亮的衣裳……」</p>\n<p>虽然远远比不上李白，但Rainbow 写出了生平第一首诗！老师在全班念了她的作品，说「想象力非常丰富」。Rainbow 兴奋地想：「如果我没把自己想象成李白，可能一句话都写不出来。换个角度思考，就像打开了另一扇门！」</p>\n</div>", "s35": "<div class=\"story-wrap\">\n<h3>📋 考试不是比聪明是比策略</h3>\n<p>期中数学考试，Rainbow 拿到卷子没有立刻动笔。她花了1分钟快速浏览：填空题10道（简单）、选择题5道（中等）、应用题3道（偏难）、附加题1道。她心里迅速分配时间。</p>\n<p>她先快速做完填空题和选择题（25分钟），然后集中精力攻克3道应用题（20分钟），最后留5分钟从头检查。检查时她发现一道填空题的答案写反了，赶紧改正。附加题有点难但还有5分钟——试着做了前两步，拿到了过程分。</p>\n<p>成绩：98分！同桌小红能力不差但只考了85——因为她在一道难题上卡了太久，后面几道会做的题都没时间写。Rainbow 告诉小红：「考试有策略：先浏览→先易后难→分好时间→留空检查。会学重要，会考同样重要！」</p>\n</div>", "s37": "<div class=\"story-wrap\">\n<h3>🧘 Rainbow 的1分钟魔法</h3>\n<p>Rainbow 刚和弟弟吵了一架，气呼呼地坐到书桌前。她盯着作业本，脑子里却全是刚才的争吵——根本看不进去一个字。</p>\n<p>她想起老师教的「正念学习法」。闭眼，深呼吸10次，只关注呼吸的起伏——吸气……呼气……吸气……呼气……渐渐地，脑海里的怒火像云一样飘走了，心跳也慢了下来。</p>\n<p>睁开眼睛后，她感觉整个人像被按了「重置」按钮。刚才读不进去的课文，现在每个字都清晰地跳进脑海。「原来大脑需要从生气模式切换到学习模式——1分钟深呼吸就是那个切换开关。」从那以后，Rainbow 每次学习前都会先做这「1分钟魔法」。</p>\n</div>", "s38": "<div class=\"story-wrap\">\n<h3>🪞 Rainbow 的自言自语</h3>\n<p>「这道题怎么这么难！」Rainbow 对着数学题发愁。她想起老师说的——「把思路说出来」。</p>\n<p>「好，先从题目开始。一个水池，进水每小时3吨，出水每小时2吨……所以每小时净增加多少？3减2等于1吨。哦！每小时净增加1吨！那么填满需要5吨水的话……5除以1等于5。对！5小时！」</p>\n<p>她把每一步都用嘴说了出来，说到「3减2等于1吨」的时候，突然发现之前卡住的地方其实很简单——但以前这些步骤只是在脑子里模糊地过一遍，一卡住就放弃了。</p>\n<p>Rainbow 发现：「小声说出来，模糊的地方就会变清晰。说不清楚的地方=还没真正理解的地方。自言自语不是傻——是把脑子里的浆糊搅成清水！」</p>\n</div>", "s39": "<div class=\"story-wrap\">\n<h3>📍 Rainbow 的学习魔法区</h3>\n<p>Rainbow 以前有时在餐桌上写作业（旁边是电视），有时趴床上看书（看着看着就睡着了）。她发现自己在不同地方的学习效率差别特别大。</p>\n<p>妈妈帮她把书桌角落重新整理：撤走了玩具和零食，放上了台灯、笔筒和一个小闹钟。墙上贴了她自己画的「Rainbow 学习魔法区」标签。从那天起，Rainbow 只在这个位置学习——不做其他事。</p>\n<p>神奇的事发生了：只要她坐到这个位置，大脑就像接收了信号——「叮！学习模式启动！」不到两分钟就能进入专注状态。Rainbow 笑着说：「我的大脑被训练成了乖乖狗——坐到学习角就自动想学习。这就像一进厕所就想刷牙一样！」</p>\n</div>", "s40": "<div class=\"story-wrap\">\n<h3>⏳ 碎片变黄金</h3>\n<p>Rainbow 算了笔账：每天早上等校车5分钟、中午吃完饭等午休10分钟、下午放学等妈妈接15分钟、晚饭前等开饭10分钟——一天至少有40分钟的碎片时间！</p>\n<p>她做了一叠小卡片，每张写5个知识点：一张写英语单词、一张写古诗、一张写数学公式。等校车时掏出来看5分钟，午饭后复习10分钟。</p>\n<p>一个月下来，Rainbow 用碎片时间背完了60个单词、8首古诗、12个数学公式——而且完全没占用正常的作业和玩的时间！她惊叹：「原来碎片时间加起来每天超过一节课！口袋卡片就像是把时间缝隙里的金子捞出来。积少成多，一年下来太惊人了！」</p>\n</div>", "s41": "<div class=\"story-wrap\">\n<h3>📓 Rainbow 的三句日记</h3>\n<p>Rainbow 的妈妈送了她一本精致的小日记本，说：「每天只写三句话就好：今天学了什么、哪里比较难、明天怎么改进。」Rainbow 觉得三句话太简单了，抱着试试看的心态开始写。</p>\n<p>第一周，她发现自己每次都在「数学应用题」上写「有点难」。她开始主动思考：为什么难？原来她总是没理解题意就开始计算。于是第二周她刻意先读三遍题目再动笔——正确率立刻上去了。</p>\n<p>Rainbow 惊喜地发现：「写反思日记就像给自己的学习过程拍X光片——平时看不到的问题，一写就暴露出来了！我不是变聪明了，我是更了解自己的学习方式了。」</p>\n</div>", "s42": "<div class=\"story-wrap\">\n<h3>🌱 只是一个「还」字的差别</h3>\n<p>数学考试发下来，Rainbow 只考了72分。她垂头丧气地说：「我根本学不好数学。」妈妈轻轻纠正她：「你不是学不好数学，你是还-没-学好数学。多一个字，差别很大哦。」</p>\n<p>Rainbow 愣住了。「我做不到」和「我还做不到」——差一个字，但感觉完全不同。「我还做不到」意味着我在路上，我还有机会。她开始把这句话贴在书桌前，每次遇到难题就想：「我的大脑肌肉正在生长中！」</p>\n<p>期末考试她考了88分。虽然还不是最高分，但她笑着说：「我在进步！每一次努力都在让我的大脑变强。」Rainbow 明白了：「相信自己可以成长——这种信念本身就是最强大的学习方法。」</p>\n</div>", "s43": "<div class=\"story-wrap\">\n<h3>🏃 先动再学的秘密</h3>\n<p>Rainbow 放学回家第一件事总是先吃点心然后开始写作业。但坐在书桌前总感觉脑子迷迷糊糊，一道简单的题要想半天。</p>\n<p>爸爸提议：「试试先跳绳20分钟再学习？」Rainbow 半信半疑地试了。跳完绳她满头大汗地坐到书桌前——奇异的事发生了！她发现脑子特别清醒，做题速度比平时快多了，背课文也记得特别清楚。</p>\n<p>科学老师告诉她：「运动后大脑会分泌BDNF——这是大脑的超级肥料！它让神经元生长新连接，相当于给大脑升级了CPU。」从那以后，Rainbow 每天放学的流程变成了：🏃运动20分钟→✍️学习。她说这是她发现的最神奇的提效方法。</p>\n</div>", "s44": "<div class=\"story-wrap\">\n<h3>🔗 不靠意志力靠惯性</h3>\n<p>Rainbow 想养成每天背单词的习惯，但总坚持不了三天。妈妈教了她一个秘诀：把新习惯「挂」到旧习惯上。</p>\n<p>公式很简单：「在[已经有的习惯]之后，我会[新的好习惯]」。Rainbow 列了几个：刷牙后→背1个单词（只要1分钟）；吃早饭前→看1页课外书；睡前洗澡后→写三句反思日记；放学回家→先复习10分钟再做作业。</p>\n<p>奇迹发生了——因为刷牙、吃饭、洗澡、回家这些事她本来就会做，新的好习惯就像搭上了顺风车，完全不需要额外消耗意志力。一个月后，这些新习惯已经变成了和刷牙一样自然的日常！</p>\n</div>", "s45": "<div class=\"story-wrap\">\n<h3>🌊 忘记时间的学习魔法</h3>\n<p>Rainbow 发现一个奇怪的规律：做太简单的题会无聊到走神，做太难的题会焦虑到想放弃——但做那种「有点难、努力一下能做出来」的题时，时间过得飞快，一抬头一个小时过去了！</p>\n<p>老师告诉她这叫「心流」——一种完全沉浸在学习中的状态。在心流中学1小时等于普通状态学3小时。关键是要不断调整难度，让自己始终保持在那个甜蜜点上。</p>\n<p>现在Rainbow 学会了「难度调节」：做题觉得无聊了就换难一点的，觉得焦虑了就换简单一点的。她说：「找到难度刚好的甜蜜点，学习就不再是苦差事——而是一种享受。那种忘记时间的感觉，真的太奇妙了。」</p>\n</div>", "s46": "<div class=\"story-wrap\">\n<h3>✍️ 慢就是快，少就是多</h3>\n<p>Rainbow 以前用平板电脑记笔记，打字飞快——老师讲的内容她几乎能全部打下来。但考试前复习时，她发现自己对笔记上的内容印象很模糊。</p>\n<p>科学课上老师讲到「为什么手写比打字记得牢」。原来打字时手指动作太快，大脑来不及深度加工；而手写时速度慢，大脑被迫对信息进行提炼和重组——这个过程就是最有效的记忆编码。</p>\n<p>Rainbow 试着改用纸笔记笔记。刚开始觉得好慢，但一周后她惊喜地发现：手写的内容几乎不用复习就能回忆起来。她在笔记本扉页上写：「慢就是快，少就是多。每一个手写的字，都经过了大脑的深度加工。」</p>\n</div>"};
+
+function toggleFlip(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const hint = el.querySelector('.flip-hint');
+  if (!el.classList.contains('flipped')) {
+    // Load story content on first flip
+    const sid = id.replace('flip_', '');
+    const back = document.getElementById('story_' + sid);
+    if (back && STORIES[sid] && !back.innerHTML) {
+      back.innerHTML = STORIES[sid];
+    }
+  }
+  el.classList.toggle('flipped');
+  if (hint) hint.style.opacity = el.classList.contains('flipped') ? '0' : '1';
+}
+
 (function(){
 const slides=document.querySelectorAll('.slide');
 const topNav=document.getElementById('topMethodNav');
@@ -1057,15 +1331,15 @@ for(let i=0;i<totalSlides;i++){
 const dots=navDots.querySelectorAll('.dot');
 
 const categories=[
-  {start:3,end:9,color:'var(--cat1)',name:'⏰ 时间管理',methods:[
+  {start:3,end:9,color:'var(--c1)',methods:[
     {id:3,label:'番茄专注',color:'var(--c2)'},{id:4,label:'间隔记忆',color:'var(--c6)'},{id:5,label:'目标分解',color:'var(--c8)'},{id:6,label:'四象限',color:'var(--c1)'},{id:7,label:'晨间规划',color:'var(--c2)'},{id:8,label:'交叉学习',color:'var(--c5)'},{id:9,label:'大脑休息',color:'var(--c7)'}]},
-  {start:11,end:18,color:'var(--cat2)',name:'🧠 记忆强化',methods:[
+  {start:11,end:18,color:'var(--c6)',methods:[
     {id:11,label:'预习复习',color:'var(--c1)'},{id:12,label:'联想记忆',color:'var(--c9)'},{id:13,label:'思维导图',color:'var(--c4)'},{id:14,label:'组块记忆',color:'var(--c5)'},{id:15,label:'睡前复习',color:'var(--c7)'},{id:16,label:'双编码',color:'var(--c8)'},{id:17,label:'类比桥梁',color:'var(--c3)'},{id:18,label:'多感官',color:'var(--c9)'}]},
-  {start:20,end:28,color:'var(--cat3)',name:'💡 深度理解',methods:[
+  {start:20,end:28,color:'var(--c8)',methods:[
     {id:20,label:'费曼小老师',color:'var(--c3)'},{id:21,label:'提问学习',color:'var(--c7)'},{id:22,label:'自我检测',color:'var(--c10)'},{id:23,label:'康奈尔笔记',color:'var(--c8)'},{id:24,label:'SQ3R',color:'var(--c3)'},{id:25,label:'精细加工',color:'var(--c1)'},{id:26,label:'具体例子',color:'var(--c4)'},{id:27,label:'主动倾听',color:'var(--c3)'},{id:28,label:'知识串珠',color:'var(--c5)'}]},
-  {start:30,end:35,color:'var(--cat4)',name:'🤝 互动激励',methods:[
+  {start:30,end:35,color:'var(--c5)',methods:[
     {id:30,label:'错题宝藏',color:'var(--c5)'},{id:31,label:'合作学习',color:'var(--c6)'},{id:32,label:'游戏化',color:'var(--c4)'},{id:33,label:'刻意练习',color:'var(--c1)'},{id:34,label:'角色扮演',color:'var(--c7)'},{id:35,label:'考试策略',color:'var(--c10)'}]},
-  {start:37,end:46,color:'var(--cat5)',name:'🌈 情绪习惯',methods:[
+  {start:37,end:46,color:'var(--c7)',methods:[
     {id:37,label:'正念学习',color:'var(--c7)'},{id:38,label:'自我对话',color:'var(--c9)'},{id:39,label:'固定学习角',color:'var(--c3)'},{id:40,label:'碎片时间',color:'var(--c5)'},{id:41,label:'反思日记',color:'var(--c4)'},{id:42,label:'成长心态',color:'var(--c6)'},{id:43,label:'运动促学',color:'var(--c2)'},{id:44,label:'习惯叠加',color:'var(--c8)'},{id:45,label:'心流学习',color:'var(--c9)'},{id:46,label:'手写优势',color:'var(--c10)'}]},
 ];
 
