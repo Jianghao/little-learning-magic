@@ -10,7 +10,7 @@
 <style>
 :root{--bg:#FFF8F0;--card:#FFFDF7;--coral:#E8725A;--teal:#2D8B8B;--gold:#F4C542;--text:#3D2C2C;--text-light:#7A6A6A;--sage:#7BAE7F;--lavender:#C4B5E0;--blush:#F0D5D0;--cream:#FEF9F0;--shadow:0 4px 24px rgba(61,44,44,.08);--radius:24px;--radius-sm:16px;--font-display:'ZCOOL KuaiLe','PingFang SC','Microsoft YaHei',cursive;--font-body:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;--transition:.4s cubic-bezier(.25,.46,.45,.94);--c1:#E8725A;--c2:#F08A5D;--c3:#3DA5A5;--c4:#E8919E;--c5:#F4C542;--c6:#7BAE7F;--c7:#9B7EC4;--c8:#5B9EED;--c9:#F0926B;--c10:#4ECB71}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-snap-type:y mandatory;scroll-behavior:smooth;font-size:18px}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth;font-size:22px}
 body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.7;-webkit-font-smoothing:antialiased}
 .bg-layer{position:fixed;inset:0;pointer-events:none;z-index:0}
 .bg-orb{position:absolute;border-radius:50%;opacity:.10;animation:orbFloat 20s ease-in-out infinite}
@@ -27,12 +27,12 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
 .slide-nav .dot.active{background:var(--coral);border-color:var(--coral);box-shadow:0 0 6px rgba(232,114,90,.4);width:9px;height:9px}
 .slide-nav .dot.cat-dot{width:9px;height:9px;border:1px dashed rgba(61,44,44,.3)}
 .slide-nav .dot.hero-dot{width:11px;height:11px;background:var(--gold)}
-.kb-hint{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:200;font-size:.8em;color:var(--text-light);background:rgba(255,255,255,.8);backdrop-filter:blur(10px);padding:8px 20px;border-radius:50px;pointer-events:none;transition:opacity .5s}
+.kb-hint{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);z-index:200;font-size:0.85em;color:var(--text-light);background:rgba(255,255,255,.8);backdrop-filter:blur(10px);padding:8px 20px;border-radius:50px;pointer-events:none;transition:opacity .5s}
 .kb-hint kbd{display:inline-block;padding:2px 8px;border-radius:4px;background:#fff;border:1px solid #ddd;font-family:monospace;margin:0 3px;font-size:.9em}
 .top-method-nav{position:fixed;top:0;left:0;right:0;z-index:300;background:rgba(255,255,255,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--blush);padding:0 24px;height:52px;display:flex;align-items:center;gap:0;opacity:0;transform:translateY(-100%);transition:opacity .35s,transform .35s cubic-bezier(.25,.46,.45,.94);pointer-events:none;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .top-method-nav::-webkit-scrollbar{display:none}
 .top-method-nav.visible{opacity:1;transform:translateY(0);pointer-events:auto}
-.top-method-nav a{flex-shrink:0;text-decoration:none;padding:6px 14px;border-radius:20px;font-size:.83em;font-weight:600;color:var(--text-light);transition:var(--transition);white-space:nowrap}
+.top-method-nav a{flex-shrink:0;text-decoration:none;padding:7px 14px;border-radius:20px;font-size:0.9em;font-weight:600;color:var(--text-light);transition:var(--transition);white-space:nowrap}
 .top-method-nav a:hover{color:var(--coral);background:rgba(232,114,90,.08)}
 .top-method-nav a.active{color:#fff}
 
@@ -42,23 +42,33 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
 .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.7);backdrop-filter:blur(10px);border:2px solid var(--blush);border-radius:50px;padding:12px 28px;font-size:1.1em;font-weight:500;color:var(--coral);margin-bottom:24px;animation:fadeInUp .8s ease both}
 .hero-badge .dot{width:10px;height:10px;border-radius:50%;background:var(--coral);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.8);opacity:.5}}
-.hero-slide h1{font-family:var(--font-display);font-size:clamp(2.4em,5vw,4em);font-weight:400;line-height:1.2;margin-bottom:12px;animation:fadeInUp .8s ease .1s both}
+.hero-slide h1{font-family:var(--font-display);font-size:clamp(2.6em,5.5vw,4.5em);font-weight:400;line-height:1.2;margin-bottom:12px;animation:fadeInUp .8s ease .1s both}
 .hero-slide h1 .hl{background:linear-gradient(135deg,var(--coral),#F0A060,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-slide .subtitle{font-size:clamp(1em,2vw,1.2em);color:var(--text-light);max-width:650px;margin-bottom:24px;animation:fadeInUp .8s ease .2s both}
+.hero-slide .subtitle{font-size:clamp(1.15em,2.2vw,1.35em);color:var(--text-light);max-width:650px;margin-bottom:24px;animation:fadeInUp .8s ease .2s both}
 @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 
 /* Hero category grid */
 .hero-cats{display:flex;flex-direction:column;gap:20px;max-width:1100px;width:100%;animation:fadeInUp .8s ease .3s both}
 .hero-cat-group{text-align:left}
-.hero-cat-group .hcg-title{font-family:var(--font-display);font-size:1.2em;font-weight:400;margin-bottom:8px;padding-left:8px;border-left:4px solid;display:inline-block}
+.hero-cat-group .hcg-title{font-family:var(--font-display);font-size:1.25em;font-weight:400;margin-bottom:8px;padding-left:8px;border-left:4px solid;display:inline-block}
 .hero-cat-group .hcg-methods{display:flex;flex-wrap:wrap;gap:6px}
-.hero-cat-group .hcg-methods a{text-decoration:none;padding:5px 12px;border-radius:16px;font-size:.78em;font-weight:600;color:#fff;transition:var(--transition);white-space:nowrap}
+.hero-cat-group .hcg-methods a{text-decoration:none;padding:5px 12px;border-radius:16px;font-size:.82em;font-weight:600;color:#fff;transition:var(--transition);white-space:nowrap}
 .hero-cat-group .hcg-methods a:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.2)}
 
 /* Category Overview */
+.cat-header-slide{flex-direction:column;text-align:center}
+.cat-header-slide .ch-icon{font-size:4em;margin-bottom:16px}
+.cat-header-slide h2{font-family:var(--font-display);font-size:clamp(2.6em,5vw,3.8em);font-weight:400;margin-bottom:10px}
+.cat-header-slide .ch-sub{font-size:1.35em;color:var(--text-light);margin-bottom:30px;max-width:600px}
+.cat-header-slide .ch-methods{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;max-width:1000px}
+.cat-header-slide .ch-method-link{text-decoration:none;padding:10px 20px;border-radius:26px;font-size:1.05em;font-weight:600;color:#fff;transition:var(--transition)}
+.cat-header-slide .ch-method-link:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.cat-header-slide .ch-scroll{color:var(--text-light);font-size:1.1em;margin-top:24px;animation:bounce 2s ease-in-out infinite;display:flex;flex-direction:column;align-items:center;gap:4px}
+.cat-header-slide .ch-arrow{width:24px;height:24px;border-right:3px solid var(--coral);border-bottom:3px solid var(--coral);transform:rotate(45deg)}
+
 .cat-overview-slide{flex-direction:column;text-align:center}
-.cat-overview-slide h2{font-family:var(--font-display);font-size:clamp(2.2em,4vw,3em);font-weight:400;margin-bottom:10px;background:linear-gradient(135deg,var(--coral),var(--lavender),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.cat-overview-slide .co-sub{color:var(--text-light);font-size:1.15em;margin-bottom:40px}
+.cat-overview-slide h2{font-family:var(--font-display);font-size:clamp(2.4em,4.5vw,3.4em);font-weight:400;margin-bottom:10px;background:linear-gradient(135deg,var(--coral),var(--lavender),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.cat-overview-slide .co-sub{color:var(--text-light);font-size:1.25em;margin-bottom:40px}
 .cat-cards{display:flex;gap:20px;max-width:1150px;flex-wrap:wrap;justify-content:center}
 .cat-card{flex:0 1 200px;background:var(--card);border-radius:var(--radius);padding:28px 20px;text-align:center;text-decoration:none;color:var(--text);box-shadow:var(--shadow);transition:var(--transition);position:relative;overflow:hidden}
 .cat-card:hover{transform:translateY(-8px);box-shadow:0 16px 48px rgba(0,0,0,.15)}
@@ -67,9 +77,9 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
 .cat-card:nth-child(3)::before{background:var(--c8)}.cat-card:nth-child(4)::before{background:var(--c5)}
 .cat-card:nth-child(5)::before{background:var(--c7)}
 .cat-card .cc-icon{font-size:3em;display:block;margin-bottom:12px}
-.cat-card .cc-name{font-family:var(--font-display);font-size:1.3em;font-weight:400;margin-bottom:4px}
-.cat-card .cc-count{font-size:.85em;color:var(--text-light)}
-.cat-card .cc-desc{font-size:.82em;color:var(--text-light);margin-top:6px;line-height:1.5}
+.cat-card .cc-name{font-family:var(--font-display);font-size:1.35em;font-weight:400;margin-bottom:4px}
+.cat-card .cc-count{font-size:0.9em;color:var(--text-light)}
+.cat-card .cc-desc{font-size:.85em;color:var(--text-light);margin-top:6px;line-height:1.5}
 
 /* Category Header */
 
@@ -80,42 +90,42 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
 .method-slide .slide-inner{display:flex;align-items:stretch;width:100%;min-height:100vh}
 .method-slide .slide-text{flex:1;display:flex;flex-direction:column;justify-content:center;padding:68px 56px 48px 24px;position:relative;overflow-y:auto}
 .method-slide .slide-number{position:absolute;top:30px;right:40px;font-family:var(--font-display);font-size:8em;color:rgba(61,44,44,.04);line-height:1;pointer-events:none;user-select:none}
-.method-slide .card-badge{display:inline-flex;align-items:center;gap:6px;padding:7px 18px;border-radius:24px;font-size:.95em;font-weight:700;color:#fff;margin-bottom:18px;width:fit-content}
-.method-slide h2{font-family:var(--font-display);font-size:clamp(2.2em,4vw,3em);font-weight:400;line-height:1.2;margin-bottom:10px}
-.method-slide .method-subtitle{font-size:1.15em;color:var(--text-light);margin-bottom:20px;padding-bottom:18px;border-bottom:2px dashed var(--blush)}
+.method-slide .card-badge{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:24px;font-size:1em;font-weight:700;color:#fff;margin-bottom:18px;width:fit-content}
+.method-slide h2{font-family:var(--font-display);font-size:clamp(2.4em,4.5vw,3.4em);font-weight:400;line-height:1.2;margin-bottom:10px}
+.method-slide .method-subtitle{font-size:1.25em;color:var(--text-light);margin-bottom:20px;padding-bottom:18px;border-bottom:2px dashed var(--blush)}
 .method-slide .info-blocks{display:flex;flex-direction:column;gap:16px;margin-bottom:20px}
 .method-slide .info-block{padding:16px 20px;border-radius:var(--radius-sm);background:var(--cream);border-left:5px solid}
-.method-slide .info-block h4{font-size:1.05em;margin-bottom:4px;font-weight:700}
-.method-slide .info-block p{font-size:1.05em;color:var(--text-light);line-height:1.65}
+.method-slide .info-block h4{font-size:1.2em;margin-bottom:4px;font-weight:700}
+.method-slide .info-block p{font-size:1.15em;color:var(--text-light);line-height:1.65}
 .method-slide .magic-spell{display:flex;align-items:flex-start;gap:12px;padding:18px 22px;border-radius:var(--radius-sm);background:linear-gradient(135deg,#FFF9E6,#FFF3D6);border:2px dashed var(--gold)}
 .method-slide .magic-spell .spell-icon{font-size:1.5em;flex-shrink:0}
-.method-slide .magic-spell .spell-label{font-size:.85em;font-weight:700;color:var(--gold);margin-bottom:2px}
-.method-slide .magic-spell .spell-text{font-size:1.08em;font-weight:500;color:var(--text);line-height:1.6}
+.method-slide .magic-spell .spell-label{font-size:0.95em;font-weight:700;color:var(--gold);margin-bottom:2px}
+.method-slide .magic-spell .spell-text{font-size:1.2em;font-weight:500;color:var(--text);line-height:1.6}
 .method-slide .accent-bar{position:absolute;top:0;left:0;width:8px;height:100%;z-index:2}
 
 /* ===== FLIP CARD ===== */
 .flip-zone{flex:0 0 60%;display:flex;align-items:center;justify-content:center;padding:40px;position:relative}
-.flip-container{width:100%;max-width:600px;aspect-ratio:4/3;perspective:1200px;cursor:pointer}
-.flip-hint{position:absolute;bottom:50px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.6);color:#fff;padding:6px 16px;border-radius:20px;font-size:.8em;pointer-events:none;transition:opacity .3s;z-index:5}
+.flip-container{width:100%;aspect-ratio:4/3;perspective:1200px;cursor:pointer}
+
 .flip-inner{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.4,0,.2,1);transform-style:preserve-3d}
 .flip-container.flipped .flip-inner{transform:rotateY(180deg)}
 .flip-front,.flip-back{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:var(--radius-sm);overflow:hidden}
 .flip-front img{width:100%;height:100%;object-fit:contain;box-shadow:0 12px 48px rgba(0,0,0,.12);border-radius:var(--radius-sm)}
 .flip-back{transform:rotateY(180deg);background:linear-gradient(135deg,#FFFDF7,#FFF8F0);box-shadow:0 12px 48px rgba(0,0,0,.12);display:flex;align-items:center;justify-content:center;padding:32px}
 .story-wrap{width:100%;height:100%;overflow-y:auto;padding:8px}
-.story-wrap h3{font-family:var(--font-display);font-size:1.5em;font-weight:400;margin-bottom:12px;color:var(--coral);text-align:center}
-.story-wrap p{font-size:1.05em;color:var(--text);line-height:1.8;margin-bottom:10px;text-indent:2em}
+.story-wrap h3{font-family:var(--font-display);font-size:1.6em;font-weight:400;margin-bottom:12px;color:var(--coral);text-align:center}
+.story-wrap p{font-size:1.15em;color:var(--text);line-height:1.8;margin-bottom:10px;text-indent:2em}
 .story-wrap p:last-child{margin-bottom:0}
 
 /* Footer */
 .footer-slide{flex-direction:column;text-align:center;gap:20px;border-top:3px solid var(--blush)}
-.footer-slide .footer-title{font-family:var(--font-display);font-size:clamp(1.8em,4vw,2.6em);font-weight:400;background:linear-gradient(135deg,var(--coral),var(--gold),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.footer-slide .footer-sub{font-size:1.1em;color:var(--text-light);max-width:550px}
+.footer-slide .footer-title{font-family:var(--font-display);font-size:clamp(2em,4.5vw,2.6em);font-weight:400;background:linear-gradient(135deg,var(--coral),var(--gold),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.footer-slide .footer-sub{font-size:1.15em;color:var(--text-light);max-width:550px}
 .footer-mini-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;max-width:900px}
-.footer-mini-grid a{padding:7px 14px;border-radius:18px;font-size:.82em;font-weight:600;color:#fff;text-decoration:none;transition:var(--transition)}
+.footer-mini-grid a{padding:8px 14px;border-radius:18px;font-size:.85em;font-weight:600;color:#fff;text-decoration:none;transition:var(--transition)}
 .footer-mini-grid a:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.15)}
-.footer-quote{font-size:1.15em;font-weight:500;color:var(--text);font-style:italic;padding:14px 28px;background:var(--cream);border-radius:var(--radius-sm);border:2px dashed var(--blush);max-width:600px}
-.footer-heart{font-size:1.05em;color:var(--text-light)}
+.footer-quote{font-size:1.2em;font-weight:500;color:var(--text);font-style:italic;padding:14px 28px;background:var(--cream);border-radius:var(--radius-sm);border:2px dashed var(--blush);max-width:600px}
+.footer-heart{font-size:1.1em;color:var(--text-light)}
 .footer-slide .heart{color:var(--coral);animation:pulse 1.5s ease-in-out infinite;display:inline-block}
 
 @media(max-width:1024px){
@@ -124,7 +134,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   .top-method-nav a{padding:5px 10px;font-size:.74em}
   .flip-zone{flex:0 0 auto;padding:60px 24px 8px}
   .flip-container{max-width:90%;max-height:35vh}
-  .flip-hint{bottom:16px}
+  
   .method-slide .slide-text{padding:20px 28px 40px;overflow-y:visible}
   .method-slide .slide-number{font-size:5em;top:10px;right:20px}
   .method-slide h2{font-size:1.8em}
@@ -177,20 +187,29 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <h2>📂 五大学习方法分类</h2>
   <p class="co-sub">40种方法分成5大类，点击进入你想了解的类别。每个方法点击图片可以看 Rainbow 的故事！</p>
   <div class="cat-cards">
-    <a href="#s3" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务</span><span class="cc-count">7种</span></a>
-    <a href="#s11" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化</span><span class="cc-count">8种</span></a>
-    <a href="#s20" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解</span><span class="cc-count">9种</span></a>
-    <a href="#s30" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动激励</span><span class="cc-count">6种</span></a>
-    <a href="#s37" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪习惯</span><span class="cc-count">10种</span></a>
+    <a href="#s2" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务</span><span class="cc-count">7种</span></a>
+    <a href="#s10" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化</span><span class="cc-count">8种</span></a>
+    <a href="#s19" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解</span><span class="cc-count">9种</span></a>
+    <a href="#s29" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动激励</span><span class="cc-count">6种</span></a>
+    <a href="#s36" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪习惯</span><span class="cc-count">10种</span></a>
   </div>
 </section>
+<!-- s2: 时间与任务管理 Header -->
+<section class="slide cat-header-slide" id="s2">
+  <div class="ch-icon">⏰</div>
+  <h2>时间与任务管理</h2>
+  <p class="ch-sub">学会管理时间、安排任务，是高效学习的第一步。下面7种方法帮你从小养成好习惯。</p>
+  <div class="ch-methods"><a href="#s3" class="ch-method-link" style="background:var(--c2)">🍅 番茄专注法</a> <a href="#s4" class="ch-method-link" style="background:var(--c6)">📅 间隔记忆法</a> <a href="#s5" class="ch-method-link" style="background:var(--c8)">🪜 目标分解法</a> <a href="#s6" class="ch-method-link" style="background:var(--c1)">🟩 四象限法</a> <a href="#s7" class="ch-method-link" style="background:var(--c2)">🌅 晨间规划法</a> <a href="#s8" class="ch-method-link" style="background:var(--c5)">🔄 交叉学习法</a> <a href="#s9" class="ch-method-link" style="background:var(--c7)">🧠 大脑休息法</a></div>
+  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow"></div></div>
+</section>
+
 <!-- s3: 番茄专注法 -->
 <section class="slide method-slide" id="s3">
   <div class="accent-bar" style="background:var(--c2)"></div>
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s3" onclick="toggleFlip('flip_s3')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/02-pomodoro-focus.png" alt="番茄专注法" loading="lazy"></div>
           <div class="flip-back" id="story_s3"></div>
@@ -216,7 +235,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s4" onclick="toggleFlip('flip_s4')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/06-spaced-repetition.png" alt="间隔记忆法" loading="lazy"></div>
           <div class="flip-back" id="story_s4"></div>
@@ -242,7 +261,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s5" onclick="toggleFlip('flip_s5')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/08-goal-decomposition.png" alt="目标分解法" loading="lazy"></div>
           <div class="flip-back" id="story_s5"></div>
@@ -268,7 +287,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s6" onclick="toggleFlip('flip_s6')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/11-quadrant-method.png" alt="四象限法" loading="lazy"></div>
           <div class="flip-back" id="story_s6"></div>
@@ -294,7 +313,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s7" onclick="toggleFlip('flip_s7')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/12-morning-planning.png" alt="晨间规划法" loading="lazy"></div>
           <div class="flip-back" id="story_s7"></div>
@@ -320,7 +339,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s8" onclick="toggleFlip('flip_s8')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/25-interleaving.png" alt="交叉学习法" loading="lazy"></div>
           <div class="flip-back" id="story_s8"></div>
@@ -346,7 +365,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s9" onclick="toggleFlip('flip_s9')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/31-brain-rest.png" alt="大脑休息法" loading="lazy"></div>
           <div class="flip-back" id="story_s9"></div>
@@ -366,13 +385,22 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
     </div>
   </div>
 </section>
+<!-- s10: 记忆强化技巧 Header -->
+<section class="slide cat-header-slide" id="s10">
+  <div class="ch-icon">🧠</div>
+  <h2>记忆强化技巧</h2>
+  <p class="ch-sub">记东西不需要死记硬背！下面8种方法让你的记忆力像超级英雄一样强大。</p>
+  <div class="ch-methods"><a href="#s11" class="ch-method-link" style="background:var(--c1)">🔍 预习与复习法</a> <a href="#s12" class="ch-method-link" style="background:var(--c9)">🧩 联想记忆法</a> <a href="#s13" class="ch-method-link" style="background:var(--c4)">🗺️ 思维导图法</a> <a href="#s14" class="ch-method-link" style="background:var(--c5)">🧱 组块记忆法</a> <a href="#s15" class="ch-method-link" style="background:var(--c7)">🌙 睡前复习法</a> <a href="#s16" class="ch-method-link" style="background:var(--c8)">🎨 双编码法</a> <a href="#s17" class="ch-method-link" style="background:var(--c3)">🌉 类比桥梁法</a> <a href="#s18" class="ch-method-link" style="background:var(--c9)">👀 多感官学习法</a></div>
+  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow"></div></div>
+</section>
+
 <!-- s11: 预习与复习法 -->
 <section class="slide method-slide" id="s11">
   <div class="accent-bar" style="background:var(--c1)"></div>
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s11" onclick="toggleFlip('flip_s11')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/01-preview-review.png" alt="预习与复习法" loading="lazy"></div>
           <div class="flip-back" id="story_s11"></div>
@@ -398,7 +426,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s12" onclick="toggleFlip('flip_s12')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/09-association-memory.png" alt="联想记忆法" loading="lazy"></div>
           <div class="flip-back" id="story_s12"></div>
@@ -424,7 +452,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s13" onclick="toggleFlip('flip_s13')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/04-mind-map.png" alt="思维导图法" loading="lazy"></div>
           <div class="flip-back" id="story_s13"></div>
@@ -450,7 +478,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s14" onclick="toggleFlip('flip_s14')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/13-chunking-memory.png" alt="组块记忆法" loading="lazy"></div>
           <div class="flip-back" id="story_s14"></div>
@@ -476,7 +504,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s15" onclick="toggleFlip('flip_s15')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/14-sleep-review.png" alt="睡前复习法" loading="lazy"></div>
           <div class="flip-back" id="story_s15"></div>
@@ -502,7 +530,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s16" onclick="toggleFlip('flip_s16')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/15-dual-coding.png" alt="双编码法" loading="lazy"></div>
           <div class="flip-back" id="story_s16"></div>
@@ -528,7 +556,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s17" onclick="toggleFlip('flip_s17')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/26-analogy-bridge.png" alt="类比桥梁法" loading="lazy"></div>
           <div class="flip-back" id="story_s17"></div>
@@ -554,7 +582,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s18" onclick="toggleFlip('flip_s18')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/32-multi-sensory.png" alt="多感官学习法" loading="lazy"></div>
           <div class="flip-back" id="story_s18"></div>
@@ -574,13 +602,22 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
     </div>
   </div>
 </section>
+<!-- s19: 深度理解方法 Header -->
+<section class="slide cat-header-slide" id="s19">
+  <div class="ch-icon">💡</div>
+  <h2>深度理解方法</h2>
+  <p class="ch-sub">真正的学习不是死记硬背，而是深入理解。下面9种方法帮你把知识真正吃透。</p>
+  <div class="ch-methods"><a href="#s20" class="ch-method-link" style="background:var(--c3)">👨‍🏫 费曼小老师法</a> <a href="#s21" class="ch-method-link" style="background:var(--c7)">❓ 提问学习法</a> <a href="#s22" class="ch-method-link" style="background:var(--c10)">✅ 自我检测法</a> <a href="#s23" class="ch-method-link" style="background:var(--c8)">📝 康奈尔笔记法</a> <a href="#s24" class="ch-method-link" style="background:var(--c3)">🔄 SQ3R阅读法</a> <a href="#s25" class="ch-method-link" style="background:var(--c1)">🔗 精细加工法</a> <a href="#s26" class="ch-method-link" style="background:var(--c4)">🪜 具体例子法</a> <a href="#s27" class="ch-method-link" style="background:var(--c3)">👂 主动倾听法</a> <a href="#s28" class="ch-method-link" style="background:var(--c5)">🧵 知识串珠法</a></div>
+  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow"></div></div>
+</section>
+
 <!-- s20: 费曼小老师法 -->
 <section class="slide method-slide" id="s20">
   <div class="accent-bar" style="background:var(--c3)"></div>
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s20" onclick="toggleFlip('flip_s20')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/03-feynman-teacher.png" alt="费曼小老师法" loading="lazy"></div>
           <div class="flip-back" id="story_s20"></div>
@@ -606,7 +643,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s21" onclick="toggleFlip('flip_s21')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/07-question-learning.png" alt="提问学习法" loading="lazy"></div>
           <div class="flip-back" id="story_s21"></div>
@@ -632,7 +669,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s22" onclick="toggleFlip('flip_s22')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/10-self-testing.png" alt="自我检测法" loading="lazy"></div>
           <div class="flip-back" id="story_s22"></div>
@@ -658,7 +695,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s23" onclick="toggleFlip('flip_s23')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/16-cornell-notes.png" alt="康奈尔笔记法" loading="lazy"></div>
           <div class="flip-back" id="story_s23"></div>
@@ -684,7 +721,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s24" onclick="toggleFlip('flip_s24')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/17-sq3r-reading.png" alt="SQ3R阅读法" loading="lazy"></div>
           <div class="flip-back" id="story_s24"></div>
@@ -710,7 +747,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s25" onclick="toggleFlip('flip_s25')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/27-elaboration.png" alt="精细加工法" loading="lazy"></div>
           <div class="flip-back" id="story_s25"></div>
@@ -736,7 +773,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s26" onclick="toggleFlip('flip_s26')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/28-concrete-examples.png" alt="具体例子法" loading="lazy"></div>
           <div class="flip-back" id="story_s26"></div>
@@ -762,7 +799,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s27" onclick="toggleFlip('flip_s27')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/33-active-listening.png" alt="主动倾听法" loading="lazy"></div>
           <div class="flip-back" id="story_s27"></div>
@@ -788,7 +825,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s28" onclick="toggleFlip('flip_s28')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/34-knowledge-weaving.png" alt="知识串珠法" loading="lazy"></div>
           <div class="flip-back" id="story_s28"></div>
@@ -808,13 +845,22 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
     </div>
   </div>
 </section>
+<!-- s29: 互动与激励 Header -->
+<section class="slide cat-header-slide" id="s29">
+  <div class="ch-icon">🤝</div>
+  <h2>互动与激励</h2>
+  <p class="ch-sub">学习不一定是孤独的！下面6种方法让学习变得更有趣、更有动力。</p>
+  <div class="ch-methods"><a href="#s30" class="ch-method-link" style="background:var(--c5)">💎 错题宝藏法</a> <a href="#s31" class="ch-method-link" style="background:var(--c6)">🤝 合作学习法</a> <a href="#s32" class="ch-method-link" style="background:var(--c4)">🏆 游戏化学习法</a> <a href="#s33" class="ch-method-link" style="background:var(--c1)">🎯 刻意练习法</a> <a href="#s34" class="ch-method-link" style="background:var(--c7)">🎭 角色扮演法</a> <a href="#s35" class="ch-method-link" style="background:var(--c10)">📋 考试策略法</a></div>
+  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow"></div></div>
+</section>
+
 <!-- s30: 错题宝藏法 -->
 <section class="slide method-slide" id="s30">
   <div class="accent-bar" style="background:var(--c5)"></div>
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s30" onclick="toggleFlip('flip_s30')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/05-error-treasure.png" alt="错题宝藏法" loading="lazy"></div>
           <div class="flip-back" id="story_s30"></div>
@@ -840,7 +886,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s31" onclick="toggleFlip('flip_s31')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/18-collaborative-learning.png" alt="合作学习法" loading="lazy"></div>
           <div class="flip-back" id="story_s31"></div>
@@ -866,7 +912,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s32" onclick="toggleFlip('flip_s32')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/19-gamified-learning.png" alt="游戏化学习法" loading="lazy"></div>
           <div class="flip-back" id="story_s32"></div>
@@ -892,7 +938,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s33" onclick="toggleFlip('flip_s33')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/20-deliberate-practice.png" alt="刻意练习法" loading="lazy"></div>
           <div class="flip-back" id="story_s33"></div>
@@ -918,7 +964,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s34" onclick="toggleFlip('flip_s34')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/35-role-playing.png" alt="角色扮演法" loading="lazy"></div>
           <div class="flip-back" id="story_s34"></div>
@@ -944,7 +990,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s35" onclick="toggleFlip('flip_s35')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/36-exam-strategy.png" alt="考试策略法" loading="lazy"></div>
           <div class="flip-back" id="story_s35"></div>
@@ -964,13 +1010,22 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
     </div>
   </div>
 </section>
+<!-- s36: 情绪与习惯 Header -->
+<section class="slide cat-header-slide" id="s36">
+  <div class="ch-icon">🌈</div>
+  <h2>情绪与习惯</h2>
+  <p class="ch-sub">好的学习状态来自好的情绪和习惯。下面10种方法帮你建立最佳学习状态。</p>
+  <div class="ch-methods"><a href="#s37" class="ch-method-link" style="background:var(--c7)">🧘 正念学习法</a> <a href="#s38" class="ch-method-link" style="background:var(--c9)">🪞 自我对话法</a> <a href="#s39" class="ch-method-link" style="background:var(--c3)">📍 固定学习角法</a> <a href="#s40" class="ch-method-link" style="background:var(--c5)">⏳ 碎片时间利用法</a> <a href="#s41" class="ch-method-link" style="background:var(--c4)">📓 反思日记法</a> <a href="#s42" class="ch-method-link" style="background:var(--c6)">🌱 成长心态法</a> <a href="#s43" class="ch-method-link" style="background:var(--c2)">🏃 运动促学法</a> <a href="#s44" class="ch-method-link" style="background:var(--c8)">🔗 习惯叠加法</a> <a href="#s45" class="ch-method-link" style="background:var(--c9)">🌊 心流学习法</a> <a href="#s46" class="ch-method-link" style="background:var(--c10)">✍️ 手写优势法</a></div>
+  <div class="ch-scroll"><span>向下滚动查看详情</span><div class="ch-arrow"></div></div>
+</section>
+
 <!-- s37: 正念学习法 -->
 <section class="slide method-slide" id="s37">
   <div class="accent-bar" style="background:var(--c7)"></div>
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s37" onclick="toggleFlip('flip_s37')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/21-mindfulness-learning.png" alt="正念学习法" loading="lazy"></div>
           <div class="flip-back" id="story_s37"></div>
@@ -996,7 +1051,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s38" onclick="toggleFlip('flip_s38')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/22-self-talk.png" alt="自我对话法" loading="lazy"></div>
           <div class="flip-back" id="story_s38"></div>
@@ -1022,7 +1077,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s39" onclick="toggleFlip('flip_s39')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/23-fixed-study-spot.png" alt="固定学习角法" loading="lazy"></div>
           <div class="flip-back" id="story_s39"></div>
@@ -1048,7 +1103,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s40" onclick="toggleFlip('flip_s40')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/24-fragmented-time.png" alt="碎片时间利用法" loading="lazy"></div>
           <div class="flip-back" id="story_s40"></div>
@@ -1074,7 +1129,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s41" onclick="toggleFlip('flip_s41')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/29-reflection-journal.png" alt="反思日记法" loading="lazy"></div>
           <div class="flip-back" id="story_s41"></div>
@@ -1100,7 +1155,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s42" onclick="toggleFlip('flip_s42')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/30-growth-mindset.png" alt="成长心态法" loading="lazy"></div>
           <div class="flip-back" id="story_s42"></div>
@@ -1126,7 +1181,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s43" onclick="toggleFlip('flip_s43')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/37-exercise-learning.png" alt="运动促学法" loading="lazy"></div>
           <div class="flip-back" id="story_s43"></div>
@@ -1152,7 +1207,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s44" onclick="toggleFlip('flip_s44')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/38-habit-stacking.png" alt="习惯叠加法" loading="lazy"></div>
           <div class="flip-back" id="story_s44"></div>
@@ -1178,7 +1233,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s45" onclick="toggleFlip('flip_s45')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/39-flow-learning.png" alt="心流学习法" loading="lazy"></div>
           <div class="flip-back" id="story_s45"></div>
@@ -1204,7 +1259,7 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <div class="slide-inner">
     <div class="flip-zone">
       <div class="flip-container" id="flip_s46" onclick="toggleFlip('flip_s46')">
-        <div class="flip-hint">👆 点击翻转看 Rainbow 的故事</div>
+        
         <div class="flip-inner">
           <div class="flip-front"><img src="images/40-handwriting.png" alt="手写优势法" loading="lazy"></div>
           <div class="flip-back" id="story_s46"></div>
@@ -1229,11 +1284,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--text);overflo
   <h2>🌟 选择你的第一个魔法吧！</h2>
   <p class="co-sub">40种方法分成5大类，先选一个最喜欢的开始。每天进步一点点！</p>
   <div class="cat-cards">
-    <a href="#s3" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务</span><span class="cc-count">7种</span></a>
-    <a href="#s11" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化</span><span class="cc-count">8种</span></a>
-    <a href="#s20" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解</span><span class="cc-count">9种</span></a>
-    <a href="#s30" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动激励</span><span class="cc-count">6种</span></a>
-    <a href="#s37" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪习惯</span><span class="cc-count">10种</span></a>
+    <a href="#s2" class="cat-card"><span class="cc-icon">⏰</span><span class="cc-name">时间与任务</span><span class="cc-count">7种</span></a>
+    <a href="#s10" class="cat-card"><span class="cc-icon">🧠</span><span class="cc-name">记忆强化</span><span class="cc-count">8种</span></a>
+    <a href="#s19" class="cat-card"><span class="cc-icon">💡</span><span class="cc-name">深度理解</span><span class="cc-count">9种</span></a>
+    <a href="#s29" class="cat-card"><span class="cc-icon">🤝</span><span class="cc-name">互动激励</span><span class="cc-count">6种</span></a>
+    <a href="#s36" class="cat-card"><span class="cc-icon">🌈</span><span class="cc-name">情绪习惯</span><span class="cc-count">10种</span></a>
   </div>
 </section>
 <!-- s48: FOOTER -->
@@ -1275,7 +1330,7 @@ for(let i=0;i<totalSlides;i++){
   const d=document.createElement('span');
   d.className='dot'+(i===0?' hero-dot active':'');
   d.dataset.index=i;
-  if([2,10,19,29,36].includes(i)){};
+  if([2,10,19,29,36].includes(i))d.classList.add('cat-dot');
   d.title=slides[i].id;
   d.addEventListener('click',()=>goToSlide(i));
   navDots.appendChild(d);
@@ -1283,15 +1338,15 @@ for(let i=0;i<totalSlides;i++){
 const dots=navDots.querySelectorAll('.dot');
 
 const categories=[
-  {start:3,end:9,color:'var(--c1)',methods:[
+  {start:2,end:9,color:'var(--c1)',methods:[
     {id:3,label:'番茄专注',color:'var(--c2)'},{id:4,label:'间隔记忆',color:'var(--c6)'},{id:5,label:'目标分解',color:'var(--c8)'},{id:6,label:'四象限',color:'var(--c1)'},{id:7,label:'晨间规划',color:'var(--c2)'},{id:8,label:'交叉学习',color:'var(--c5)'},{id:9,label:'大脑休息',color:'var(--c7)'}]},
-  {start:11,end:18,color:'var(--c6)',methods:[
+  {start:10,end:18,color:'var(--c6)',methods:[
     {id:11,label:'预习复习',color:'var(--c1)'},{id:12,label:'联想记忆',color:'var(--c9)'},{id:13,label:'思维导图',color:'var(--c4)'},{id:14,label:'组块记忆',color:'var(--c5)'},{id:15,label:'睡前复习',color:'var(--c7)'},{id:16,label:'双编码',color:'var(--c8)'},{id:17,label:'类比桥梁',color:'var(--c3)'},{id:18,label:'多感官',color:'var(--c9)'}]},
-  {start:20,end:28,color:'var(--c8)',methods:[
+  {start:19,end:28,color:'var(--c8)',methods:[
     {id:20,label:'费曼小老师',color:'var(--c3)'},{id:21,label:'提问学习',color:'var(--c7)'},{id:22,label:'自我检测',color:'var(--c10)'},{id:23,label:'康奈尔笔记',color:'var(--c8)'},{id:24,label:'SQ3R',color:'var(--c3)'},{id:25,label:'精细加工',color:'var(--c1)'},{id:26,label:'具体例子',color:'var(--c4)'},{id:27,label:'主动倾听',color:'var(--c3)'},{id:28,label:'知识串珠',color:'var(--c5)'}]},
-  {start:30,end:35,color:'var(--c5)',methods:[
+  {start:29,end:35,color:'var(--c5)',methods:[
     {id:30,label:'错题宝藏',color:'var(--c5)'},{id:31,label:'合作学习',color:'var(--c6)'},{id:32,label:'游戏化',color:'var(--c4)'},{id:33,label:'刻意练习',color:'var(--c1)'},{id:34,label:'角色扮演',color:'var(--c7)'},{id:35,label:'考试策略',color:'var(--c10)'}]},
-  {start:37,end:46,color:'var(--c7)',methods:[
+  {start:36,end:46,color:'var(--c7)',methods:[
     {id:37,label:'正念学习',color:'var(--c7)'},{id:38,label:'自我对话',color:'var(--c9)'},{id:39,label:'固定学习角',color:'var(--c3)'},{id:40,label:'碎片时间',color:'var(--c5)'},{id:41,label:'反思日记',color:'var(--c4)'},{id:42,label:'成长心态',color:'var(--c6)'},{id:43,label:'运动促学',color:'var(--c2)'},{id:44,label:'习惯叠加',color:'var(--c8)'},{id:45,label:'心流学习',color:'var(--c9)'},{id:46,label:'手写优势',color:'var(--c10)'}]},
 ];
 
